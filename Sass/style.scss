@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 @mixin flex($direction,$justify,$align) {
     display: flex;
     justify-content:$justify ;
@@ -11,17 +14,20 @@
 
 .header{
     width: 100vw;
+    height: 10vh;
     background: rgba(128, 128, 128, 0.418);
 position: relative;
-overflow: hidden;
+
+@include flex(row, space-between, center);
 
     .nav{
         @include flex(column, center, center);
         position: absolute;
-        background: red;
+        background-color: rgb(169, 169, 252);
         height: 100vh;
         inset: 0 0 0 40%;
         transform: translateX(100%);
+        z-index: 999;
         ul{
             height: 50%;
             @include flex(column, space-around, center);
@@ -29,8 +35,10 @@ overflow: hidden;
                 list-style: none;
             }
         }
+        &.active{
+            transform: translateX(0%);
+        }
     }
-
     .hamburger-container{
         position: fixed;
         right: 0;
@@ -59,9 +67,27 @@ overflow: hidden;
             &::after{
                 bottom: 15%;
             }
+
+        }
+        &.activeBtn{
+            z-index: 9999;
+            
+            .hamburger-line{  
+                background: transparent;    
+            &::before{  
+                transform: translateY(12.5px) rotate(45deg);
+               }
+
+            &::after{
+                transform: translateY(-12.5px) rotate(-45deg);                
+            }
+            }
         }
     }
+    
 }
 .footer{
     background: gray;
+    position: absolute;
+    bottom: 0;
 }
