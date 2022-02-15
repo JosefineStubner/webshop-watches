@@ -1,3 +1,4 @@
+
 let test = [
   {
     name:"Emma",
@@ -69,6 +70,7 @@ fetchJson()
              products.forEach(e=>{
                  if(dataAttribute == e.id){
                      shoppingCart.push(e)
+                     localStorage.setItem("cart",JSON.stringify(shoppingCart))
                      console.log(shoppingCart)
                     }
                 })

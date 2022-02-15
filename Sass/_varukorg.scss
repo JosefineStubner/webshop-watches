@@ -1,6 +1,6 @@
 #shoppingcart-main{
     @include flex(column,space-around,center);
-    width: 100vw;
+    // width: 100vw;
     height: 100%;
     .back-btn{
         align-self: flex-start;
