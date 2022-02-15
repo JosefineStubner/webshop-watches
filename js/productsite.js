@@ -30,7 +30,7 @@ let productComponent = (item)=>`
   <p class="producttext" id="productpara">
   lorem ipsum dolor amet lorem ipsum dolor amet 
   </p>
-  <button class="buyBtn">Köp</button>
+  <button class="buyBtn" data-id="${item.id}">Köp</button>
 </div>
 </div>
 `
