@@ -48,6 +48,8 @@ body {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 999;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .header .nav ul {
