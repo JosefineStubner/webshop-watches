@@ -1,0 +1,20 @@
+
+.productside{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    border: solid red 1px;
+    .productimg{
+        width: 250px;
+        height: 250px;
+    }
+    .productinfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        border: solid blueviolet 1px;
+    }
+}
