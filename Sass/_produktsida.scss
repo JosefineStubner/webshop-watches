@@ -1,13 +1,15 @@
-
+.backmany{
+    border: 1px solid pink;
+    height: 80px;
+}
 .productside{
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 500px;
     border: solid red 1px;
     .productimg{
-        width: 250px;
+        width: 220px;
         height: 250px;
     }
     .productinfo{
@@ -16,5 +18,7 @@
         justify-content: space-around;
         align-items: flex-start;
         border: solid blueviolet 1px;
+        height: 250px;
+        width: 220px;
     }
 }
