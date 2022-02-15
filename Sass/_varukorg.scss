@@ -8,12 +8,17 @@
     }
     .main-wrapper{
         width: 90%;
-        background: gray;
+        background: rgb(168, 168, 168);
         @include flex(column,space-around,center);
         margin: 10%;
         .order-button{
-            align-self: flex-end;
-            margin: 5%;
+            margin: 2%;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 7px;
+            &:hover{
+                background: rgb(109, 109, 250);
+            }
         }
     }
 }
