@@ -2,46 +2,64 @@
   "pageName": "Watches",
   "products": [{
     "name": "Armband1",
+    "price": "100",
+    "image": "./images/products/armbandsur1.jpg",
     "category": "Armbandsur",
     "id": 1
   },
   {
     "name": "Armband2",
+    "price": "200",
+    "image": "./images/products/armbandsur2.jpg",
     "category": "Armbandsur",
     "id": 2
   },
   {
     "name": "Armband3",
+    "price": "300",
+    "image": "./images/products/armbandsur3.jpg",
     "category": "Armbandsur",
     "id": 3
   },
   {
     "name": "Fickur1",
+    "price": "400",
+    "image": "./images/products/fickur1.jpg",
     "category": "Fickur",
     "id": 4
   },
   {
     "name": "Fickur2",
+    "price": "500",
+    "image": "./images/products/fickur2.jpg",
     "category": "Fickur",
     "id": 5
   },
   {
     "name": "Fickur3",
+    "price": "600",
+    "image": "./images/products/fickur3.jpg",
     "category":"Fickur",
     "id": 6
   },
   {
     "name": "Gökur1",
+    "price": "700",
+    "image": "./images/products/gokur1.jpg",
     "category": "Gökur",
     "id": 7
   },
   {
     "name": "Gökur2",
+    "price": "800",
+    "image": "./images/products/gokur2.jpg",
     "category": "Gökur",
     "id": 8
   },
   {
     "name": "Gökur3",
+    "price": "900",
+    "image": "./images/products/gokur3.jpg",
     "category": "Gökur",
     "id": 9
   }]
