@@ -26,34 +26,28 @@
     <h2 class="login-header">Skapa Användare</h2>
 
     <form class="create-login-form" id="createUserForm">
-      <label for="createName" class="create-form-styling">Namn</label>
-      <br>
-      <input type="text" name="create-name" class="create-form-styling" id="createName">
-      <br>
-      <label for="createAdress" class="create-form-styling">Gatuadress</label>
-      <br>
-      <input type="text" name="create-adress" class="create-form-styling" id="createAdress">
-      <br>
-      <label for="createZipcode" class="create-form-styling">Postnummer</label>
-      <br>
-      <input type="number" name="create-zipcode" class="create-form-styling" id="createZipcode">
-      <br>
-      <label for="createCity" class="create-form-styling">Ort</label>
-      <br>
-      <input type="text" name="create-city" class="create-form-styling" id="createCity">
-      <br>
-      <label for="createEmail" class="create-form-styling">E-post</label>
-      <br>
-      <input type="email" name="create-email" class="create-form-styling" id="createEmail">
-      <br>
-      <label for="createPassword" class="create-form-styling">Lösenord</label>
-      <br>
-      <input type="text" name="create-password" class="create-form-styling" id="createPassword">
-      <br>
-      <label for="createPhone" class="create-form-styling">Telefonnummer</label>
-      <br>
-      <input type="number" name="create-phone" class="create-form-styling" id="createPhone">
-      <br>
+
+      <secion class="input-container">
+        <div class="input-wrapper">
+          <label for="createName" class="create-form-styling">Namn</label>
+          <input type="text" name="create-name" class="create-form-styling" id="createName">
+          <label for="createAdress" class="create-form-styling">Gatuadress</label>
+          <input type="text" name="create-adress" class="create-form-styling" id="createAdress">
+          <label for="createZipcode" class="create-form-styling">Postnummer</label>
+          <input type="number" name="create-zipcode" class="create-form-styling" id="createZipcode">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="createCity" class="create-form-styling">Ort</label>
+          <input type="text" name="create-city" class="create-form-styling" id="createCity">
+          <label for="createEmail" class="create-form-styling">E-post</label>
+          <input type="email" name="create-email" class="create-form-styling" id="createEmail">
+          <label for="createPassword" class="create-form-styling">Lösenord</label>
+          <input type="text" name="create-password" class="create-form-styling" id="createPassword">
+          <label for="createPhone" class="create-form-styling">Telefonnummer</label>
+          <input type="number" name="create-phone" class="create-form-styling" id="createPhone">
+        </div>
+      </secion>
       <button class="button create-form-styling" id="createUserBtn">Skapa</button>
     </form>
 
