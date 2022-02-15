@@ -65,8 +65,14 @@ fetchJson()
       const buyBtn = document.querySelectorAll(".buyBtn")
       buyBtn.forEach(e=>{
          e.addEventListener("click", (e)=>{
-             shoppingCart.push(products[e])
-             console.log(shoppingCart)
+             let dataAttribute = e.target.getAttribute("data-id")
+             products.forEach(e=>{
+                 if(dataAttribute == e.id){
+                     shoppingCart.push(e)
+                     console.log(shoppingCart)
+                    }
+                })
+               
          })
       })
   }
