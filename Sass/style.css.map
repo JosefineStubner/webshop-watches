@@ -8,7 +8,9 @@
         "_produktsida.scss",
         "_produktlista.scss",
         "_main.scss",
-        "_index.scss"
+        "_index.scss",
+        "_skapalogin.scss",
+        "_login.scss"
     ],
     "names": [],
     "file": "style.css"
