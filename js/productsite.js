@@ -1,6 +1,24 @@
+let test = [
+  {
+    name:"Emma",
+    plats:"här",
+    category:1
+  },
+  {
+    name:"Albin",
+    plats:"Där",
+    category:2
+  },
+{
+  name:"Patrik",
+  plats:"där",
+  category:3
+},
+]
+
 const productWrapper = document.querySelector(".productside")
 const queryString = new URLSearchParams(location.search)
-const product = queryString.get("category")
+let qsCategory = queryString.get("category")
 
 let productComponent = (item)=>`
 
@@ -8,6 +26,7 @@ let productComponent = (item)=>`
 <div class="productinfo">
   <h3 class="productheading" id="productname">${item.name}</h3>
   <p class="producttext" id="productpara">
+  ${item.plats}
   </p>
   <button class="">Köp</button>
 </div>
@@ -24,19 +43,24 @@ fetchJson()
     const products = data.products;
     // productWrapper.innerHTML= products.map(productComponent).join("")
     // productWrapper.innerHTML= productComponent(products[0])
+
+    console.log(qsCategory);
     
-    function product(products) {
-      products.forEach (prod =>{
-        if(prod.category === qsCategory){
+    let prodName = []
+    function selectedProd(test) {
+      test.forEach (prod =>{
+        console.log(prod);
+        if(prod.category == qsCategory){
           // const paragraf = document.createElement("p")
           // paragraf.innerText= prod
-          productWrapper.innerHTML= productComponent(prod)
-        console.log(prod)
-      }
-    })
+          prodName.push(prod)
+          console.log(prod)
+        }
+      })
+      productWrapper.innerHTML= prodName.map(productComponent).join("")
     
   }
-  product(products)
+  selectedProd(test)
   })
 
 // productWrapper.innerHTML = 
