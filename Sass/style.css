@@ -481,5 +481,7 @@ body {
 
 .footer {
   background: olive;
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
