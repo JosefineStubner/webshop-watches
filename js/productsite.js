@@ -23,9 +23,21 @@ fetchJson()
 .then(data => {
     const products = data.products;
     // productWrapper.innerHTML= products.map(productComponent).join("")
-    productWrapper.innerHTML= productComponent(products[0])
-
-})
+    // productWrapper.innerHTML= productComponent(products[0])
+    
+    function product(products) {
+      products.forEach (prod =>{
+        if(prod.category === qsCategory){
+          // const paragraf = document.createElement("p")
+          // paragraf.innerText= prod
+          productWrapper.innerHTML= productComponent(prod)
+        console.log(prod)
+      }
+    })
+    
+  }
+  product(products)
+  })
 
 // productWrapper.innerHTML = 
 
