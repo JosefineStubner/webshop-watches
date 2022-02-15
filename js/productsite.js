@@ -30,7 +30,7 @@ let productComponent = (item)=>`
   <p class="producttext" id="productpara">
   lorem ipsum dolor amet lorem ipsum dolor amet 
   </p>
-  <button class="">Köp</button>
+  <button class="buyBtn">Köp</button>
 </div>
 </div>
 `
@@ -61,10 +61,18 @@ fetchJson()
         }
       })
       productWrapper.innerHTML= prodName.map(productComponent).join("")
-    
+      let shoppingCart = []
+      const buyBtn = document.querySelectorAll(".buyBtn")
+      buyBtn.forEach(e=>{
+         e.addEventListener("click", (e)=>{
+             shoppingCart.push(products[e])
+             console.log(shoppingCart)
+         })
+      })
   }
   selectedProd(products)
   })
+
 
 // productWrapper.innerHTML = 
 
