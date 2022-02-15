@@ -108,12 +108,56 @@
   border: solid red 1px;
 }
 
-.productside .productimg {
-  width: 13.75rem;
-  height: 15.625rem;
+.productside .productCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  margin: 2%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.productside .productinfo {
+.productside .productCard:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
+}
+
+.productside .productCard .productImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 13rem;
+  height: 5rem;
+  overflow: hidden;
+  padding: 5%;
+}
+
+.productside .productCard .productImg img {
+  width: 100%;
+}
+
+.productside .productCard .productinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,14 +165,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border: solid blueviolet 1px;
-  height: 250px;
+  height: 100px;
   width: 220px;
+}
+
+.productside .productCard .productinfo button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 5% 15% 0 0;
 }
 
 .header-img {
@@ -481,7 +531,7 @@ body {
 
 .footer {
   background: olive;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

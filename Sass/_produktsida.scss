@@ -26,17 +26,38 @@
     margin: auto;
     @include flex(column,space-around,center);
     border: solid red 1px;
-    .productimg{
-        width: 13.75rem;
-        height: 15.625rem;
+    .productCard{
+        @include flex(row,center,center);
+        border: 1px solid black;
+        
+        margin: 2%;
+        transition: all .3s ease;
+        &:hover{
+            transform: scale(103%)
+        }
+        .productImg{
+            @include flex(row,center,center);
+            width: 13rem;
+        height: 5rem;
+        overflow: hidden;
+        padding: 5%;
+
+        img{
+            width: 100%;
+        }
+        
     }
     .productinfo{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: flex-start;
-        border: solid blueviolet 1px;
-        height: 250px;
+        height: 100px;
         width: 220px;
+        button{
+            align-self: flex-end;
+            margin: 5% 15% 0 0;
+        }
     }
+}
 }
