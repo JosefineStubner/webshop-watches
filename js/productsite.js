@@ -61,7 +61,7 @@ fetchJson()
       productWrapper.innerHTML= prodName.map(productComponent).join("")
     
   }
-  selectedProd(products)
+  selectedProd(test)
   })
 
 // productWrapper.innerHTML = 
