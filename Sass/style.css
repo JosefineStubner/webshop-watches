@@ -354,6 +354,10 @@ body {
           align-items: center;
 }
 
+.header .logo {
+  margin-left: 5%;
+}
+
 .header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,6 +472,11 @@ body {
 .header .hamburger-container.activeBtn .hamburger-line::after {
   -webkit-transform: translateY(-12.5px) rotate(-45deg);
           transform: translateY(-12.5px) rotate(-45deg);
+}
+
+.header .cart {
+  position: relative;
+  right: 20%;
 }
 
 .footer {
