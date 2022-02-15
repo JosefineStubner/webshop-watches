@@ -1,0 +1,41 @@
+.login-form {
+  @include flex(column, flex-start, center);
+  height: 450px;
+
+  // @media (min-width: 500px) {
+  //   width: 320px;
+  //   @include flex(row, center, flex-start);
+  //   flex-wrap: wrap;
+  // }
+
+  .input-container {
+    @include flex(column, space-around, center);
+
+    @media (min-width: 500px) {
+      @include flex(row, space-around, center);
+      flex-wrap: wrap;
+    }
+
+    .input-wrapper {
+      @include flex(column, space-evenly, center);
+
+      @media (min-width: 500px) {
+        @include flex(column, flex-start, center);
+        margin: 0 5px 0 5px;
+      }
+
+      .create-form-styling {
+        margin: 5px 0 5px 0;
+      }
+
+    }
+
+  }
+
+  .button.create-form-styling {
+    margin-top: 10px;
+    padding: 5px;
+
+  }
+
+}
