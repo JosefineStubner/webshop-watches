@@ -43,24 +43,25 @@ fetchJson()
     const products = data.products;
     // productWrapper.innerHTML= products.map(productComponent).join("")
     // productWrapper.innerHTML= productComponent(products[0])
+    console.log(products)
 
     console.log(qsCategory);
     
     let prodName = []
-    function selectedProd(test) {
-      test.forEach (prod =>{
-        console.log(prod);
+    function selectedProd(item) {
+      item.forEach (prod =>{
+        console.log(prod.category);
         if(prod.category == qsCategory){
           // const paragraf = document.createElement("p")
           // paragraf.innerText= prod
           prodName.push(prod)
-          console.log(prod)
+          console.log("test")
         }
       })
       productWrapper.innerHTML= prodName.map(productComponent).join("")
     
   }
-  selectedProd(test)
+  selectedProd(products)
   })
 
 // productWrapper.innerHTML = 
