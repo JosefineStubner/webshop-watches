@@ -14,12 +14,3 @@ const shoppingComponent = (event)=> `
           </div>
         </div>
 `
-const fetchJson = async ()=>{
-    const response = await fetch("./products.json");
-    const data = await response.json();
-    return data
-}
-fetchJson()
-.then(data => console.log(data)
-
-)
