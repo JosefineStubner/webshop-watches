@@ -1,7 +1,13 @@
+@mixin flex($direction,$justify,$align) {
+    display: flex;
+    justify-content:$justify ;
+    flex-direction: $direction;
+    align-items: $align;
+}
+@import "./varibels";
 @import "./varukorg";
 @import "./produktsida";
 @import "./produktlista";
-@import "./varibels";
 @import "./main";
 @import "./index";
 
@@ -11,12 +17,6 @@
 }
 body{
     overflow-x: hidden;
-}
-@mixin flex($direction,$justify,$align) {
-    display: flex;
-    justify-content:$justify ;
-    flex-direction: $direction;
-    align-items: $align;
 }
 
 .header{
