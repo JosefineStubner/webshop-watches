@@ -21,20 +21,22 @@ const queryString = new URLSearchParams(location.search)
 let qsCategory = queryString.get("category")
 
 let productComponent = (item)=>`
-
-<img class ="productimg" src="${item.image}" alt="" />
+<div class="productCard">
+<div class="productImg">
+<img src="${item.image}" alt="" />
+</div>
 <div class="productinfo">
   <h3 class="productheading" id="productname">${item.name}</h3>
   <p class="producttext" id="productpara">
-  ${item.plats}
+  lorem ipsum dolor amet lorem ipsum dolor amet 
   </p>
   <button class="">Köp</button>
 </div>
-
+</div>
 `
 
 const fetchJson = async ()=>{
-const response = await fetch("./products.json")
+const response = await fetch("./js/products.json")
 const data = await response.json()
 return data
 }
@@ -61,7 +63,7 @@ fetchJson()
       productWrapper.innerHTML= prodName.map(productComponent).join("")
     
   }
-  selectedProd(test)
+  selectedProd(products)
   })
 
 // productWrapper.innerHTML = 
