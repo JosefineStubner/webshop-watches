@@ -24,9 +24,7 @@
 }
 .productside{
     margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(column,space-around,center);
     border: solid red 1px;
     .productimg{
         width: 13.75rem;
