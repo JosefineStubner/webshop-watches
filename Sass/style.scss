@@ -28,6 +28,7 @@ position: relative;
         inset: 0 0 0 40%;
         transform: translateX(100%);
         z-index: 999;
+        transition: all .3s ease;
         ul{
             height: 50%;
             @include flex(column, space-around, center);
