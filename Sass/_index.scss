@@ -1,6 +1,15 @@
 .header-img{
     background-color:olive;
     height: 500px;
+    width: 100%;
+    .startheading{
+        margin: 0 auto;
+        position: absolute;
+        top:200px;
+        left:40%;
+        border: 1px solid tomato;
+
+    }
 }
 .startmain{
     display: flex;
@@ -11,13 +20,15 @@
     border: 1px solid olive;
     .categorycontainer{
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         border: 1px solid blue;
         width: 80%;
         .category{
-            height: 150px;
-            width: 100px;
+            height: 250px;
+            width: 200px;
             border:1px solid red;
+            margin: 20px;
         }
     }
 }
