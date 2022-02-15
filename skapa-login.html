@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Sass/style.css">
-
   <title>Watches - Webshop</title>
 </head>
 <body>
@@ -20,13 +19,50 @@
         <li><a href="#">kategori 2</a></li>
         <li><a href="#">kategori 3</a></li>
         <li><a href="#">Logga in/profil</a></li>
-    </ul>
-  </nav>
+     </ul>
+    </nav>
   </header>
-  <main></main>
+  <main class="create-login-main">
+    <h2 class="login-header">Skapa Användare</h2>
+
+    <form class="create-login-form" id="createUserForm">
+      <label for="createName" class="create-form-styling">Namn</label>
+      <br>
+      <input type="text" name="create-name" class="create-form-styling" id="createName">
+      <br>
+      <label for="createAdress" class="create-form-styling">Gatuadress</label>
+      <br>
+      <input type="text" name="create-adress" class="create-form-styling" id="createAdress">
+      <br>
+      <label for="createZipcode" class="create-form-styling">Postnummer</label>
+      <br>
+      <input type="number" name="create-zipcode" class="create-form-styling" id="createZipcode">
+      <br>
+      <label for="createCity" class="create-form-styling">Ort</label>
+      <br>
+      <input type="text" name="create-city" class="create-form-styling" id="createCity">
+      <br>
+      <label for="createEmail" class="create-form-styling">E-post</label>
+      <br>
+      <input type="email" name="create-email" class="create-form-styling" id="createEmail">
+      <br>
+      <label for="createPassword" class="create-form-styling">Lösenord</label>
+      <br>
+      <input type="text" name="create-password" class="create-form-styling" id="createPassword">
+      <br>
+      <label for="createPhone" class="create-form-styling">Telefonnummer</label>
+      <br>
+      <input type="number" name="create-phone" class="create-form-styling" id="createPhone">
+      <br>
+      <button class="button create-form-styling" id="createUserBtn">Skapa</button>
+    </form>
+
+  </main>
+
   <footer class="footer">
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam unde dolores expedita sint optio aspernatur maxime ipsa obcaecati consequatur, enim reprehenderit rerum fugit modi maiores aliquid aperiam corporis praesentium </p>
   </footer>
+
   <script src="./main.js"></script>
 </body>
 </html>
