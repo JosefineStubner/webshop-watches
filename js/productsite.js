@@ -21,20 +21,22 @@ const queryString = new URLSearchParams(location.search)
 let qsCategory = queryString.get("category")
 
 let productComponent = (item)=>`
-
-<img class ="productimg" src="${item.image}" alt="" />
+<div class="productCard">
+<div class="productImg">
+<img src="${item.image}" alt="" />
+</div>
 <div class="productinfo">
   <h3 class="productheading" id="productname">${item.name}</h3>
   <p class="producttext" id="productpara">
-  ${item.plats}
+  lorem ipsum dolor amet lorem ipsum dolor amet 
   </p>
   <button class="">Köp</button>
 </div>
-
+</div>
 `
 
 const fetchJson = async ()=>{
-const response = await fetch("./products.json")
+const response = await fetch("./js/products.json")
 const data = await response.json()
 return data
 }
@@ -43,24 +45,25 @@ fetchJson()
     const products = data.products;
     // productWrapper.innerHTML= products.map(productComponent).join("")
     // productWrapper.innerHTML= productComponent(products[0])
+    console.log(products)
 
     console.log(qsCategory);
     
     let prodName = []
-    function selectedProd(test) {
-      test.forEach (prod =>{
-        console.log(prod);
+    function selectedProd(item) {
+      item.forEach (prod =>{
+        console.log(prod.category);
         if(prod.category == qsCategory){
           // const paragraf = document.createElement("p")
           // paragraf.innerText= prod
           prodName.push(prod)
-          console.log(prod)
+          console.log("test")
         }
       })
       productWrapper.innerHTML= prodName.map(productComponent).join("")
     
   }
-  selectedProd(test)
+  selectedProd(products)
   })
 
 // productWrapper.innerHTML = 
