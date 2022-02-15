@@ -1,0 +1,23 @@
+.header-img{
+    background-color:olive;
+    height: 500px;
+}
+.startmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px;
+    border: 1px solid olive;
+    .categorycontainer{
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid blue;
+        width: 80%;
+        .category{
+            height: 150px;
+            width: 100px;
+            border:1px solid red;
+        }
+    }
+}
