@@ -1,7 +1,8 @@
 const productWrapper = document.querySelector(".productside")
+const queryString = new URLSearchParams(location.search)
+const product = queryString.get("category")
 
 let productComponent = (item)=>`
-
 
 <img class ="productimg" src="${item.image}" alt="" />
 <div class="productinfo">
@@ -27,3 +28,4 @@ fetchJson()
 })
 
 // productWrapper.innerHTML = 
+
