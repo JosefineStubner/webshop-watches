@@ -1,3 +1,50 @@
+#shoppingcart-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+#shoppingcart-main .back-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5% 0 0 5%;
+}
+
+#shoppingcart-main .main-wrapper {
+  width: 90%;
+  background: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10%;
+}
+
+#shoppingcart-main .main-wrapper .order-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 5%;
+}
+
 * {
   margin: 0;
   padding: 0;
