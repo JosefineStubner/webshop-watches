@@ -1,35 +1,8 @@
-.backmany{
-    border: 1px solid pink;
-    height: 3.125rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 70%;
-        border: 1px solid black;
-    }
-    li{
-        list-style: none;
-        a{
-            text-decoration: none;
-            color: black;
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-    }
-}
+
 .productside{
-    margin: auto;
-    @include flex(column,space-around,center);
-    border: solid red 1px;
+    margin: 5rem auto;
     .productCard{
-        @include flex(row,center,center);
-        border: 1px solid black;
-        
+        @include flex(column,center,center);        
         margin: 2%;
         transition: all .3s ease;
         &:hover{
@@ -37,8 +10,8 @@
         }
         .productImg{
             @include flex(row,center,center);
-            width: 13rem;
-        height: 5rem;
+            width: 16rem;
+        height: 16rem;
         overflow: hidden;
         padding: 5%;
 
@@ -48,15 +21,13 @@
         
     }
     .productinfo{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: 100px;
-        width: 220px;
+        @include flex(column,space-around,flex-start);
+        width: 16rem;
+        height: 10rem;
         button{
             align-self: flex-end;
             margin: 5% 15% 0 0;
+            width: 120px;
         }
     }
 }
