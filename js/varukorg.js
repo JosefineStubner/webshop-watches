@@ -47,7 +47,7 @@ let NewShoppingCart = [...cartProduct]
 
 }
 
-const deletproduct = shoppingComponent.querySelector(".deleteBtn");
+const deletproduct = document.querySelector(".deleteBtn");
 
 deletproduct[0].addEventListener("click", (e) => {
   NewShoppingCart.splice(index, 1);
