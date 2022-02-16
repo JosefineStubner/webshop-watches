@@ -35,22 +35,26 @@ const localCart = localStorage.getItem("cart")
 if(localCart){
  let cartProduct= JSON.parse(localCart)
 
-let NewShoppingCart = [...cartProduct]
-
-
-
-
+ 
+ 
+ 
+ 
  shoppingWrapper.innerHTML= cartProduct.map(shoppingComponent).join("")
  
-
-
-
+ 
+ 
+ let NewShoppingCart = [...cartProduct]
+ let card = document.querySelector(".card")
+ 
+ const deletproduct = document.querySelectorAll(".deleteBtn");
+ deletproduct.forEach(e=>{
+   e.addEventListener("click", ()=>{
+     NewShoppingCart.splice(e, 1);
+     localStorage.setItem("cart", JSON.stringify(NewShoppingCart));
+     shoppingWrapper.removeChild(card);
+     location.reload()
+    })
+  })
+  
 }
 
-const deletproduct = shoppingComponent.querySelector(".deleteBtn");
-
-deletproduct[0].addEventListener("click", (e) => {
-  NewShoppingCart.splice(index, 1);
-  localStorage.setItem("NewShoppingCart", JSON.stringify(NewShoppingCart));
-  shoppingWrapper.removeChild(card);
-});

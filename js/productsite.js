@@ -17,9 +17,8 @@ let test = [
 ];
 
 const queryString = new URLSearchParams(location.search);
-let qsName = queryString.get("name");
+let qsName = queryString.get("category");
 const productWrapper = document.querySelector(".productside");
-
 let productComponent = (item) => `
 <div class="productCard">
 <div class="productImg">
@@ -46,8 +45,9 @@ fetchJson().then((data) => {
   // productWrapper.innerHTML= productComponent(products[0])
 
   function selectedProd(item) {
+      console.log(item,qsName)
     item.forEach((prod) => {
-      if (prod.name.toLowerCase() == qsName.toLowerCase()) {
+      if (prod.category.toLowerCase() == qsName.toLowerCase()) {
         console.log("hej");
         productWrapper.innerHTML = productComponent(prod);
       }
