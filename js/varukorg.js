@@ -46,3 +46,11 @@ let NewShoppingCart = [...cartProduct]
 
 
 }
+
+const deletproduct = shoppingComponent.querySelector(".deleteBtn");
+
+deletproduct[0].addEventListener("click", (e) => {
+  NewShoppingCart.splice(index, 1);
+  localStorage.setItem("NewShoppingCart", JSON.stringify(NewShoppingCart));
+  shoppingWrapper.removeChild(card);
+});
