@@ -49,62 +49,8 @@
   background: #6d6dfa;
 }
 
-.backmany {
-  border: 1px solid pink;
-  height: 3.125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.backmany ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 70%;
-  border: 1px solid black;
-}
-
-.backmany li {
-  list-style: none;
-}
-
-.backmany li a {
-  text-decoration: none;
-  color: black;
-}
-
-.backmany li a:hover {
-  text-decoration: underline;
-}
-
 .productside {
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: solid red 1px;
+  margin: 5rem auto;
 }
 
 .productside .productCard {
@@ -114,14 +60,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid black;
   margin: 2%;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -146,8 +91,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 13rem;
-  height: 5rem;
+  width: 16rem;
+  height: 16rem;
   overflow: hidden;
   padding: 5%;
 }
@@ -160,24 +105,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 100px;
-  width: 220px;
+  width: 16rem;
+  height: 10rem;
 }
 
 .productside .productCard .productinfo button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 5% 15% 0 0;
+  width: 120px;
 }
 
 .header-img {

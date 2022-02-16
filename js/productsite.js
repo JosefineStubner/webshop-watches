@@ -44,9 +44,6 @@ fetchJson().then((data) => {
   const products = data.products;
   // productWrapper.innerHTML= products.map(productComponent).join("")
   // productWrapper.innerHTML= productComponent(products[0])
-  // console.log(products[0])
-
-  // console.log(qsCategory);
 
   function selectedProd(item) {
     item.forEach((prod) => {
@@ -66,7 +63,7 @@ fetchJson().then((data) => {
           if (dataAttribute == e.id) {
             shoppingCart.push(e);
             localStorage.setItem("cart", JSON.stringify(shoppingCart));
-            //  console.log(shoppingCart)
+             console.log(shoppingCart)
           }
         });
       });
