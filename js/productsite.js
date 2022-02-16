@@ -1,23 +1,4 @@
-let test = [
-  {
-    name: "Emma",
-    plats: "här",
-    category: 1,
-  },
-  {
-    name: "Albin",
-    plats: "Där",
-    category: 2,
-  },
-  {
-    name: "Patrik",
-    plats: "där",
-    category: 3,
-  },
-];
 
-const queryString = new URLSearchParams(location.search);
-let qsName = queryString.get("category");
 const productWrapper = document.querySelector(".productside");
 let productComponent = (item) => `
 <div class="productCard">
@@ -33,27 +14,30 @@ let productComponent = (item) => `
 </div>
 </div>
 `;
-
+//hämtar data från JSON
 const fetchJson = async () => {
   const response = await fetch("./js/products.json");
   const data = await response.json();
   return data;
 };
+//skapar variabel för qs där jag hämtar name.
+const queryString = new URLSearchParams(location.search);
+let qsName = queryString.get("name");
+
+//alla JSON produkter
 fetchJson().then((data) => {
   const products = data.products;
-  // productWrapper.innerHTML= products.map(productComponent).join("")
-  // productWrapper.innerHTML= productComponent(products[0])
 
+  //funktion hämtar variablen products, för varje prod - kolla om name är samma som qsName. Om så skriv ut i productWrapper.
   function selectedProd(item) {
-      console.log(item,qsName)
+    console.log(item, qsName);
     item.forEach((prod) => {
-      if (prod.category.toLowerCase() == qsName.toLowerCase()) {
+      if (prod.name.toLowerCase() == qsName.toLowerCase()) {
         console.log("hej");
         productWrapper.innerHTML = productComponent(prod);
       }
     });
 
-    // productWrapper.innerHTML = prodName.map(productComponent).join("");
     let shoppingCart = [];
     const buyBtn = document.querySelectorAll(".buyBtn");
     buyBtn.forEach((e) => {
@@ -63,7 +47,7 @@ fetchJson().then((data) => {
           if (dataAttribute == e.id) {
             shoppingCart.push(e);
             localStorage.setItem("cart", JSON.stringify(shoppingCart));
-             console.log(shoppingCart)
+            console.log(shoppingCart);
           }
         });
       });
