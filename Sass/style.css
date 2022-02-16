@@ -469,6 +469,12 @@
   padding: 5px;
 }
 
+.login-form .link-button {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
 .footer.login-footer {
   background: olive;
   position: absolute;
