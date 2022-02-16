@@ -5,20 +5,29 @@ const loginPassword = document.querySelector("#loginPassword");
 
 let users = JSON.parse(localStorage.users);
 
-const checkUsers = () => {
-  users.map((user) => {
+const checkUserInfo = () => {
+  users.forEach((user) => {
     if (user.email === loginEmail.value && user.password === loginPassword.value) {
       alert("login successful");
-    } else {
-      alert("login failed.");
-    }
+    } 
+    // else if (user.email !== loginEmail.value && user.password !== loginPassword.value) {
+    //   alert("login failed");
+    // }
+    // else {
+    //   alert("login failed.");
+    // }
+
   })
+
+  loginEmail.value = "";
+  loginPassword.value = "";
+
 }
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   
-  checkUsers();
+  checkUserInfo();
 
 
 })
