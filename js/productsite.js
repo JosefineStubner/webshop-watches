@@ -1,3 +1,4 @@
+
 let test = [
   {
     name:"Emma",
@@ -30,7 +31,7 @@ let productComponent = (item)=>`
   <p class="producttext" id="productpara">
   lorem ipsum dolor amet lorem ipsum dolor amet 
   </p>
-  <button class="">Köp</button>
+  <button class="buyBtn" data-id="${item.id}">Köp</button>
 </div>
 </div>
 `
@@ -61,10 +62,25 @@ fetchJson()
         }
       })
       productWrapper.innerHTML= prodName.map(productComponent).join("")
-    
+      let shoppingCart = []
+      const buyBtn = document.querySelectorAll(".buyBtn")
+      buyBtn.forEach(e=>{
+         e.addEventListener("click", (e)=>{
+             let dataAttribute = e.target.getAttribute("data-id")
+             products.forEach(e=>{
+                 if(dataAttribute == e.id){
+                     shoppingCart.push(e)
+                     localStorage.setItem("cart",JSON.stringify(shoppingCart))
+                     console.log(shoppingCart)
+                    }
+                })
+               
+         })
+      })
   }
   selectedProd(products)
   })
+
 
 // productWrapper.innerHTML = 
 
