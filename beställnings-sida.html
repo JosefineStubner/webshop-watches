@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Sass/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Sass/style.css" />
 
-  <title>Watches - Webshop</title>
-</head>
-<body>
-  <header class="header">
-    <div class="logo"><h2>Logga</h2></div>
-    <div class="hamburger-container">
-      <div class="hamburger-line"></div>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="Produktsida.html?category=Armbandsur">Armbandsur</a></li>
-          <li><a href="Produktsida.html?category=Fickur">Fickur</a></li>
-          <li><a href="Produktsida.html?category=Gökur">Gökur</a></li>
+    <title>Watches - Webshop</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><h2>Logga</h2></div>
+      <div class="hamburger-container">
+        <div class="hamburger-line"></div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="Produktlista.html?category=armbandsur">Armbandsur</a>
+          </li>
+          <li><a href="Produktlista.html?category=Fickur">Fickur</a></li>
+          <li><a href="Produktlista.html?category=Gökur">Gökur</a></li>
           <li><a href="./skapa-login.html">Logga in/profil</a></li>
-    </ul>
-  </nav>
-  </header>
-  <main></main>
-  <footer class="footer">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam unde dolores expedita sint optio aspernatur maxime ipsa obcaecati consequatur, enim reprehenderit rerum fugit modi maiores aliquid aperiam corporis praesentium </p>
-  </footer>
-  <script src="./main.js"></script>
-</body>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="orderSection">
+        <h2>Beställnings-sida</h2>
+        <!-- en div ska skappas för varje vald produkt -->
+        <div class="oneproduct">
+          <img src="" alt="" />
+          <p>Produktbeskrivning - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div> antal, läggtill, tabort</div>
+        </div>
+
+        <p>Totalt</p>
+      </section>
+      <section >
+        <h2>Beställningsformulär</h2>
+        <section class="orderFormular">
+          <div class="wrapper">
+            <label for="createName" class="create-form-styling">Namn</label>
+            <input type="text" name="create-name" class="create-form-styling" id="createName" required>
+            <label for="createAdress" class="create-form-styling">Gatuadress</label>
+            <input type="text" name="create-adress" class="create-form-styling" id="createAdress" required>
+            <label for="createZipcode" class="create-form-styling">Postnummer</label>
+            <input type="number" name="create-zipcode" class="create-form-styling" id="createZipcode" required>
+          </div>
+  
+          <div class="wrapper">
+            <label for="createCity" class="create-form-styling">Ort</label>
+            <input type="text" name="create-city" class="create-form-styling" id="createCity" required>
+            <label for="createEmail" class="create-form-styling">E-post</label>
+            <input type="email" name="create-email" class="create-form-styling" id="createEmail" required>
+            <label for="createPhone" class="create-form-styling">Telefonnummer</label>
+            <input type="number" name="create-phone" class="create-form-styling" id="createPhone">
+          </div>
+        </section>
+        <div class="wrapper">
+        <label for="textbox" class="create-form-styling">Övriga kommentarer</label>
+        <textarea name="textbox" id="" cols="30" rows="10"></textarea>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam
+        unde dolores expedita sint optio aspernatur maxime ipsa obcaecati
+        consequatur, enim reprehenderit rerum fugit modi maiores aliquid aperiam
+        corporis praesentium
+      </p>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/order.js"></script>
+  </body>
 </html>

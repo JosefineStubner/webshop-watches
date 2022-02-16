@@ -1,0 +1,30 @@
+.orderSection{
+    @include flex(column,space-between,center); 
+    height: 400px;
+    .oneproduct{
+        @include flex(row,space-between,space-between); 
+        border: 1px solid saddlebrown;
+        padding: 5px;
+        margin: 10px;
+        img{
+            width: 20%;
+            border: 1px solid black;
+        }
+        p{
+            width: 20%;
+        }
+        div {
+            width: 20%;
+        }
+    }
+}
+.orderFormular{
+    @include flex(row,space-around,flex-start); 
+    margin: 10px;
+    border: 1px solid royalblue;
+    .wrapper{
+        @include flex(column,space-around,center); 
+        border: 1px red solid;
+        height: 200px;
+    }
+}
