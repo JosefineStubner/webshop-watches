@@ -5,17 +5,19 @@ const loginPassword = document.querySelector("#loginPassword");
 
 let users = JSON.parse(localStorage.users);
 
+const loggedInUser = () => {
+  localStorage.setItem("loggedInUser", JSON.stringify({
+    email: loginEmail.value,
+    password: loginPassword.value
+    }))
+}
+
 const checkUserInfo = () => {
   users.forEach((user) => {
     if (user.email === loginEmail.value && user.password === loginPassword.value) {
       alert("login successful");
+      loggedInUser();
     } 
-    // else if (user.email !== loginEmail.value && user.password !== loginPassword.value) {
-    //   alert("login failed");
-    // }
-    // else {
-    //   alert("login failed.");
-    // }
 
   })
 
