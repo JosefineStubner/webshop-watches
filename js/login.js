@@ -18,7 +18,6 @@ const checkUserInfo = () => {
       alert("login successful");
       loggedInUser();
     } 
-
   })
 
   loginEmail.value = "";
