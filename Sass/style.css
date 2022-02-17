@@ -420,12 +420,6 @@
   cursor: default;
 }
 
-.footer.login-footer {
-  background: olive;
-  position: absolute;
-  bottom: 0;
-}
-
 .orderSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,7 +659,6 @@ body {
 
 .footer {
   background: olive;
-  position: relative;
   bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
