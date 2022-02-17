@@ -29,20 +29,9 @@ const userArr = () => {
     localStorage.setItem('users', JSON.stringify(users));
   }
 
-const clearFields = () => {
-  createName.value = ""; 
-  createAdress.value = "";
-  createZipcode.value = "";
-  createCity.value = "";
-  createEmail.value = "";
-  createPassword.value = "";
-  createPhone.value = "";
-};
-
 createUserForm.addEventListener("submit", (e) => {
   e.preventDefault();
   userArr();
-  clearFields();
   window.location.replace("login.html");
   
 })
