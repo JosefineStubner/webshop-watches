@@ -57,6 +57,8 @@ fetchJson().then((data) => {
     });
   }
   selectedProd(products);
+  
+
 });
 
-// productWrapper.innerHTML =
+
