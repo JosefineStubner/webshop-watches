@@ -27,17 +27,6 @@ const loggedInUser = () => {
 
 };
 
-// let userobj = localStorage.getItem('user');
-// if (userobj) {
-//   userobj = JSON.parse(userobj);
-//   nameText.innerText = "Your name: " + userobj.name;
-//   emailText.innerText = "Your email: " + userobj.email;
-//   userForm.classList.add("hidden");
-// } else {
-//   container.classList.add("hidden");
-// }
-
-
 const clearLoginFields = () => {
   loginEmail.value = "";
   loginPassword.value = "";
