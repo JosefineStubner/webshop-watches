@@ -319,6 +319,10 @@
   padding: 5px;
 }
 
+.hidden-login {
+  display: none;
+}
+
 .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
