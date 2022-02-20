@@ -43,6 +43,7 @@ fetchJson().then((data) => {
 
     // //Version som inte skriver över carten.
     //// Hämtar antingen den cart som finns, eller skapar tom array om inga produkter finns ilagda än.
+    ////OBS denna finns i main.js just nu.
     // let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
 
     const buyBtn = document.querySelectorAll(".buyBtn");
