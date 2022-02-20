@@ -32,23 +32,27 @@ fetchJson().then((data) => {
     const productParagraph = document.createElement("p");
     productParagraph.innerText = product.name;
 
-    // const productImgDiv = document.createElement("div");
-    // productImgDiv.classList.add("productImgDiv");
+    //prata med Emma om id vs name
+    const imageWrapper = document.createElement("a") ;
+    imageWrapper.href = `Produktsida.html?name=${product.name}`;
+
 
     const productImage = document.createElement("img");
     productImage.src = product.image;
 
-    //href på image fungerar inte, löser med a-tagg senare.
-    productImage.href = `Produktsida.html?name=${product.name}`;
-
     //köpknapp
     const buyBtn = document.createElement("button");
 
+    // Funktion för att lägga till produkten i varukorgen via köpknappen.
+    buyBtn.addEventListener("click", function () {buyListProduct (product.id)});
+    
+
     buyBtn.innerText = "Köp";
 
-    //Append elements to productCard
+    //Append elements to productCardList
     productCardList.appendChild(productParagraph);
-    productCardList.appendChild(productImage);
+    imageWrapper.appendChild(productImage);
+    productCardList.appendChild(imageWrapper);
     productCardList.appendChild(buyBtn);
 
     //append productCard to section
@@ -56,12 +60,28 @@ fetchJson().then((data) => {
   });
 });
 
-// Funktion för att lägga till produkten i varukorgen
+const buyListProduct = (productId) => {
+  console.log(productId);
+  fetchJson().then((data) => {
 
+    //Hämtar all data från storage, letar upp produkter med samma ID (välj den första/enda med samma ID).
+    const productToBuy = data.products.filter(product => product.id == productId)[0];
+
+    //Bör vara en delad funktion över hela sidan
+    let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    shoppingCart.push(productToBuy);
+
+    localStorage.setItem("cart", JSON.stringify(shoppingCart));
+    console.log(shoppingCart);
+});
+}
+
+//preventdefault?
 
 // Textfält där användaren kan “söka” efter en produkt, alltså ett filter där innehållet i sökfältet skall matchas mot produktens namn och beskrivning (VG)
 
-//Att göra: Måste man ha en div runt bilden för att styla? Hur isf?
-//Köpknapp.
+//Att göra: Måste man ha en div runt bilden för att styla? Hur isf? (OBS ska ändå göra a-tagg, styla den isf?) ((öva på css, glömt allt))
+
 //Filter (input-fält etc)
+
 //Styling D:
