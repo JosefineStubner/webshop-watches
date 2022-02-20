@@ -26,11 +26,14 @@ fetchJson().then((data) => {
 
     // Varje produkt skall ha: Namn / Pris / Bild
     //Skapa html-element.
-    const productCard = document.createElement("div");
-    productCard.classList.add("productCard");
+    const productCardList = document.createElement("div");
+    productCardList.classList.add("productCard");
 
     const productParagraph = document.createElement("p");
     productParagraph.innerText = product.name;
+
+    // const productImgDiv = document.createElement("div");
+    // productImgDiv.classList.add("productImgDiv");
 
     const productImage = document.createElement("img");
     productImage.src = product.image;
@@ -44,12 +47,12 @@ fetchJson().then((data) => {
     buyBtn.innerText = "Köp";
 
     //Append elements to productCard
-    productCard.appendChild(productParagraph);
-    productCard.appendChild(productImage);
-    productCard.appendChild(buyBtn);
+    productCardList.appendChild(productParagraph);
+    productCardList.appendChild(productImage);
+    productCardList.appendChild(buyBtn);
 
     //append productCard to section
-    productList.appendChild(productCard);
+    productList.appendChild(productCardList);
   });
 });
 
@@ -57,3 +60,8 @@ fetchJson().then((data) => {
 
 
 // Textfält där användaren kan “söka” efter en produkt, alltså ett filter där innehållet i sökfältet skall matchas mot produktens namn och beskrivning (VG)
+
+//Att göra: Måste man ha en div runt bilden för att styla? Hur isf?
+//Köpknapp.
+//Filter (input-fält etc)
+//Styling D:
