@@ -1,3 +1,7 @@
+.hidden-login {
+  display: none;
+}
+
 .login-form {
   @include flex(column, flex-start, center);
   height: 450px;

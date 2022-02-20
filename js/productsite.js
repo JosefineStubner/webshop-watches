@@ -37,7 +37,8 @@ fetchJson().then((data) => {
         productWrapper.innerHTML = productComponent(prod);
       }
     });
-
+    let countdisplay = document.querySelector("#quantity")
+    let count = 0
     let shoppingCart = [];
 
     // //Version som inte skriver över carten.
@@ -50,6 +51,8 @@ fetchJson().then((data) => {
         let dataAttribute = e.target.getAttribute("data-id");
         products.forEach((e) => {
           if (dataAttribute == e.id) {
+            count++
+            countdisplay.innerHTML = count;
             shoppingCart.push(e);
             localStorage.setItem("cart", JSON.stringify(shoppingCart));
             console.log(shoppingCart);
@@ -59,6 +62,8 @@ fetchJson().then((data) => {
     });
   }
   selectedProd(products);
+  
+
 });
 
-// productWrapper.innerHTML =
+

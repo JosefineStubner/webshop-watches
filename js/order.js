@@ -10,4 +10,3 @@ let oneOrder = (item) => `
   <div> antal, läggtill, tabort</div>
 `;
 
-let 
