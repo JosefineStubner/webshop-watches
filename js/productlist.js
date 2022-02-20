@@ -60,7 +60,7 @@ fetchProductData().then((data) => {
   });
 });
 
-//Funktion över hela sidan
+//Kan man ha hela nedan som gemensam funktion på hela sidan?
 const addProductToCart = (productId) => {
   console.log(productId);
   fetchProductData().then((data) => {
