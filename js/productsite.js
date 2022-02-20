@@ -39,6 +39,11 @@ fetchJson().then((data) => {
     });
 
     let shoppingCart = [];
+
+    // //Version som inte skriver över carten.
+    //// Hämtar antingen den cart som finns, eller skapar tom array om inga produkter finns ilagda än.
+    // let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+
     const buyBtn = document.querySelectorAll(".buyBtn");
     buyBtn.forEach((e) => {
       e.addEventListener("click", (e) => {

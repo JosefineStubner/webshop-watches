@@ -125,6 +125,20 @@
   width: 120px;
 }
 
+.productlist {
+  border: 2px solid red;
+}
+
+.productlist img {
+  max-width: 50%;
+  max-height: 50%;
+  border: 2px solid green;
+}
+
+.productlist button {
+  display: block;
+}
+
 .header-img {
   background-color: olive;
   height: 500px;
