@@ -1,6 +1,4 @@
-
 const productList = document.querySelector(".productlist")
-
 
 //hämtar data från JSON
 const fetchProductData = async () => {
@@ -18,8 +16,10 @@ console.log(qsCategory);
 //hämta alla json-produkter / filtrera bort produkter utifrån category
 //Början på filter-funktion, inte färdig ännu.
 fetchProductData().then((data) => {
-  const searchText = "3";
-  const products = data.products.filter(product => product.category.toLowerCase() == qsCategory && (product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText)));
+  // const searchText = "3";
+  const products = data.products.filter(product => product.category.toLowerCase() == qsCategory);
+  
+  // && (product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText)));
 
   // för varje produkt skapa ett produktkort
   // .forEach
@@ -36,7 +36,6 @@ fetchProductData().then((data) => {
     //prata med Emma om id vs name
     const imageWrapper = document.createElement("a") ;
     imageWrapper.href = `Produktsida.html?name=${product.name}`;
-
 
     const productImage = document.createElement("img");
     productImage.src = product.image;
@@ -60,27 +59,6 @@ fetchProductData().then((data) => {
     productList.appendChild(productCardList);
   });
 });
-
-//Kan man ha hela nedan som gemensam funktion på hela sidan?
-const addProductToCart = (productId) => {
-  console.log(productId);
-  fetchProductData().then((data) => {
-
-    //Hämtar all data från storage, letar upp produkter med samma ID (välj den första/enda med samma ID).
-    const productToBuy = data.products.filter(product => product.id == productId)[0];
-
-    //Bör vara en delad funktion över hela sidan
-    let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    
-    shoppingCart.push(productToBuy);
-
-    localStorage.setItem("cart", JSON.stringify(shoppingCart));
-    console.log(shoppingCart);
-
-    updateCartCount();
-  });
-// });
-}
 
 //preventdefault?
 
