@@ -1,6 +1,5 @@
 const shoppingWrapper = document.querySelector(".schoppingcart-wrapper");
 let total = document.querySelector(".total");
-
 function clearAllElements(parentElem){
   while(parentElem.firstChild){
       parentElem.removeChild(parentElem.lastChild);
@@ -23,7 +22,9 @@ const shoppingComponent = (event)=> `
           <div class="card-wrapper">
             <h3 class="pruductname">${event.name}</h3>
             <div class="bottom-line-wrapper">
-              <label for="amount">Antal:</label>
+            <button class="decreaseBtn" data-id="${event.id}">-</button>
+            <label for="amount">Antal:</label>
+            <button class="increaseBtn" data-id="${event.id}">+</button>
               <h4>${event.antal}St</h4>
               <button class="deleteBtn button" data-id="${event.id}">Ta bort</button>
               <h4 class="price">${event.price} Sek</h4>
@@ -63,24 +64,61 @@ return returnArray;
  
  shoppingWrapper.innerHTML= uniqueArray.map(shoppingComponent).join("")
  
- 
+
  
 //  let NewShoppingCart = [...cartProduct]
 //deleteknapp
  let card = document.querySelector(".card")
  
  const deletproduct = document.querySelectorAll(".deleteBtn");
- 
- 
- 
- deletproduct.forEach(e=>{
-   e.addEventListener("click", ()=>{
-     uniqueArray.splice(e, 1);
-     localStorage.setItem("cart", JSON.stringify(uniqueArray));
-     shoppingWrapper.removeChild(card);
-     location.reload()
+const increaseBtn = document.querySelectorAll(".increaseBtn")
+increaseBtn.forEach(e=>{
+  e.addEventListener("click", ()=>{
+    let data = e.getAttribute("data-id")
+
+
+    const currentCart = JSON.parse(localStorage.getItem('cart'));
+
+    const newProduct = currentCart.find(prod =>{
+      return prod.id == data
     })
+    currentCart.push(newProduct);
+
+    localStorage.setItem("cart", JSON.stringify(currentCart));
+
+    location.reload()
   })
+}) 
+ 
+const decreaseBtn = document.querySelectorAll(".decreaseBtn")
+
+decreaseBtn.forEach(delBtn=>{
+  delBtn.addEventListener("click", ()=>{
+    let data = delBtn.getAttribute("data-id")  
+    
+    const currentCart = JSON.parse(localStorage.getItem('cart'));
+    
+    const newProduct = currentCart.find(prod =>{
+      return prod.id == data
+    })
+    console.log(newProduct)
+    currentCart.splice(currentCart.indexOf(newProduct), 1);
+    
+    localStorage.setItem("cart", JSON.stringify(currentCart));
+    
+    location.reload()
+  })
+})
+
+//  deletproduct.forEach(e=>{
+//    e.addEventListener("click", ()=>{
+//      console.log('del trigger');
+//      uniqueArray.splice(e, 1);
+//      localStorage.setItem("cart", JSON.stringify(uniqueArray));
+//      shoppingWrapper.removeChild(card);
+//      location.reload()
+//     })
+//   })
 }
 
 
