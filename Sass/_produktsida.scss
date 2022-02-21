@@ -1,34 +1,32 @@
-
-.productside{
-    margin: 5rem auto;
-    .productCard{
-        @include flex(column,center,center);        
-        margin: 2%;
-        transition: all .3s ease;
-        &:hover{
-            transform: scale(103%)
-        }
-        .productImg{
-            @include flex(row,center,center);
-            width: 16rem;
-        height: 16rem;
-        overflow: hidden;
-        padding: 5%;
-
-        img{
-            width: 100%;
-        }
-        
+.productside {
+  margin: 5rem auto;
+  .productCard {
+    @include flex(column, center, center);
+    margin: 2%;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(103%);
     }
-    .productinfo{
-        @include flex(column,space-around,flex-start);
-        width: 16rem;
-        height: 10rem;
-        button{
-            align-self: flex-end;
-            margin: 5% 15% 0 0;
-            width: 120px;
-        }
+    .productImg {
+      @include flex(row, center, center);
+      width: 16rem;
+      height: 16rem;
+      overflow: hidden;
+      padding: 5%;
+
+      img {
+        width: 100%;
+      }
     }
-}
+    .productinfo {
+      @include flex(column, space-around, flex-start);
+      width: 16rem;
+      height: 10rem;
+      button {
+        align-self: flex-end;
+        margin: 5% 15% 0 0;
+        width: 120px;
+      }
+    }
+  }
 }
