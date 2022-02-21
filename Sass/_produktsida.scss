@@ -1,6 +1,6 @@
 
 .productside {
-  margin: 5rem auto;
+  margin:0 auto 20rem;
   .productCard {
     @include flex(column, center, center);
     margin: 2%;
@@ -12,9 +12,7 @@
       @include flex(row, center, center);
       width: 16rem;
       height: 16rem;
-      overflow: hidden;
-      padding: 5%;
-
+      border: 1 solid green;
       img {
         width: 100%;
       }
@@ -23,6 +21,10 @@
       @include flex(column, space-around, flex-start);
       width: 16rem;
       height: 10rem;
+      .productheading{
+        margin: 20px 0;
+        border: 1px solid pink;
+      }
       button {
         align-self: flex-end;
         margin: 5% 15% 0 0;

@@ -8,6 +8,7 @@ let productComponent = (item) => `
   <h3 class="productheading" id="productname">${item.name}</h3>
   <p class="producttext" id="productpara">${item.description}
   </p>
+  <p> ${item.price} kr </p>
   <button class="buyBtn" data-id="${item.id}">Köp</button>
 </div>
 </div>

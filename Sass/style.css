@@ -50,7 +50,7 @@
 }
 
 .productside {
-  margin: 5rem auto;
+  margin: 0 auto 20rem;
 }
 
 .productside .productCard {
@@ -93,8 +93,7 @@
           align-items: center;
   width: 16rem;
   height: 16rem;
-  overflow: hidden;
-  padding: 5%;
+  border: 1 solid green;
 }
 
 .productside .productCard .productImg img {
@@ -116,6 +115,11 @@
           align-items: flex-start;
   width: 16rem;
   height: 10rem;
+}
+
+.productside .productCard .productinfo .productheading {
+  margin: 20px 0;
+  border: 1px solid pink;
 }
 
 .productside .productCard .productinfo button {
@@ -689,6 +693,21 @@ body {
 
 .footer {
   background-color: #8f8ff0;
-  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer p {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -116,5 +116,9 @@ body{
 .footer{
     background-color: rgb(143, 143, 240);
     // position: relative;
-    bottom: 0;
+    // bottom: 0;
+    @include flex(row, space-around, center);
+    p{
+        width: 30%;
+    }
 }
