@@ -44,7 +44,7 @@ if(loggedInUserObj) {
   loggedInUserObj = JSON.parse(loggedInUserObj);
   loginMenuLink.classList.add("hidden-login");
   let li = document.createElement("li");
-  li.innerText = loggedInUserObj.email;
+  li.innerText = "Inloggad som: " + loggedInUserObj.email;
   loginMenuList.appendChild(li);
 }
 

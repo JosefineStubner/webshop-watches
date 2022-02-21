@@ -14,7 +14,7 @@ let productComponent = (item) => `
 </div>
 `;
 //hämtar data från JSON
-const fetchJson = async () => {
+const fetchProductData = async () => {
   const response = await fetch("./js/products.json");
   const data = await response.json();
   return data;
@@ -23,7 +23,7 @@ const fetchJson = async () => {
 const queryString = new URLSearchParams(location.search);
 let qsName = queryString.get("name");
 //alla JSON produkter
-fetchJson().then((data) => {
+fetchProductData().then((data) => {
   const products = data.products;
 
   //funktion hämtar variablen products, för varje prod - kolla om name är samma som qsName. Om så skriv ut i productWrapper.
@@ -33,35 +33,14 @@ fetchJson().then((data) => {
       if (prod.name.toLowerCase() == qsName.toLowerCase()) {
         console.log("hej");
         productWrapper.innerHTML = productComponent(prod);
+        const buyBtn = document.querySelector(".buyBtn");
+        console.log(buyBtn);
+        buyBtn.addEventListener("click", function () {addProductToCart (prod.id)});
       }
     });
-    let countdisplay = document.querySelector("#quantity")
-    let count = 0
-    let shoppingCart = [];
-
-    // //Version som inte skriver över carten.
-    //// Hämtar antingen den cart som finns, eller skapar tom array om inga produkter finns ilagda än.
-    ////OBS denna finns i main.js just nu.
-    // let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-
-    const buyBtn = document.querySelectorAll(".buyBtn");
-    buyBtn.forEach((e) => {
-      e.addEventListener("click", (e) => {
-        let dataAttribute = e.target.getAttribute("data-id");
-        products.forEach((e) => {
-          if (dataAttribute == e.id) {
-            count++
-            countdisplay.innerHTML = count;
-            shoppingCart.push(e);
-            localStorage.setItem("cart", JSON.stringify(shoppingCart));
-            console.log(shoppingCart);
-          }
-        });
-      });
-    });
+  
   }
   selectedProd(products);
-  
 
 });
 
