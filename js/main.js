@@ -56,12 +56,9 @@ if(loggedInUserObj) {
   loginMenuLink.classList.add("hidden-login");
 
   let li = document.createElement("li");
-  li.innerText = "Inloggad som:"
-  let liUser = document.createElement("li");
-  liUser.innerText = loggedInUserObj.email;
-  loginMenuList.append(li, liUser);
-
+  li.innerText = "Inloggad som: " + loggedInUserObj.email;
+  loginMenuList.appendChild(li);
+  
   li.style.color = "#ECF2F3";
-  liUser.style.color = "#ECF2F3";
-
+  li.style.textAlign = "center";
 }
