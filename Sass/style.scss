@@ -26,7 +26,7 @@ body{
     width: 100vw;
     height: 10vh;
     background: rgba(245, 243, 243, 0.712);
-    position: fixed;
+    border: 1px red solid;
     .logo{
         margin-left: 5%
     }
@@ -41,11 +41,9 @@ body{
         transform: translateX(100%);
         z-index: 999;
         transition: all .3s ease;
-        border: solid 1px blue;
         ul{
             height: 80%;
             width: 50%;
-            border: 1px solid red;
             @include flex(column, space-around, center);
             li{
                 list-style: none;
@@ -116,7 +114,7 @@ body{
     
 }
 .footer{
-    background: olive;
+    background-color: rgb(143, 143, 240);
     // position: relative;
     bottom: 0;
 }
