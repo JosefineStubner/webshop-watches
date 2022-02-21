@@ -16,8 +16,10 @@ console.log(qsCategory);
 //hämta alla json-produkter / filtrera bort produkter utifrån category
 //Början på filter-funktion, inte färdig ännu.
 fetchProductData().then((data) => {
-  const searchText = "3";
-  const products = data.products.filter(product => product.category.toLowerCase() == qsCategory && (product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText)));
+  // const searchText = "3";
+  const products = data.products.filter(product => product.category.toLowerCase() == qsCategory);
+  
+  // && (product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText)));
 
   // för varje produkt skapa ett produktkort
   // .forEach
