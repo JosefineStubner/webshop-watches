@@ -545,7 +545,7 @@ body {
 .header {
   width: 100vw;
   height: 10vh;
-  background: rgba(245, 243, 243, 0.712);
+  background: #ECF2F3;
   border: 1px red solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,7 +581,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  background-color: rgba(169, 169, 252, 0.747);
+  background-color: rgba(185, 143, 52, 0.747);
   height: 100vh;
   inset: 0 0 0 40%;
   -webkit-transform: translateX(100%);
@@ -614,7 +614,7 @@ body {
 }
 
 .header .nav ul li a {
-  color: black;
+  color: #ECF2F3;
   text-decoration: none;
 }
 
@@ -699,7 +699,7 @@ body {
 }
 
 .footer {
-  background-color: #8f8ff0;
+  background-color: #004040;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,5 +716,6 @@ body {
 
 .footer p {
   width: 30%;
+  color: #ECF2F3;
 }
 /*# sourceMappingURL=style.css.map */
