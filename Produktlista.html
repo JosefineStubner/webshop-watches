@@ -4,50 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link rel="stylesheet" href="./Sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Sass/style.css" />
 
     <title>Watches - Webshop</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo"><h2>Logga</h2></div>
-      <div class="cart">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <span id="quantity">0</span>st
-    </div>
-      <div class="hamburger-container">
-        <div class="hamburger-line"></div>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="Produktlista.html?category=armbandsur">Armbandsur</a></li>
-          <li><a href="Produktlista.html?category=Fickur">Fickur</a></li>
-          <li><a href="Produktlista.html?category=Gökur">Gökur</a></li>
-          <li><a href="./skapa-login.html">Logga in/profil</a></li>
-        </ul>
-      </nav>
+    <header class="header-img">
+      <section class="header">
+        <div class="logo"><h2>Logga</h2></div>
+        <div class="cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span id="quantity">0</span>st
+        </div>
+        <div class="hamburger-container">
+          <div class="hamburger-line"></div>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="Produktlista.html?category=armbandsur">Armbandsur</a></li>
+            <li><a href="Produktlista.html?category=Fickur">Fickur</a></li>
+            <li><a href="Produktlista.html?category=Gökur">Gökur</a></li>
+            <li><a href="./skapa-login.html">Logga in/profil</a></li>
+          </ul>
+        </nav>
+      </section>
+      <h1 class="startheading">Rubrik</h1>
     </header>
-  <main>
-    <button id="backBtn" class="button back-btn" onclick="history.go(-1)">Tillbaka</button>
+    <main>
+      <button id="backBtn" class="button back-btn" onclick="history.go(-1)">
+        Tillbaka
+      </button>
 
-    <section class="productlist">
-     
-    </section>
-    
-  </main>
-  <footer class="footer">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam
-      unde dolores expedita sint optio aspernatur maxime ipsa obcaecati
-      consequatur, </p>
-      <p> enim reprehenderit rerum fugit modi maiores aliquid aperiam
-      corporis praesentium
-    </p>
-  </footer>
-  <script src="./js/main.js"></script>
-  <script src="./js/productlist.js"></script>
-  <script src="./js/productsite.js"></script>
-  <script src="./js/varukorg.js"></script>
-</body>
+      <section class="filter-products">
+        <label for="filter-field">Sök produkter:</label>
+        <input type="text" class="filter-field">
+        <button id="searchBtn" class="search-btn">Sök</button>
+      </section>
+      <section class="productlist"></section>
+    </main>
+    <footer class="footer">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum veniam
+        unde dolores expedita sint optio aspernatur maxime ipsa obcaecati
+        consequatur,
+      </p>
+      <p>
+        enim reprehenderit rerum fugit modi maiores aliquid aperiam corporis
+        praesentium
+      </p>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/productlist.js"></script>
+    <script src="./js/productsite.js"></script>
+    <script src="./js/varukorg.js"></script>
+  </body>
 </html>

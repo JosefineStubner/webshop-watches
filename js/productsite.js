@@ -38,6 +38,12 @@ fetchJson().then((data) => {
     let countdisplay = document.querySelector("#quantity")
     let count = 0
     let shoppingCart = [];
+
+    // //Version som inte skriver över carten.
+    //// Hämtar antingen den cart som finns, eller skapar tom array om inga produkter finns ilagda än.
+    ////OBS denna finns i main.js just nu.
+    // let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+
     const buyBtn = document.querySelectorAll(".buyBtn");
     buyBtn.forEach((e) => {
       e.addEventListener("click", (e) => {
