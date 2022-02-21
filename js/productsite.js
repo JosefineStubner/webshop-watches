@@ -7,8 +7,7 @@ let productComponent = (item) => `
 </div>
 <div class="productinfo">
   <h3 class="productheading" id="productname">${item.name}</h3>
-  <p class="producttext" id="productpara">
-  lorem ipsum dolor amet lorem ipsum dolor amet 
+  <p class="producttext" id="productpara">${item.description}
   </p>
   <button class="buyBtn" data-id="${item.id}">Köp</button>
 </div>
