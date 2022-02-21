@@ -37,18 +37,6 @@ const checkUserInfo = () => {
   });
 };
 
-let loggedInUserObj = localStorage.getItem("loggedInUser");
-
-// Fungerande funktion men endast för login email och inte user namn etc
-if(loggedInUserObj) {
-  loggedInUserObj = JSON.parse(loggedInUserObj);
-  loginMenuLink.classList.add("hidden-login");
-  let li = document.createElement("li");
-  li.innerText = "Inloggad som: " + loggedInUserObj.email;
-  loginMenuList.appendChild(li);
-}
-
-
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   checkUserInfo();
