@@ -35,6 +35,7 @@ fetchJson().then((data) => {
       if (prod.name.toLowerCase() == qsName.toLowerCase()) {
         console.log("hej");
         productWrapper.innerHTML = productComponent(prod);
+        
       }
     });
     let countdisplay = document.querySelector("#quantity")
