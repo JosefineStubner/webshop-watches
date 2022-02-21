@@ -1,5 +1,5 @@
 const shoppingWrapper = document.querySelector(".schoppingcart-wrapper");
-let totalPrice = document.querySelector(".total");
+let total = document.querySelector(".total");
 
 function clearAllElements(parentElem){
   while(parentElem.firstChild){
@@ -39,6 +39,7 @@ if(localCart){
  
  function getUniqueProds(prodList){
 const returnArray = []
+let totalPrice = 0
 prodList.forEach(product =>{
   const alreadyExists = returnArray.find(retProd =>{
     return retProd.id === product.id;
@@ -51,12 +52,11 @@ prodList.forEach(product =>{
   }else{
     alreadyExists.antal += 1;
     alreadyExists.price = parseInt(product.price) * alreadyExists.antal;
-    totalPriceProd = parseInt(product.price) * alreadyExists.antal;
-    console.log(totalPrice)
-    totalPrice.innerHTML=totalPriceProd 
   }
+  totalPrice = totalPrice + product.price
+ 
 });
-
+total.innerHTML= totalPrice
 return returnArray;
  };
  const uniqueArray = getUniqueProds(cartProduct)
