@@ -6,6 +6,20 @@ function clearAllElements(parentElem){
   }
 };
 
+function sort(event){
+  event.sort((a,b)=>{
+    const nameA = a.name
+    const nameB = b.name
+    if(nameA>nameB){
+      return 1
+    }else if(nameA<nameB){
+      return -1
+    }else {
+      return 0
+    }
+  })
+}
+
 function renderCards(list){
   list.forEach((card, i) => {
       // console.log(card);
@@ -26,7 +40,6 @@ const shoppingComponent = (event)=> `
             <label for="amount">Antal:</label>
             <button class="increaseBtn" data-id="${event.id}">+</button>
               <h4>${event.antal}St</h4>
-              <button class="deleteBtn button" data-id="${event.id}">Ta bort</button>
               <h4 class="price">${event.price} Sek</h4>
             </div>
           </div>
@@ -36,7 +49,8 @@ const shoppingComponent = (event)=> `
 const localCart = localStorage.getItem("cart")
 if(localCart){
  let cartProduct= JSON.parse(localCart)
-
+ 
+  
  
  function getUniqueProds(prodList){
 const returnArray = []
@@ -61,7 +75,7 @@ total.innerHTML= totalPrice
 return returnArray;
  };
  const uniqueArray = getUniqueProds(cartProduct)
- 
+ sort(uniqueArray)
  shoppingWrapper.innerHTML= uniqueArray.map(shoppingComponent).join("")
  
 
@@ -83,9 +97,9 @@ increaseBtn.forEach(e=>{
       return prod.id == data
     })
     currentCart.push(newProduct);
-
+    sort(currentCart)
     localStorage.setItem("cart", JSON.stringify(currentCart));
-
+    
     location.reload()
   })
 }) 
@@ -101,9 +115,9 @@ decreaseBtn.forEach(delBtn=>{
     const newProduct = currentCart.find(prod =>{
       return prod.id == data
     })
-    console.log(newProduct)
+    console.log(currentCart.indexOf(newProduct))
     currentCart.splice(currentCart.indexOf(newProduct), 1);
-    
+    sort(currentCart)
     localStorage.setItem("cart", JSON.stringify(currentCart));
     
     location.reload()
