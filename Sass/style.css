@@ -581,7 +581,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  background-color: rgba(207, 173, 104, 0.747);
+  background-color: rgba(185, 143, 52, 0.747);
   height: 100vh;
   inset: 0 0 0 40%;
   -webkit-transform: translateX(100%);
