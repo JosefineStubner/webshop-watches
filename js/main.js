@@ -28,3 +28,23 @@ const updateCartCount = () => {
   };
   
 updateCartCount();
+
+//Gemensam funktion på hela sidan.
+const addProductToCart = (productId) => {
+  console.log(productId);
+  fetchProductData().then((data) => {
+
+    //Hämtar all data från storage, letar upp produkter med samma ID (välj den första/enda med samma ID).
+    const productToBuy = data.products.filter(product => product.id == productId)[0];
+
+    //Delad funktion över hela sidan
+    let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    
+    shoppingCart.push(productToBuy);
+
+    localStorage.setItem("cart", JSON.stringify(shoppingCart));
+    console.log(shoppingCart);
+
+    updateCartCount();
+  });
+}
