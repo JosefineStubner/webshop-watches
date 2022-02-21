@@ -219,7 +219,7 @@
           align-items: center;
 }
 
-.create-login-main .login-header {
+.create-login-main .login-heading {
   margin: 20px 0 20px 0;
 }
 
@@ -342,6 +342,11 @@
 
 .hidden-login {
   display: none;
+}
+
+.hourglass-logo {
+  height: 55px;
+  width: 180px;
 }
 
 .login-form {
