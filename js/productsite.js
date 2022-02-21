@@ -1,4 +1,3 @@
-
 const productWrapper = document.querySelector(".productside");
 let productComponent = (item) => `
 <div class="productCard">
@@ -22,7 +21,6 @@ const fetchProductData = async () => {
 //skapar variabel för qs där jag hämtar name.
 const queryString = new URLSearchParams(location.search);
 let qsName = queryString.get("name");
-
 //alla JSON produkter
 fetchProductData().then((data) => {
   const products = data.products;
