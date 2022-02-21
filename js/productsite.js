@@ -1,16 +1,13 @@
 const productWrapper = document.querySelector(".productside");
 let productComponent = (item) => `
 <div class="productCard">
-<div class="productImg">
-<img src="${item.image}" alt="" />
-</div>
-<div class="productinfo">
   <h3 class="productheading" id="productname">${item.name}</h3>
-  <p class="producttext" id="productpara">${item.description}
-  </p>
+  <div class="productImg"><img src="${item.image}" alt="" /></div>
+  <p class="producttext" id="productpara">${item.description}</p>
+  <div class="productinfo">
   <p> ${item.price} kr </p>
   <button class="buyBtn" data-id="${item.id}">Köp</button>
-</div>
+  </div>
 </div>
 `;
 //hämtar data från JSON
