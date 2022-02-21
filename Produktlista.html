@@ -33,14 +33,14 @@
           </ul>
         </nav>
     </header>
-    <main id="shoppingcart-main">
+    <main>
       <button id="backBtn" class="button back-btn" onclick="history.go(-1)">
         Tillbaka
       </button>
 
       <section class="filter-products">
         <label for="filter-field">Sök produkter:</label>
-        <input type="text" class="filter-field">
+        <input type="text" id="search-text" class="filter-field">
         <button id="searchBtn" class="search-btn">Sök</button>
       </section>
       <section class="productlist"></section>

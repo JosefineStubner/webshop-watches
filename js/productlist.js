@@ -1,4 +1,5 @@
-const productList = document.querySelector(".productlist")
+const productList = document.querySelector(".productlist");
+const searchBtn = document.querySelector("#searchBtn");
 
 //hämtar data från JSON
 const fetchProductData = async () => {
@@ -13,52 +14,66 @@ const queryStringCategory = new URLSearchParams(location.search);
 let qsCategory = queryStringCategory.get("category").toLowerCase();
 console.log(qsCategory);
 
-//hämta alla json-produkter / filtrera bort produkter utifrån category
-//Början på filter-funktion, inte färdig ännu.
-fetchProductData().then((data) => {
-  // const searchText = "3";
-  const products = data.products.filter(product => product.category.toLowerCase() == qsCategory);
-  
-  // && (product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText)));
-
-  // för varje produkt skapa ett produktkort
-  // .forEach
-  products.forEach(function (product) {
-
-    // Varje produkt skall ha: Namn / Pris / Bild
-    //Skapa html-element.
-    const productCardList = document.createElement("div");
-    productCardList.classList.add("productCard");
-
-    const productParagraph = document.createElement("p");
-    productParagraph.innerText = product.name;
-
-    //prata med Emma om id vs name
-    const imageWrapper = document.createElement("a") ;
-    imageWrapper.href = `Produktsida.html?name=${product.name}`;
-
-    const productImage = document.createElement("img");
-    productImage.src = product.image;
-
-    //köpknapp
-    const buyBtn = document.createElement("button");
-
-    // Funktion för att lägga till produkten i varukorgen via köpknappen.
-    buyBtn.addEventListener("click", function () {addProductToCart (product.id)});
-    
-
-    buyBtn.innerText = "Köp";
-
-    //Append elements to productCardList
-    productCardList.appendChild(productParagraph);
-    imageWrapper.appendChild(productImage);
-    productCardList.appendChild(imageWrapper);
-    productCardList.appendChild(buyBtn);
-
-    //append productCard to section
-    productList.appendChild(productCardList);
-  });
+searchBtn.addEventListener("click", function () {
+  renderedFilteredProducts();
 });
+
+const renderedFilteredProducts = () => {
+  fetchProductData().then((data) => {
+    const searchText = document.querySelector("#search-text").value;
+
+    //hämta alla json-produkter / filtrera bort produkter utifrån category
+    const products = data.products.filter(
+      (product) =>
+        product.category.toLowerCase() == qsCategory &&
+        (product.name.toLowerCase().includes(searchText) ||
+          product.description.toLowerCase().includes(searchText))
+    );
+
+    //Ta bort alla tidigare renderade produkter.
+    productList.innerHTML = "";
+
+    // för varje produkt skapa ett produktkort
+    // .forEach
+    products.forEach(function (product) {
+      // Varje produkt skall ha: Namn / Pris / Bild
+      //Skapa html-element.
+      const productCardList = document.createElement("div");
+      productCardList.classList.add("productCard");
+
+      const productParagraph = document.createElement("p");
+      productParagraph.innerText = product.name;
+
+      //prata med Emma om id vs name
+      const imageWrapper = document.createElement("a");
+      imageWrapper.href = `Produktsida.html?name=${product.name}`;
+
+      const productImage = document.createElement("img");
+      productImage.src = product.image;
+
+      //köpknapp
+      const buyBtn = document.createElement("button");
+
+      // Funktion för att lägga till produkten i varukorgen via köpknappen.
+      buyBtn.addEventListener("click", function () {
+        addProductToCart(product.id);
+      });
+
+      buyBtn.innerText = "Köp";
+
+      //Append elements to productCardList
+      productCardList.appendChild(productParagraph);
+      imageWrapper.appendChild(productImage);
+      productCardList.appendChild(imageWrapper);
+      productCardList.appendChild(buyBtn);
+
+      //append productCard to section
+      productList.appendChild(productCardList);
+    });
+  });
+};
+
+renderedFilteredProducts();
 
 //preventdefault?
 
@@ -68,10 +83,9 @@ fetchProductData().then((data) => {
 //2. Skapa knapp för att söka.
 //3. Skapa eventlistener för när man trcker på sök-knappen.
 //4. hämta texten från sökfältet. (searchText)
-//5. 
+//5.
 
 // const filteredProducts = data.products.filter(product => product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText));
-
 
 //Att göra: Måste man ha en div runt bilden för att styla? Hur isf? (OBS ska ändå göra a-tagg, styla den isf?) ((öva på css, glömt allt))
 
