@@ -9,8 +9,8 @@
   <title>Watches - Webshop</title>
 </head>
 <body>
-  <header class="header">
-    <div class="logo"><h2>Logga</h2></div>
+  <header class="header login-header">
+    <div class="logo"><a href="index.html"> <img src="./logo/hourglass-logo-1.png" alt="Hourglass logo" class="hourglass-logo"> </a></div>
     <div class="cart">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       <span id="quantity">0</span>st
@@ -27,7 +27,8 @@
      </ul>
     </nav>
   </header>
-  <main class="create-login-main">
+  <main class="create-login-main" id="shoppingcart-main">
+      <button id="backBtn" class="button back-btn" onclick="history.go(-1)">Tillbaka</button>
     <h2 class="login-header">Logga in</h2>
 
     <form class="login-form" id="loginForm">

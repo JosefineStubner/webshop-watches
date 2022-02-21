@@ -1,5 +1,6 @@
+
 .productside {
-  margin: 5rem auto;
+  margin:0 auto 15rem;
   .productCard {
     @include flex(column, center, center);
     margin: 2%;
@@ -7,26 +8,29 @@
     &:hover {
       transform: scale(103%);
     }
+    .productheading{
+      align-self: flex-start;
+    }
     .productImg {
       @include flex(row, center, center);
       width: 16rem;
       height: 16rem;
-      overflow: hidden;
-      padding: 5%;
-
       img {
         width: 100%;
       }
     }
-    .productinfo {
-      @include flex(column, space-around, flex-start);
-      width: 16rem;
+    .producttext{
+      margin: 5px;
+      width: 18rem;
       height: 10rem;
-      button {
-        align-self: flex-end;
-        margin: 5% 15% 0 0;
-        width: 120px;
-      }
+    }
+    .productinfo {
+      @include flex(row, space-around, flex-start);
+      width: 16rem;
+      margin-top: 20px;
+    } 
+    button {
+      width: 120px;
     }
   }
 }

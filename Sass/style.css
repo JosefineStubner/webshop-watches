@@ -50,7 +50,7 @@
 }
 
 .productside {
-  margin: 5rem auto;
+  margin: 0 auto 15rem;
 }
 
 .productside .productCard {
@@ -68,13 +68,18 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 2%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .productside .productCard:hover {
   -webkit-transform: scale(103%);
           transform: scale(103%);
+}
+
+.productside .productCard .productheading {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .productside .productCard .productImg {
@@ -93,12 +98,16 @@
           align-items: center;
   width: 16rem;
   height: 16rem;
-  overflow: hidden;
-  padding: 5%;
 }
 
 .productside .productCard .productImg img {
   width: 100%;
+}
+
+.productside .productCard .producttext {
+  margin: 5px;
+  width: 18rem;
+  height: 10rem;
 }
 
 .productside .productCard .productinfo {
@@ -107,21 +116,18 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   width: 16rem;
-  height: 10rem;
+  margin-top: 20px;
 }
 
-.productside .productCard .productinfo button {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin: 5% 15% 0 0;
+.productside .productCard button {
   width: 120px;
 }
 
@@ -183,15 +189,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid blue;
   width: 80%;
 }
 
 .startmain .categorycontainer .category {
-  height: 250px;
-  width: 200px;
-  border: 1px solid red;
   margin: 20px;
+}
+
+.startmain .categorycontainer .category a img {
+  height: 250px;
 }
 
 * {
@@ -213,7 +219,7 @@
           align-items: center;
 }
 
-.create-login-main .login-header {
+.create-login-main .login-heading {
   margin: 20px 0 20px 0;
 }
 
@@ -336,6 +342,11 @@
 
 .hidden-login {
   display: none;
+}
+
+.hourglass-logo {
+  height: 55px;
+  width: 180px;
 }
 
 .login-form {
@@ -535,7 +546,7 @@ body {
   width: 100vw;
   height: 10vh;
   background: rgba(245, 243, 243, 0.712);
-  position: fixed;
+  border: 1px red solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,7 +581,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  background-color: #a9a9fc;
+  background-color: rgba(169, 169, 252, 0.747);
   height: 100vh;
   inset: 0 0 0 40%;
   -webkit-transform: translateX(100%);
@@ -581,7 +592,8 @@ body {
 }
 
 .header .nav ul {
-  height: 50%;
+  height: 80%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,6 +610,16 @@ body {
 
 .header .nav ul li {
   list-style: none;
+  font-size: 2.5rem;
+}
+
+.header .nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.header .nav ul li a:hover {
+  text-decoration: underline;
 }
 
 .header .nav.active {
@@ -677,7 +699,22 @@ body {
 }
 
 .footer {
-  background: olive;
-  bottom: 0;
+  background-color: #8f8ff0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer p {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */

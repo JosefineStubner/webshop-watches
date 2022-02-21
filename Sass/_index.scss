@@ -23,13 +23,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px solid blue;
         width: 80%;
         .category{
-            height: 250px;
-            width: 200px;
-            border:1px solid red;
             margin: 20px;
+            a{
+                img{
+                    height: 250px;
+
+                }
+            }
         }
     }
 }

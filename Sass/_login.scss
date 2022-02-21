@@ -2,6 +2,11 @@
   display: none;
 }
 
+.hourglass-logo {
+  height: 55px;
+  width: 180px;
+}
+
 .login-form {
   @include flex(column, flex-start, center);
   height: 450px;

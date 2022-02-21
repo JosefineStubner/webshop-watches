@@ -26,7 +26,7 @@ body{
     width: 100vw;
     height: 10vh;
     background: rgba(245, 243, 243, 0.712);
-    position: fixed;
+    border: 1px red solid;
     .logo{
         margin-left: 5%
     }
@@ -35,17 +35,26 @@ body{
     .nav{
         @include flex(column, center, center);
         position: absolute;
-        background-color: rgb(169, 169, 252);
+        background-color: rgba(169, 169, 252, 0.747);
         height: 100vh;
         inset: 0 0 0 40%;
         transform: translateX(100%);
         z-index: 999;
         transition: all .3s ease;
         ul{
-            height: 50%;
+            height: 80%;
+            width: 50%;
             @include flex(column, space-around, center);
             li{
                 list-style: none;
+                font-size: 2.5rem;
+                a{
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                }
             }
         }
         &.active{
@@ -105,7 +114,11 @@ body{
     
 }
 .footer{
-    background: olive;
+    background-color: rgb(143, 143, 240);
     // position: relative;
-    bottom: 0;
+    // bottom: 0;
+    @include flex(row, space-around, center);
+    p{
+        width: 30%;
+    }
 }
