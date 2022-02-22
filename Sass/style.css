@@ -130,9 +130,9 @@
 .header-img .startheading {
   margin: 0 auto;
   position: absolute;
-  color: aliceblue;
-  top: 200px;
-  left: 40%;
+  color: #ECF2F3;
+  top: 190px;
+  left: 30%;
 }
 
 .startmain {
@@ -168,6 +168,17 @@
 
 .startmain .categorycontainer .category {
   margin: 20px;
+}
+
+.startmain .categorycontainer .category a {
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  margin: 10px 0px 0px;
+  font-weight: 700;
+  font-size: calc(0.6875rem + 0.3125 * ((100vw - 20rem) / 100));
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .startmain .categorycontainer .category a img {
@@ -435,10 +446,13 @@ main {
           align-items: center;
 }
 
+main .orderTitle {
+  margin-top: 5%;
+}
+
 main .orderSection {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  border: 1px solid black;
   margin: 5%;
 }
 
@@ -461,8 +475,9 @@ main .orderSection .orderContainer .oneproduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -470,10 +485,30 @@ main .orderSection .orderContainer .oneproduct {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 4% 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 50vw;
 }
 
 main .orderSection .orderContainer .oneproduct img {
-  width: 50px;
+  width: 5rem;
+  margin-right: 5%;
+}
+
+main .orderSection .orderContainer .oneproduct h2 {
+  margin-bottom: 5%;
+}
+
+main .orderSection .line {
+  width: 80vw;
+  height: .5px;
+  background: gray;
+}
+
+main .totalPrice {
+  margin-top: 5%;
+  float: right;
 }
 
 .order-form {
@@ -553,7 +588,6 @@ body {
   width: 100vw;
   height: 10vh;
   background: #ECF2F3;
-  border: 1px red solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -755,12 +789,12 @@ body {
   border: 1px solid;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  color: #12784a;
+  color: #004040;
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: 1.875rem;
-  border-color: #12784a;
+  border-color: #004040;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-width: 1px;
@@ -776,6 +810,7 @@ body {
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #b98f34;
-  border-radius: 1.5rem;
+  border-radius: 1.875rem;
+  min-width: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

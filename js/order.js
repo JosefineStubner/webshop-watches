@@ -11,9 +11,11 @@ let oneOrder = (item) => `
   <img src="${item.image}" alt="" />
   <div class="orderCardContainer">
   <h2>${item.name}</h2>
-  <p>${item.antal}St</p>
-  <h3>${item.price}Kr</h3>
+  <p> Antal ${item.antal} st</p>
+  <p>${item.price} kr</p>
   </div>
+  </div>
+  <div class="line"></div>
 `;
 
 
@@ -48,7 +50,7 @@ console.log(cartProduct)
    const uniqueArray = getUniqueProds(cartProduct)
    sort(uniqueArray)
    orderContainer.innerHTML= uniqueArray.map(oneOrder).join("")
-   
+   console.log(uniqueArray)
 
 
 }
