@@ -344,11 +344,6 @@
   display: none;
 }
 
-.hourglass-logo {
-  height: 55px;
-  width: 180px;
-}
-
 .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -563,7 +558,12 @@ body {
 }
 
 .header .logo {
-  margin-left: 5%;
+  margin-left: 1%;
+}
+
+.header .logo .hourglass-logo {
+  height: 55px;
+  width: 180px;
 }
 
 .header .nav {
