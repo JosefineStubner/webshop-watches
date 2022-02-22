@@ -110,3 +110,18 @@ currentOrderForm.addEventListener("submit", (e) => {
   orderArr();
 
 })
+
+const orderBtn = document.querySelector ("#orderBtn")
+let viewkvitto = document.querySelector("#kvitto")
+let kvitto = (item) => `
+<div class="kvittocontainer">
+<h1>KVITTO</h1>
+<h2>Tack för din beställning</h2>
+</div>`
+
+orderBtn.addEventListener("click", ()=>{
+  viewkvitto.style.display ="none";
+
+  viewkvitto.append(kvitto)
+  
+})

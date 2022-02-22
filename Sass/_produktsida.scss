@@ -1,13 +1,13 @@
 
 .productside {
-  margin:0 auto 15rem;
-  .productCard {
-    @include flex(column, center, center);
-    margin: 2%;
-    transition: all 0.3s ease;
-    &:hover {
-      transform: scale(103%);
-    }
+  margin:2rem auto 15rem;
+  // .productCard {
+  //   @include flex(column, center, center);
+  //   margin: 2%;
+  //   transition: all 0.3s ease;
+  //   &:hover {
+  //     transform: scale(103%);
+  //   }
     .productheading{
       align-self: flex-start;
     }
@@ -29,5 +29,5 @@
       width: 16rem;
       margin-top: 20px;
     } 
-  }
+  // }
 }
