@@ -7,7 +7,7 @@
         "_varukorg.scss",
         "_produktsida.scss",
         "_produktlista.scss",
-        "_main.scss",
+        "_mixin.scss",
         "_index.scss",
         "_skapalogin.scss",
         "_login.scss",

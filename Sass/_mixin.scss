@@ -1,0 +1,26 @@
+//Knappar
+@mixin backbtnStyle {
+    padding: .4rem 1rem;
+    border: 1px solid;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1), inset 0 1px 1px rgba(0,0,0,.1);
+    color: rgb(18, 120, 74);
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: transparent;
+    border-radius: 1.875rem;
+    border-color: rgb(18, 120, 74);
+    box-sizing: border-box;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+@mixin bybtnStyle {
+    padding: .4rem 1rem;
+    border: 1px solid;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1), inset 0 1px 1px rgba(0,0,0,.1);
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: $gold;
+    border-radius: 1.5rem;
+}

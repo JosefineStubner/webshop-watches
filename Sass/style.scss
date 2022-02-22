@@ -8,7 +8,7 @@
 @import "./varukorg";
 @import "./produktsida";
 @import "./produktlista";
-@import "./main";
+@import "./mixin";
 @import "./index";
 @import "./skapalogin";
 @import "./login";
@@ -128,3 +128,17 @@ body{
         color: $ice;
     }
 }
+//Knappar
+#shoppingcart-main{
+    @include flex(column,space-around,center);
+    // width: 100vw;
+    height: 100%;
+    .back-btn{
+        align-self: flex-start;
+        margin: 5% 0 0 5%;
+        @include backbtnStyle;
+    }
+}
+.buyBtn {
+    @include bybtnStyle;
+  }
