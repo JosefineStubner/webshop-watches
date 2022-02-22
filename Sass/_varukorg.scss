@@ -1,13 +1,4 @@
-#shoppingcart-main{
-    @include flex(column,space-around,center);
-    // width: 100vw;
-    height: 100%;
-    .back-btn{
-        align-self: flex-start;
-        margin: 5% 0 0 5%;
-    }
-    
-    .main-wrapper{
+        .main-wrapper{
         width: 90%;
         background: rgb(168, 168, 168);
         @include flex(column,space-around,center);
@@ -22,4 +13,3 @@
             }
         }
     }
-}
