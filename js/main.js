@@ -18,7 +18,8 @@ hamburgerBtn.addEventListener("click", () => {
   }
 });
 
-//sortera funktion, kan användas till lite allt möjligt med name
+//sortera funktion, kan användas till lite allt möjligt med name.
+//används bl.a i varukorgen för att sortera produkter.
 function sort(event) {
   event.sort((a, b) => {
     const nameA = a.name;
@@ -33,7 +34,6 @@ function sort(event) {
   });
 }
 
-//funktion över hela sidan.
 //uppdaterar shopping cart count baserat på hur många produkter som finns i local storage (shopping cart).
 const updateCartCount = () => {
   let shoppingCart = JSON.parse(localStorage.getItem("cart") || "[]");
