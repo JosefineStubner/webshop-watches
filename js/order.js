@@ -112,12 +112,13 @@ let kvitto = () => `
 <h2>Tack för din beställning</h2>
 <ul id="kvittoProduktLista"></ul>
 <div id="kvittototal" class="total"></div>
-</div>`
+</div>
+`;
 
 let kvittoFunc = () => {
   let cartProduct = JSON.parse(localCart)
   viewkvitto.style.display = "hidden";
-  viewkvitto.innerHTML = kvitto;
+  viewkvitto.innerHTML = kvitto();
   const kvittoProduktLista = document.getElementById('kvittoProduktLista');
   const kvittototal = document.querySelector("#kvittototal");
 
