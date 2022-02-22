@@ -103,16 +103,14 @@
   background-image: url("https://images.unsplash.com/photo-1578998323870-83a9a3d609e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 500px;
-  width: 100%;
+  height: 80vh;
+  height: 80vh;
 }
 
 .header-img .startheading {
-  margin: 0 auto;
   position: absolute;
   color: #ECF2F3;
-  top: 190px;
-  left: 30%;
+  top: 50%;
 }
 
 .startmain {
@@ -163,6 +161,69 @@
 
 .startmain .categorycontainer .category a img {
   height: 250px;
+}
+
+@media only screen and (min-width: 600px) {
+  header .header .hamburger-container {
+    display: none;
+  }
+  header .header .nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    inset: 0 0 0 0;
+    height: 10%;
+    background: none;
+  }
+  header .header .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header .nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header .nav ul li a {
+    font-size: 20px;
+    color: black;
+  }
+  header .startheading {
+    font-size: 14vw;
+  }
+  .startmain .categorycontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 * {
@@ -410,7 +471,7 @@
   cursor: default;
 }
 
-main {
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,17 +487,17 @@ main {
           align-items: center;
 }
 
-main .orderTitle {
+section .orderTitle {
   margin-top: 5%;
 }
 
-main .orderSection {
+section .orderSection {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 5%;
 }
 
-main .orderSection .orderContainer {
+section .orderSection .orderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,7 +512,7 @@ main .orderSection .orderContainer {
           align-items: center;
 }
 
-main .orderSection .orderContainer .oneproduct {
+section .orderSection .orderContainer .oneproduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,22 +532,22 @@ main .orderSection .orderContainer .oneproduct {
   width: 50vw;
 }
 
-main .orderSection .orderContainer .oneproduct img {
+section .orderSection .orderContainer .oneproduct img {
   width: 5rem;
   margin-right: 5%;
 }
 
-main .orderSection .orderContainer .oneproduct h2 {
+section .orderSection .orderContainer .oneproduct h2 {
   margin-bottom: 5%;
 }
 
-main .orderSection .line {
+section .orderSection .line {
   width: 80vw;
   height: .5px;
   background: gray;
 }
 
-main .totalPrice {
+section .totalPrice {
   margin-top: 5%;
   float: right;
 }
@@ -572,6 +633,47 @@ main .totalPrice {
           align-items: center;
 }
 
+.kvittocontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #004040;
+  height: 200px;
+}
+
+.kvittocontainer .kvittoproduk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kvittocontainer ul {
+  list-style: none;
+}
+
+.kvittocontainer ul li {
+  margin: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -653,7 +755,7 @@ body {
 
 .header .nav ul li {
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
 }
 
 .header .nav ul li a {

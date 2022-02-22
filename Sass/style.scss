@@ -45,7 +45,7 @@ body{
             @include flex(column, space-around, center);
             li{
                 list-style: none;
-                font-size: 2.5rem;
+                font-size: 1.2rem;
                 a{
                 color: $ice;
                 text-decoration: none;
