@@ -20,7 +20,7 @@ function renderCards(list){
 
 const shoppingComponent = (event)=> `
 <div class="card">
-          <img src="" alt="${event.category}">
+          <img src="${event.image}" alt="${event.category}">
           <div class="card-wrapper">
             <h3 class="pruductname">${event.name}</h3>
             <div class="bottom-line-wrapper">

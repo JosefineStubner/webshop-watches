@@ -27,6 +27,10 @@
   background: #6d6dfa;
 }
 
+.main-wrapper .schoppingcart-wrapper .card img {
+  width: 20vw;
+}
+
 .productside {
   margin: 2rem auto 15rem;
 }
