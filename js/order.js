@@ -119,17 +119,22 @@ let kvitto = (item) => `
 <h1>KVITTO</h1>
 <h2>Tack för din beställning</h2>
 <p>Ditt ordernrummer är: 018963211</p>
-<div class="kvittocontainer"> ${localCart.name} ${localCart.price}</div>
+<ul id="kvittoProduktLista"></ul>
+<div id="kvittototal"></div>
 </div>`
 
 orderBtn.addEventListener("click", ()=>{
+  let cartProduct= JSON.parse(localCart)
   viewkvitto.style.display ="hidden";
   viewkvitto.innerHTML=kvitto
-  console.log(localCart.name)
-  let reciptorder = (x) => `
-  <div class="s">${localCart}</div>`
-  
-  // viewkvitto.innerHTML = orderContainer
-  console.log (oneOrder);
-  console.log (orderContainer);
+  const kvittoProduktLista = document.getElementById('kvittoProduktLista');
+  const kvittototal = document.querySelector("#kvittototal")
+  console.log (cartProduct);
+  cartProduct.forEach((vald)=>{
+  const li = document.createElement ("li")
+  li.innerText = vald.name + " " + vald.price + ":-"
+  kvittoProduktLista.appendChild(li)
+
+  })
+
 })
