@@ -2,6 +2,9 @@
   display: none;
 }
 
+.login-header {
+  margin-bottom: 10px;
+}
 .login-form {
   @include flex(column, flex-start, center);
   height: 450px;
@@ -36,15 +39,13 @@
 
   }
 
-  .button.create-form-styling {
+  .buyBtn.create-form-styling {
     margin-top: 10px;
-    padding: 5px;
-
   }
 
   .link-button {
     text-decoration: none;
-    color: black;
+    color: $ice;
     cursor: default;
   }
 

@@ -104,39 +104,41 @@ const orderArr = () => {
   localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-currentOrderForm.addEventListener("submit", (e) => {
-  localStorage.removeItem("orders")
-  e.preventDefault();
-  orderArr();
-
-})
-
-const orderBtn = document.querySelector ("#orderBtn")
 let viewkvitto = document.querySelector("#kvitto")
 
-let kvitto = (item) => `
+let kvitto = () => `
 <div class="kvittocontainer">
 <h1>KVITTO</h1>
 <h2>Tack för din beställning</h2>
-<p>Ditt ordernrummer är: 018963211</p>
 <ul id="kvittoProduktLista"></ul>
-<div id="kvittototal"></div>
-</div>`
+<div id="kvittototal" class="total"></div>
+</div>
+`;
 
-orderBtn.addEventListener("click", ()=>{
-  let cartProduct= JSON.parse(localCart)
-  viewkvitto.style.display ="hidden";
-  viewkvitto.innerHTML=kvitto
+let kvittoFunc = () => {
+  let cartProduct = JSON.parse(localCart)
+  viewkvitto.style.display = "hidden";
+  viewkvitto.innerHTML = kvitto();
   const kvittoProduktLista = document.getElementById('kvittoProduktLista');
-  const kvittototal = document.querySelector("#kvittototal")
-  console.log (cartProduct);
-  cartProduct.forEach((vald)=>{
-  const li = document.createElement ("li")
-  li.innerText = vald.name + " " + vald.price + ":-"
-  kvittoProduktLista.appendChild(li)
-  const total = document.createElement("p")
-  total.innerText= vald.total
+  const kvittototal = document.querySelector("#kvittototal");
 
+  let totalPrice = 0
+
+  cartProduct.forEach((vald)=>{
+    const liProd = document.createElement("li");
+    liProd.innerText = vald.name + " " + vald.price + ":-"
+    kvittoProduktLista.appendChild(liProd)
+
+    totalPrice = totalPrice + vald.price
   })
+
+  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+}
+
+currentOrderForm.addEventListener("submit", (e) => {
+  localStorage.removeItem("orders");
+  e.preventDefault();
+  orderArr();
+  kvittoFunc();
 
 })

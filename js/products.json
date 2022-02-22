@@ -3,7 +3,7 @@
   "products": [{
     "name": "Armband1",
     "price": 100,
-    "image": "./images/products/armbandsur1.jpg",
+    "image": "./images/products/Armbandsur1.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
     "id": 1
@@ -11,7 +11,7 @@
   {
     "name": "Armband2",
     "price": 200,
-    "image": "./images/products/armbandsur2.jpg",
+    "image": "./images/products/Armbandsur2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
     "id": 2
@@ -19,7 +19,7 @@
   {
     "name": "Armband3",
     "price": 300,
-    "image": "./images/products/armbandsur3.jpg",
+    "image": "./images/products/Armbandsur3.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
     "id": 3
@@ -27,7 +27,7 @@
   {
     "name": "Fickur1",
     "price": 400,
-    "image": "./images/products/fickur1.jpg",
+    "image": "./images/products/Fickbandsur1.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
     "id": 4
@@ -35,7 +35,7 @@
   {
     "name": "Fickur2",
     "price": 500,
-    "image": "./images/products/fickur2.jpg",
+    "image": "./images/products/Fickbandsur2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
     "id": 5
@@ -43,7 +43,7 @@
   {
     "name": "Fickur3",
     "price": 600,
-    "image": "./images/products/fickur3.jpg",
+    "image": "./images/products/Fickbandsur3.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category":"Fickur",
     "id": 6
@@ -51,7 +51,7 @@
   {
     "name": "Gökur1",
     "price": 700,
-    "image": "./images/products/gokur1.jpg",
+    "image": "./images/products/gokur5.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
     "id": 7
@@ -59,7 +59,7 @@
   {
     "name": "Gökur2",
     "price": 800,
-    "image": "./images/products/gokur2.jpg",
+    "image": "./images/products/gokur6.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
     "id": 8
@@ -67,7 +67,7 @@
   {
     "name": "Gökur3",
     "price": 900,
-    "image": "./images/products/gokur3.jpg",
+    "image": "./images/products/gokur7.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
     "id": 9

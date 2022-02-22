@@ -1,15 +1,22 @@
-        .main-wrapper{
-        width: 90%;
-        background: rgb(168, 168, 168);
-        @include flex(column,space-around,center);
-        margin: 10%;
-        .order-button{
-            margin: 2%;
-            border: 1px solid black;
-            padding: 5px;
-            border-radius: 7px;
-            &:hover{
-                background: rgb(109, 109, 250);
-            }
-        }
+.main-wrapper {
+  width: 90%;
+  background: rgb(168, 168, 168);
+  @include flex(column, space-around, center);
+  margin: 10%;
+  .order-button {
+    margin: 2%;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    &:hover {
+      background: rgb(109, 109, 250);
     }
+  }
+  .schoppingcart-wrapper {
+    .card {
+      img {
+        width: 20vw;
+      }
+    }
+  }
+}
