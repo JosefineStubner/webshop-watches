@@ -130,8 +130,13 @@ body{
         align-self: flex-start;
         margin: 5% 0 0 5%;
         @include backbtnStyle;
+        @include basbtn;
     }
 }
 .buyBtn {
     @include buybtnStyle;
+    @include basbtn;
   }
+.basbtnStyle{
+    @include basbtn
+}

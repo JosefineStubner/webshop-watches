@@ -35,6 +35,30 @@
   margin: 2rem auto 15rem;
 }
 
+.productside .productCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.productside .productCard:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
+}
+
 .productside .productheading {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -56,6 +80,7 @@
           align-items: center;
   width: 16rem;
   height: 16rem;
+  margin: 3rem;
 }
 
 .productside .productImg img {
@@ -83,6 +108,55 @@
           align-items: flex-start;
   width: 16rem;
   margin-top: 20px;
+}
+
+.productside .price {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .hamburger-container {
+    display: none;
+  }
+  .header .nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    inset: 0 0 0 0;
+    height: 10%;
+    background: none;
+  }
+  .header .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .nav ul li a {
+    font-size: 20px;
+    color: black;
+  }
 }
 
 .productlist {
@@ -712,7 +786,24 @@ section .totalPrice {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid #004040;
-  height: 200px;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.kvittocontainer .kvittohead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 7rem;
 }
 
 .kvittocontainer .kvittoproduk {
@@ -733,10 +824,30 @@ section .totalPrice {
 
 .kvittocontainer ul {
   list-style: none;
+  min-height: 5rem;
 }
 
 .kvittocontainer ul li {
   margin: 10px;
+  word-spacing: 10px;
+}
+
+.kvittocontainer .kvittopersinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: red 1px solid;
+  width: 50%;
+  height: 200px;
 }
 
 .required:after {
@@ -957,32 +1068,42 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 5% 0 0 5%;
-  padding: .4rem 1rem;
-  border: 1px solid;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
   color: #004040;
-  font-weight: 700;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  border-radius: 1.875rem;
   border-color: #004040;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-width: 1px;
   cursor: pointer;
-}
-
-.buyBtn {
   padding: .4rem 1rem;
   border: 1px solid;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  color: #fff;
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  background-color: #b98f34;
   border-radius: 1.875rem;
+}
+
+.buyBtn {
+  color: #fff;
+  background-color: #b98f34;
   min-width: 5rem;
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1.875rem;
+}
+
+.basbtnStyle {
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1.875rem;
 }
 /*# sourceMappingURL=style.css.map */
