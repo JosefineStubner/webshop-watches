@@ -28,7 +28,12 @@ body{
     background: $ice;
     border: 1px red solid;
     .logo{
-        margin-left: 5%
+        margin-left: 1%;
+
+        .hourglass-logo {
+            height: 55px;
+            width: 180px;
+          }
     }
 @include flex(row, space-between, center);
 
