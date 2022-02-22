@@ -1,22 +1,20 @@
-.orderSection{
-    @include flex(column,space-between,center); 
-    height: 400px;
-    .oneproduct{
-        @include flex(row,space-between,space-between); 
-        border: 1px solid saddlebrown;
-        padding: 5px;
-        margin: 10px;
-        img{
-            width: 20%;
-            border: 1px solid black;
-        }
-        p{
-            width: 20%;
-        }
-        div {
-            width: 20%;
+main{
+    @include flex(column,flex-start,center);
+    .orderSection{
+        align-self: flex-start;
+        border: 1px solid black;
+        margin: 5%;
+        .orderContainer{
+            @include flex(column,space-around,center);
+            .oneproduct{
+                @include flex(row,space-around,flex-start);
+                img{
+                    width: 50px;
+                }
+            }
         }
     }
+
 }
 .orderFormular{
     @include flex(row,space-around,flex-start); 

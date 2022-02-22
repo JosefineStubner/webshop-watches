@@ -6,19 +6,7 @@ function clearAllElements(parentElem){
   }
 };
 
-function sort(event){
-  event.sort((a,b)=>{
-    const nameA = a.name
-    const nameB = b.name
-    if(nameA>nameB){
-      return 1
-    }else if(nameA<nameB){
-      return -1
-    }else {
-      return 0
-    }
-  })
-}
+
 
 function renderCards(list){
   list.forEach((card, i) => {
