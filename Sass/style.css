@@ -130,9 +130,9 @@
 .header-img .startheading {
   margin: 0 auto;
   position: absolute;
-  color: aliceblue;
-  top: 200px;
-  left: 40%;
+  color: #ECF2F3;
+  top: 190px;
+  left: 30%;
 }
 
 .startmain {
@@ -168,6 +168,19 @@
 
 .startmain .categorycontainer .category {
   margin: 20px;
+}
+
+.startmain .categorycontainer .category a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000000;
+  letter-spacing: 0.1rem;
+  margin: 10px 0px 0px;
+  font-weight: 700;
+  font-size: calc(0.6875rem + 0.3125 * ((100vw - 20rem) / 100));
+  line-height: 1.4;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .startmain .categorycontainer .category a img {
@@ -523,7 +536,6 @@ body {
   width: 100vw;
   height: 10vh;
   background: #ECF2F3;
-  border: 1px red solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
