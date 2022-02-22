@@ -27,7 +27,7 @@
   {
     "name": "Fickur1",
     "price": 400,
-    "image": "./images/products/Fickbandsur1.png",
+    "image": "./images/products/Fickur1.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
     "id": 4
@@ -35,7 +35,7 @@
   {
     "name": "Fickur2",
     "price": 500,
-    "image": "./images/products/Fickbandsur2.png",
+    "image": "./images/products/Fickur2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
     "id": 5
@@ -43,7 +43,7 @@
   {
     "name": "Fickur3",
     "price": 600,
-    "image": "./images/products/Fickbandsur3.png",
+    "image": "./images/products/Fickur3.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category":"Fickur",
     "id": 6
