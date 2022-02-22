@@ -424,6 +424,10 @@
   display: none;
 }
 
+.login-header {
+  margin-bottom: 10px;
+}
+
 .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,14 +518,13 @@
   margin: 5px 0 5px 0;
 }
 
-.login-form .button.create-form-styling {
+.login-form .buyBtn.create-form-styling {
   margin-top: 10px;
-  padding: 5px;
 }
 
 .login-form .link-button {
   text-decoration: none;
-  color: black;
+  color: #ECF2F3;
   cursor: default;
 }
 
