@@ -1,26 +1,4 @@
-#shoppingcart-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-#shoppingcart-main .back-btn {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 5% 0 0 5%;
-}
-
-#shoppingcart-main .main-wrapper {
+.main-wrapper {
   width: 90%;
   background: #a8a8a8;
   display: -webkit-box;
@@ -38,14 +16,14 @@
   margin: 10%;
 }
 
-#shoppingcart-main .main-wrapper .order-button {
+.main-wrapper .order-button {
   margin: 2%;
   border: 1px solid black;
   padding: 5px;
   border-radius: 7px;
 }
 
-#shoppingcart-main .main-wrapper .order-button:hover {
+.main-wrapper .order-button:hover {
   background: #6d6dfa;
 }
 
@@ -125,10 +103,6 @@
           align-items: flex-start;
   width: 16rem;
   margin-top: 20px;
-}
-
-.productside .productCard button {
-  width: 120px;
 }
 
 .productlist {
@@ -342,11 +316,6 @@
 
 .hidden-login {
   display: none;
-}
-
-.hourglass-logo {
-  height: 55px;
-  width: 180px;
 }
 
 .login-form {
@@ -571,7 +540,12 @@ body {
 }
 
 .header .logo {
-  margin-left: 5%;
+  margin-left: 1%;
+}
+
+.header .logo .hourglass-logo {
+  height: 55px;
+  width: 180px;
 }
 
 .header .nav {
@@ -725,5 +699,53 @@ body {
 .footer p {
   width: 30%;
   color: #ECF2F3;
+}
+
+#shoppingcart-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#shoppingcart-main .back-btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5% 0 0 5%;
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #12784a;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 1.875rem;
+  border-color: #12784a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.buyBtn {
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #b98f34;
+  border-radius: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

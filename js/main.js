@@ -66,11 +66,16 @@ const addProductToCart = (productId) => {
 let loggedInUserObj = localStorage.getItem("loggedInUser");
 
 if(loggedInUserObj) {
+  let users = JSON.parse(localStorage.users);
   loggedInUserObj = JSON.parse(loggedInUserObj);
   loginMenuLink.classList.add("hidden-login");
+  
+  const currentUser = users.find((item) => {
+    return loggedInUserObj.email === item.email
+  })
 
   let li = document.createElement("li");
-  li.innerText = "Inloggad som: " + loggedInUserObj.email;
+  li.innerText = "Inloggad som:\n" + currentUser.name;
   loginMenuList.appendChild(li);
   
   li.style.color = "#ECF2F3";
