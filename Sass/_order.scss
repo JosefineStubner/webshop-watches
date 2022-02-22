@@ -37,7 +37,7 @@ section{
 }
 
 .order-form {
-    @include flex(column,space-around,center); 
+    @include flex(column,space-around,center);
 
     .orderFormular{
         @include flex(row,space-around,flex-start);
@@ -54,8 +54,17 @@ section{
         }
     }
 
+    h3 {
+        margin-bottom: 10px;
+    }
+
     .comment-wrapper {
-        @include flex(column,space-around,center); 
+        @include flex(column,space-around,center);
+        margin: 10px 0 30px 0;
+
+        #orderComments {
+            margin: 10px 0 10px 0;
+        }
     }
 }
 
@@ -63,13 +72,22 @@ section{
     @include flex(column, space-around, center);
     border:1px solid $green;
     height: 200px;
+
     .kvittoproduk{
         @include flex( row, center, center)
     }
+
     ul{
         list-style: none;
+
         li{
             margin: 10px;
         }
     }
+}
+
+.required:after {
+    color: #e32;
+    content: ' *';
+    display: inline;
 }

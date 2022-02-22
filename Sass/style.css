@@ -672,6 +672,10 @@ section .totalPrice {
   height: 200px;
 }
 
+.order-form h3 {
+  margin-bottom: 10px;
+}
+
 .order-form .comment-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -685,6 +689,11 @@ section .totalPrice {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px 0 30px 0;
+}
+
+.order-form .comment-wrapper #orderComments {
+  margin: 10px 0 10px 0;
 }
 
 .kvittocontainer {
@@ -726,6 +735,12 @@ section .totalPrice {
 
 .kvittocontainer ul li {
   margin: 10px;
+}
+
+.required:after {
+  color: #e32;
+  content: ' *';
+  display: inline;
 }
 
 * {
