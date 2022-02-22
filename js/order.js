@@ -54,3 +54,59 @@ console.log(cartProduct)
 
 
 }
+
+const currentOrderForm = document.querySelector("#orderForm");
+
+const orderName = document.querySelector("#orderName");
+const orderAdress = document.querySelector("#orderAdress");
+const orderZipcode = document.querySelector("#orderZipcode");
+const orderCity = document.querySelector("#orderCity");
+const orderEmail = document.querySelector("#orderEmail");
+const orderPhone = document.querySelector("#orderPhone");
+const orderComments = document.querySelector("#orderComments");
+
+let currentUserObj = localStorage.getItem("loggedInUser");
+
+if(currentUserObj) {
+  let users = JSON.parse(localStorage.users);
+  currentUserObj = JSON.parse(currentUserObj);
+  
+  const currentUser = users.find((item) => {
+    return currentUserObj.email === item.email
+  })
+
+  orderName.value = currentUser.name;
+  orderAdress.value = currentUser.adress;
+  orderZipcode.value = currentUser.zipcode;
+  orderCity.value = currentUser.city;
+  orderEmail.value = currentUser.email;
+  orderPhone.value = currentUser.phone;
+}
+
+const orderArr = () => {
+  const orders = (() => {
+    const orderValue = localStorage.getItem('orders');
+    return orderValue === null
+      ? []
+      : JSON.parse(orderValue);
+  })();
+
+  orders.push({
+    "name": orderName.value, 
+    "adress": orderAdress.value,
+    "zipcode": orderZipcode.value,
+    "city": orderCity.value,
+    "email": orderEmail.value,
+    "phone": orderPhone.value,
+    "comments": orderComments.value
+  });
+
+  localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+currentOrderForm.addEventListener("submit", (e) => {
+  localStorage.removeItem("orders")
+  e.preventDefault();
+  orderArr();
+
+})

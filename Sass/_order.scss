@@ -35,13 +35,27 @@ main{
     }
 
 }
-.orderFormular{
-    @include flex(row,space-around,flex-start); 
-    margin: 10px;
-    border: 1px solid royalblue;
-    .wrapper{
+
+.order-form {
+    @include flex(column,space-around,center); 
+
+    .orderFormular{
+        @include flex(row,space-around,flex-start);
+        flex-wrap: wrap;
+
+        @media (min-width: 500px) {
+            width: 320px;
+            @include flex(row, space-around, flex-start);
+          }
+
+        .wrapper{
+            @include flex(column,space-around,center); 
+            height: 200px;
+        }
+    }
+
+    .comment-wrapper {
         @include flex(column,space-around,center); 
-        border: 1px red solid;
-        height: 200px;
     }
 }
+
