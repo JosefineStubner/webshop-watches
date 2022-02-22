@@ -113,15 +113,22 @@ currentOrderForm.addEventListener("submit", (e) => {
 
 const orderBtn = document.querySelector ("#orderBtn")
 let viewkvitto = document.querySelector("#kvitto")
+
 let kvitto = (item) => `
 <div class="kvittocontainer">
 <h1>KVITTO</h1>
 <h2>Tack för din beställning</h2>
+<p>Ditt ordernrummer är: 018963211</p>
 </div>`
 
 orderBtn.addEventListener("click", ()=>{
-  viewkvitto.style.display ="none";
-
-  viewkvitto.append(kvitto)
+  viewkvitto.style.display ="hidden";
+  viewkvitto.innerHTML=kvitto
+  console.log(localCart.name)
+  let reciptorder = (x) => `
+  <div class="kvittocontainer">${localCart}</div>`
   
+  // viewkvitto.innerHTML = orderContainer
+  console.log (oneOrder);
+  console.log (orderContainer);
 })

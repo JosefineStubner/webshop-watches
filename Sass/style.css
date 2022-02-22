@@ -467,7 +467,7 @@
   cursor: default;
 }
 
-main {
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,17 +483,17 @@ main {
           align-items: center;
 }
 
-main .orderTitle {
+section .orderTitle {
   margin-top: 5%;
 }
 
-main .orderSection {
+section .orderSection {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 5%;
 }
 
-main .orderSection .orderContainer {
+section .orderSection .orderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,7 +508,7 @@ main .orderSection .orderContainer {
           align-items: center;
 }
 
-main .orderSection .orderContainer .oneproduct {
+section .orderSection .orderContainer .oneproduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,22 +528,22 @@ main .orderSection .orderContainer .oneproduct {
   width: 50vw;
 }
 
-main .orderSection .orderContainer .oneproduct img {
+section .orderSection .orderContainer .oneproduct img {
   width: 5rem;
   margin-right: 5%;
 }
 
-main .orderSection .orderContainer .oneproduct h2 {
+section .orderSection .orderContainer .oneproduct h2 {
   margin-bottom: 5%;
 }
 
-main .orderSection .line {
+section .orderSection .line {
   width: 80vw;
   height: .5px;
   background: gray;
 }
 
-main .totalPrice {
+section .totalPrice {
   margin-top: 5%;
   float: right;
 }
