@@ -105,6 +105,7 @@ const orderArr = () => {
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
+  localStorage.removeItem("orders")
   e.preventDefault();
   orderArr();
 
