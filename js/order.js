@@ -134,6 +134,8 @@ orderBtn.addEventListener("click", ()=>{
   const li = document.createElement ("li")
   li.innerText = vald.name + " " + vald.price + ":-"
   kvittoProduktLista.appendChild(li)
+  const total = document.createElement("p")
+  total.innerText= vald.total
 
   })
 
