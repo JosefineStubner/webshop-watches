@@ -1,20 +1,26 @@
+@mixin flex($direction,$justify,$align) {
+    display: flex;
+    justify-content:$justify ;
+    flex-direction: $direction;
+    align-items: $align;
+}
 //Knappar
 @mixin backbtnStyle {
     padding: .4rem 1rem;
     border: 1px solid;
     box-shadow: 0 1px 1px rgba(0,0,0,.1), inset 0 1px 1px rgba(0,0,0,.1);
-    color: rgb(18, 120, 74);
+    color:$green;
     font-weight: 700;
     text-shadow: 0 1px 1px rgba(0,0,0,.1);
     background-color: transparent;
     border-radius: 1.875rem;
-    border-color: rgb(18, 120, 74);
+    border-color: $green;
     box-sizing: border-box;
     border-width: 1px;
     cursor: pointer;
 }
 
-@mixin bybtnStyle {
+@mixin buybtnStyle {
     padding: .4rem 1rem;
     border: 1px solid;
     box-shadow: 0 1px 1px rgba(0,0,0,.1), inset 0 1px 1px rgba(0,0,0,.1);
@@ -22,5 +28,18 @@
     font-weight: 700;
     text-shadow: 0 1px 1px rgba(0,0,0,.1);
     background-color: $gold;
-    border-radius: 1.5rem;
+    border-radius: 1.875rem;
+    min-width: 5rem;
+}
+
+// text
+@mixin heading2 {
+    color: $black;
+    letter-spacing: 0.1rem;
+    margin: 10px 0px 0px;
+    font-weight: 700;
+    font-size: calc(0.6875rem + 0.3125 * ((100vw - 20rem) / 100));
+    line-height: 1.4;
+    // font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
 }
