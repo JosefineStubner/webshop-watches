@@ -55,6 +55,7 @@ const renderedFilteredProducts = () => {
 
       //skapar köpknapp.
       const buyBtn = document.createElement("button");
+      buyBtn.classList.add("buyBtn");
 
       //funktion för att lägga till produkten i varukorgen via köpknappen.
       buyBtn.addEventListener("click", function () {

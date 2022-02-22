@@ -11,9 +11,11 @@ let oneOrder = (item) => `
   <img src="${item.image}" alt="" />
   <div class="orderCardContainer">
   <h2>${item.name}</h2>
-  <p>${item.antal}St</p>
-  <h3>${item.price}Kr</h3>
+  <p> Antal ${item.antal} st</p>
+  <p>${item.price} kr</p>
   </div>
+  </div>
+  <div class="line"></div>
 `;
 
 
@@ -48,7 +50,63 @@ console.log(cartProduct)
    const uniqueArray = getUniqueProds(cartProduct)
    sort(uniqueArray)
    orderContainer.innerHTML= uniqueArray.map(oneOrder).join("")
-   
+   console.log(uniqueArray)
 
 
 }
+
+const currentOrderForm = document.querySelector("#orderForm");
+
+const orderName = document.querySelector("#orderName");
+const orderAdress = document.querySelector("#orderAdress");
+const orderZipcode = document.querySelector("#orderZipcode");
+const orderCity = document.querySelector("#orderCity");
+const orderEmail = document.querySelector("#orderEmail");
+const orderPhone = document.querySelector("#orderPhone");
+const orderComments = document.querySelector("#orderComments");
+
+let currentUserObj = localStorage.getItem("loggedInUser");
+
+if(currentUserObj) {
+  let users = JSON.parse(localStorage.users);
+  currentUserObj = JSON.parse(currentUserObj);
+  
+  const currentUser = users.find((item) => {
+    return currentUserObj.email === item.email
+  })
+
+  orderName.value = currentUser.name;
+  orderAdress.value = currentUser.adress;
+  orderZipcode.value = currentUser.zipcode;
+  orderCity.value = currentUser.city;
+  orderEmail.value = currentUser.email;
+  orderPhone.value = currentUser.phone;
+}
+
+const orderArr = () => {
+  const orders = (() => {
+    const orderValue = localStorage.getItem('orders');
+    return orderValue === null
+      ? []
+      : JSON.parse(orderValue);
+  })();
+
+  orders.push({
+    "name": orderName.value, 
+    "adress": orderAdress.value,
+    "zipcode": orderZipcode.value,
+    "city": orderCity.value,
+    "email": orderEmail.value,
+    "phone": orderPhone.value,
+    "comments": orderComments.value
+  });
+
+  localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+currentOrderForm.addEventListener("submit", (e) => {
+  localStorage.removeItem("orders")
+  e.preventDefault();
+  orderArr();
+
+})

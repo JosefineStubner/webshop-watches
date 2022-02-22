@@ -31,7 +31,7 @@
       </nav>
     </header>
     <main>
-      <h2>Beställnings-sida</h2>
+      <h2 class="orderTitle">Beställnings-sida</h2>
       <section class="orderSection">
         <!-- en div ska skappas för varje vald produkt -->
         <div class="orderContainer">
@@ -39,35 +39,36 @@
         </div>
         
 
-        <h3>Total: <span class="total">0</span>Kr</h3>
+        <h5 class="totalPrice">Total belopp inkl. moms <span class="total">0</span> kr</h5>
 
       </section>
-      <section >
+      <form class="order-form" id="orderForm">
         <h2>Beställningsformulär</h2>
         <section class="orderFormular">
           <div class="wrapper">
-            <label for="createName" class="create-form-styling">Namn</label>
-            <input type="text" name="create-name" class="create-form-styling" id="createName" required>
-            <label for="createAdress" class="create-form-styling">Gatuadress</label>
-            <input type="text" name="create-adress" class="create-form-styling" id="createAdress" required>
-            <label for="createZipcode" class="create-form-styling">Postnummer</label>
-            <input type="number" name="create-zipcode" class="create-form-styling" id="createZipcode" required>
+            <label for="orderName" class="create-form-styling">Namn</label>
+            <input type="text" name="order-name" class="create-form-styling" id="orderName" required>
+            <label for="orderAdress" class="create-form-styling">Gatuadress</label>
+            <input type="text" name="order-adress" class="create-form-styling" id="orderAdress" required>
+            <label for="orderZipcode" class="create-form-styling">Postnummer</label>
+            <input type="number" name="order-zipcode" class="create-form-styling" id="orderZipcode" required>
           </div>
   
           <div class="wrapper">
-            <label for="createCity" class="create-form-styling">Ort</label>
-            <input type="text" name="create-city" class="create-form-styling" id="createCity" required>
-            <label for="createEmail" class="create-form-styling">E-post</label>
-            <input type="email" name="create-email" class="create-form-styling" id="createEmail" required>
-            <label for="createPhone" class="create-form-styling">Telefonnummer</label>
-            <input type="number" name="create-phone" class="create-form-styling" id="createPhone">
+            <label for="orderCity" class="create-form-styling">Ort</label>
+            <input type="text" name="order-city" class="create-form-styling" id="orderCity" required>
+            <label for="orderEmail" class="create-form-styling">E-post</label>
+            <input type="email" name="order-email" class="create-form-styling" id="orderEmail" required>
+            <label for="orderPhone" class="create-form-styling">Telefonnummer</label>
+            <input type="number" name="order-phone" class="create-form-styling" id="orderPhone">
           </div>
         </section>
-        <div class="wrapper">
-        <label for="textbox" class="create-form-styling">Övriga kommentarer</label>
-        <textarea name="textbox" id="" cols="30" rows="10"></textarea>
+        <div class="comment-wrapper">
+          <label for="orderComments" class="create-form-styling">Övriga kommentarer</label>
+          <textarea name="textbox" id="orderComments" cols="30" rows="10"></textarea>
+          <button type="submit" class="buyBtn create-form-styling" id="orderBtn">Beställ</button>
         </div>
-      </section>
+      </form>
     </main>
     <footer class="footer">
       <p>
@@ -79,6 +80,5 @@
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/order.js"></script>
-    <script src="./js/skapalogin.js"></script>
   </body>
 </html>
