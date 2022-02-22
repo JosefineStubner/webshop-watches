@@ -119,6 +119,7 @@ let kvitto = (item) => `
 <h1>KVITTO</h1>
 <h2>Tack för din beställning</h2>
 <p>Ditt ordernrummer är: 018963211</p>
+<div class="kvittocontainer"> ${localCart.name} ${localCart.price}</div>
 </div>`
 
 orderBtn.addEventListener("click", ()=>{
@@ -126,7 +127,7 @@ orderBtn.addEventListener("click", ()=>{
   viewkvitto.innerHTML=kvitto
   console.log(localCart.name)
   let reciptorder = (x) => `
-  <div class="kvittocontainer">${localCart}</div>`
+  <div class="s">${localCart}</div>`
   
   // viewkvitto.innerHTML = orderContainer
   console.log (oneOrder);

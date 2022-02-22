@@ -59,3 +59,11 @@ section{
     }
 }
 
+.kvittocontainer{
+    @include flex(column, space-between, center);
+    border:1px solid saddlebrown;
+    height: 500px;
+    .kvittoproduk{
+        @include flex( row, center, center)
+    }
+}
