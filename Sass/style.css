@@ -27,40 +27,20 @@
   background: #6d6dfa;
 }
 
+.main-wrapper .schoppingcart-wrapper .card img {
+  width: 20vw;
+}
+
 .productside {
-  margin: 0 auto 15rem;
+  margin: 2rem auto 15rem;
 }
 
-.productside .productCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2%;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.productside .productCard:hover {
-  -webkit-transform: scale(103%);
-          transform: scale(103%);
-}
-
-.productside .productCard .productheading {
+.productside .productheading {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-.productside .productCard .productImg {
+.productside .productImg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,17 +58,17 @@
   height: 16rem;
 }
 
-.productside .productCard .productImg img {
+.productside .productImg img {
   width: 100%;
 }
 
-.productside .productCard .producttext {
+.productside .producttext {
   margin: 5px;
   width: 18rem;
   height: 10rem;
 }
 
-.productside .productCard .productinfo {
+.productside .productinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,7 +525,7 @@
   cursor: default;
 }
 
-main {
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,17 +541,17 @@ main {
           align-items: center;
 }
 
-main .orderTitle {
+section .orderTitle {
   margin-top: 5%;
 }
 
-main .orderSection {
+section .orderSection {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 5%;
 }
 
-main .orderSection .orderContainer {
+section .orderSection .orderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,7 +566,7 @@ main .orderSection .orderContainer {
           align-items: center;
 }
 
-main .orderSection .orderContainer .oneproduct {
+section .orderSection .orderContainer .oneproduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,22 +586,22 @@ main .orderSection .orderContainer .oneproduct {
   width: 50vw;
 }
 
-main .orderSection .orderContainer .oneproduct img {
+section .orderSection .orderContainer .oneproduct img {
   width: 5rem;
   margin-right: 5%;
 }
 
-main .orderSection .orderContainer .oneproduct h2 {
+section .orderSection .orderContainer .oneproduct h2 {
   margin-bottom: 5%;
 }
 
-main .orderSection .line {
+section .orderSection .line {
   width: 80vw;
   height: .5px;
   background: gray;
 }
 
-main .totalPrice {
+section .totalPrice {
   margin-top: 5%;
   float: right;
 }
@@ -705,6 +685,47 @@ main .totalPrice {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.kvittocontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #004040;
+  height: 200px;
+}
+
+.kvittocontainer .kvittoproduk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kvittocontainer ul {
+  list-style: none;
+}
+
+.kvittocontainer ul li {
+  margin: 10px;
 }
 
 * {
