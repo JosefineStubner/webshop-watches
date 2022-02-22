@@ -415,9 +415,8 @@
   margin: 5px 0 5px 0;
 }
 
-.create-login-main .create-login-form .button.create-form-styling {
-  margin-top: 10px;
-  padding: 5px;
+.create-login-main .create-login-form .buyBtn.create-form-styling {
+  margin: 10px 0 20px 0;
 }
 
 .hidden-login {
