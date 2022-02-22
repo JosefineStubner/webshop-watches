@@ -450,13 +450,13 @@
   cursor: default;
 }
 
-.orderSection {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -464,39 +464,47 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 400px;
 }
 
-.orderSection .oneproduct {
+main .orderSection {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: 1px solid black;
+  margin: 5%;
+}
+
+main .orderSection .orderContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .orderSection .orderContainer .oneproduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
-  border: 1px solid saddlebrown;
-  padding: 5px;
-  margin: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.orderSection .oneproduct img {
-  width: 20%;
-  border: 1px solid black;
-}
-
-.orderSection .oneproduct p {
-  width: 20%;
-}
-
-.orderSection .oneproduct div {
-  width: 20%;
+main .orderSection .orderContainer .oneproduct img {
+  width: 50px;
 }
 
 .orderFormular {

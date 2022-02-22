@@ -28,6 +28,20 @@ const updateCartCount = () => {
   };
   
 updateCartCount();
+//sortera funktion, kan användas till lite allt möjligt med name
+function sort(event){
+  event.sort((a,b)=>{
+    const nameA = a.name
+    const nameB = b.name
+    if(nameA>nameB){
+      return 1
+    }else if(nameA<nameB){
+      return -1
+    }else {
+      return 0
+    }
+  })
+}
 
 //Gemensam funktion på hela sidan.
 const addProductToCart = (productId) => {
