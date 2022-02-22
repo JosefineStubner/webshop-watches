@@ -539,8 +539,26 @@ main .totalPrice {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 10px;
-  border: 1px solid royalblue;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 500px) {
+  .order-form .orderFormular {
+    width: 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .order-form .orderFormular .wrapper {
@@ -556,7 +574,6 @@ main .totalPrice {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px red solid;
   height: 200px;
 }
 
