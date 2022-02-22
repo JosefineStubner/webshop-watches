@@ -1,7 +1,7 @@
 const productList = document.querySelector(".productlist");
 const searchBtn = document.querySelector("#searchBtn");
 
-//hämtar data från JSON
+//hämtar data från JSON.
 const fetchProductData = async () => {
   const response = await fetch("./js/products.json");
   return await response.json();
@@ -14,82 +14,70 @@ const queryStringCategory = new URLSearchParams(location.search);
 let qsCategory = queryStringCategory.get("category").toLowerCase();
 console.log(qsCategory);
 
+//kör funktionen som renderar ut produkter vid klick på sök-knappen.
 searchBtn.addEventListener("click", function () {
   renderedFilteredProducts();
 });
 
+//funktion som ritar ut alla produkter på sidan när den laddas.
 const renderedFilteredProducts = () => {
   fetchProductData().then((data) => {
     const searchText = document.querySelector("#search-text").value;
 
-    //hämta alla json-produkter / filtrera bort produkter utifrån category
+    //hämtar alla json-produkter.
     const products = data.products.filter(
       (product) =>
+        //filtrerar ut produkter efter kategori.
         product.category.toLowerCase() == qsCategory &&
+        //filtrerar ut produkter i samma kategori baserat på namn eller beskrivning.
         (product.name.toLowerCase().includes(searchText) ||
           product.description.toLowerCase().includes(searchText))
     );
 
-    //Ta bort alla tidigare renderade produkter.
+    //skriver över productList div:ens innehåll med tom sträng så att alla tidigare renderade produkter tas bort innan nya ritas ut.
     productList.innerHTML = "";
 
-    // för varje produkt skapa ett produktkort
-    // .forEach
+    //för varje produkt skapas ett produktkort.
     products.forEach(function (product) {
-      // Varje produkt skall ha: Namn / Pris / Bild
-      //Skapa html-element.
+
+      //skapar html-element för produkten.
       const productCardList = document.createElement("div");
       productCardList.classList.add("productCard");
 
       const productParagraph = document.createElement("p");
       productParagraph.innerText = product.name;
 
-      //prata med Emma om id vs name
       const imageWrapper = document.createElement("a");
       imageWrapper.href = `Produktsida.html?name=${product.name}`;
 
       const productImage = document.createElement("img");
       productImage.src = product.image;
 
-      //köpknapp
+      //skapar köpknapp.
       const buyBtn = document.createElement("button");
       buyBtn.classList.add("buyBtn");
 
-      // Funktion för att lägga till produkten i varukorgen via köpknappen.
+      //funktion för att lägga till produkten i varukorgen via köpknappen.
       buyBtn.addEventListener("click", function () {
         addProductToCart(product.id);
       });
 
       buyBtn.innerText = "Köp";
 
-      //Append elements to productCardList
+      //lägger till element till productCardList.
       productCardList.appendChild(productParagraph);
+      //lägger till img till a-tagg.
       imageWrapper.appendChild(productImage);
+      //lägger till a-tagg med img till productCardList.
       productCardList.appendChild(imageWrapper);
+
       productCardList.appendChild(buyBtn);
 
-      //append productCard to section
+      //lägger till productCardList-div:en till productList-section.
       productList.appendChild(productCardList);
     });
   });
 };
 
+//kör funktionen som ritar ut alla produkter när sidan laddas.
 renderedFilteredProducts();
-
-//preventdefault?
-
-// Textfält där användaren kan “söka” efter en produkt, alltså ett filter där innehållet i sökfältet skall matchas mot produktens namn och beskrivning (VG)
-
-//1. Skapa upp ett input-fält (text) i html.
-//2. Skapa knapp för att söka.
-//3. Skapa eventlistener för när man trcker på sök-knappen.
-//4. hämta texten från sökfältet. (searchText)
-//5.
-
-// const filteredProducts = data.products.filter(product => product.name.toLowerCase().includes(searchText) || product.description.toLowerCase().includes(searchText));
-
-//Att göra: Måste man ha en div runt bilden för att styla? Hur isf? (OBS ska ändå göra a-tagg, styla den isf?) ((öva på css, glömt allt))
-
-//Filter (input-fält etc)
-
-//Styling D:

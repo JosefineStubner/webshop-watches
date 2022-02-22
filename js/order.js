@@ -105,6 +105,7 @@ const orderArr = () => {
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
+  localStorage.removeItem("orders")
   e.preventDefault();
   orderArr();
 
@@ -119,5 +120,8 @@ let kvitto = (item) => `
 </div>`
 
 orderBtn.addEventListener("click", ()=>{
+  viewkvitto.style.display ="none";
 
+  viewkvitto.append(kvitto)
+  
 })
