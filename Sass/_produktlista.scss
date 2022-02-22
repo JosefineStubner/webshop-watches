@@ -12,3 +12,37 @@
     }
 }
 
+// .productside {
+//     margin:0 auto 15rem;
+//     .productCard {
+//       @include flex(column, center, center);
+//       margin: 2%;
+//       transition: all 0.3s ease;
+//       &:hover {
+//         transform: scale(103%);
+//       }
+//       .productheading{
+//         align-self: flex-start;
+//       }
+//       .productImg {
+//         @include flex(row, center, center);
+//         width: 16rem;
+//         height: 16rem;
+//         img {
+//           width: 100%;
+//         }
+//       }
+//       .producttext{
+//         margin: 5px;
+//         width: 18rem;
+//         height: 10rem;
+//       }
+//       .productinfo {
+//         @include flex(row, space-around, flex-start);
+//         width: 16rem;
+//         margin-top: 20px;
+//       } 
+//     }
+//   }
+  
+

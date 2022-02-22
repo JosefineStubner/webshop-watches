@@ -18,19 +18,20 @@ const loggedInUser = () => {
 
 let users = JSON.parse(localStorage.users);
 
-// if/else med nästlad if-sats-
+//if/else med nästlad if-sats.
 const checkUserInfo = () => {
-  // Går igenom alla användare:
+  //går igenom alla användare:
   users.forEach((user) => {
-  // För den användare som matchar angiven mail:
+  //för den användare som matchar angiven mail:
     if (user.email === loginEmail.value) {
-  // Jämför endast lösenordet för denna användare:
+  //jämför endast lösenordet för denna användare:
       if (user.password === loginPassword.value) {
-  // Ger denna lert om rätt:
+  //ger denna alert om rätt:
         alert("login successful");
         loggedInUser();
       } else {
-  // Ger denna alert om fel:
+  //ger denna alert om fel:
+  //OBS för närvarande kommer ingen alert, ska felsöka.
         alert("login failed");
       }
     }
