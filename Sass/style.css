@@ -725,12 +725,12 @@ body {
   border: 1px solid;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  color: #12784a;
+  color: #004040;
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: 1.875rem;
-  border-color: #12784a;
+  border-color: #004040;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-width: 1px;
@@ -746,6 +746,7 @@ body {
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #b98f34;
-  border-radius: 1.5rem;
+  border-radius: 1.875rem;
+  min-width: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
