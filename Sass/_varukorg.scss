@@ -1,3 +1,4 @@
+main{
 .main-wrapper {
   width: 90%;
   background: $gold;
@@ -14,7 +15,7 @@
   }
   .schoppingcart-wrapper {
     .card {
-      width: 50vw;
+      width: 70vw;
       margin: 3% 0;
       padding: 1rem;
       border: 1px solid black;
@@ -25,7 +26,41 @@
       .bottom-line-wrapper{
         @include flex(row, space-around,center);
         width: 100%;
+        button{
+          padding: .5vh 1.5vw;
+          border: .5px solid black;
+          background: rgba($gold, 0.3);
+        }
+        .decreaseBtn{
+          border-radius: 5px 0 0 5px;
+        }
+        .increaseBtn{
+          border-radius: 0 5px 5px 0;
+        }
       }
     }
   }
+ 
+}
+}
+
+
+@media only screen and (min-width: 600px) {
+.main-wrapper {
+  .schoppingcart-wrapper {
+    .card {
+      @include flex(row,flex-start,center,);
+      img{
+        width: 50vw;
+        margin-right: 5%;
+      }
+      .bottom-line-wrapper{
+        @include flex(row, space-around,center);
+        width: 20vw;
+        
+        
+      }
+    }
+  }
+}
 }
