@@ -108,6 +108,13 @@ body{
     .cart{
         position: relative;
         right: 20%;
+        padding: 2.5px 5px;
+        cursor: pointer;
+        &:hover{
+            background-color:($green);
+            color: white;
+            border-radius: 4px;
+        }
     }
     
 }
@@ -137,6 +144,43 @@ body{
     @include buybtnStyle;
     @include basbtn;
   }
+
+
+  @media only screen and (min-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    .header{
+      .hamburger-container{
+          display: none;
+      }
+      .logo{
+          z-index: 1;
+      }
+      .nav{
+          transform: translateX(0);
+          inset: 0 0 0 0;
+          height:10%;
+          backdrop-filter: blur(0);
+          width: 100%;
+          z-index: 0;
+          ul{
+              @include flex(row,space-between,center);
+              margin-left: 10%;
+              width: 50%;
+              li{
+                  a{
+                      color: black;
+                  }
+              }
+          }
+      }
+      .cart{
+          right: 5%;
+          z-index: 1;
+      }
+  }
+}
 .basbtnStyle{
     @include basbtn
 }
