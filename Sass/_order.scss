@@ -1,110 +1,114 @@
-section{
-    .orderTitle{
-        margin-top: 5%;
-    }
-    @include flex(column,flex-start,center);
-    .orderSection{
-        align-self: flex-start;
-        margin: 5%;
-        .orderContainer{
-            @include flex(column,space-around,center);
-            
-            .oneproduct{
-                @include flex(row,flex-start,flex-start);
-                margin: 4% 0;
-                align-self: flex-start;
-                width: 50vw;
-                img{
-                    width: 5rem;
-                    margin-right: 5%;
-                }
-                h2{
-                    margin-bottom: 5%
-                }
-            }
-        }
-        .line{
-            width: 80vw;
-            height: .5px;
-            background: gray
-        }
-    }
-    .totalPrice{
-        margin-top: 5%;
-        float: right
-    }
+section {
+  .orderTitle {
+    margin-top: 5%;
+  }
+  @include flex(column, flex-start, center);
+  .orderSection {
+    align-self: flex-start;
+    margin: 5%;
+    .orderContainer {
+      @include flex(column, space-around, center);
 
+      .oneproduct {
+        @include flex(row, flex-start, flex-start);
+        margin: 4% 0;
+        align-self: flex-start;
+        width: 50vw;
+        img {
+          width: 5rem;
+          margin-right: 5%;
+        }
+        h2 {
+          margin-bottom: 5%;
+        }
+      }
+    }
+    .line {
+      width: 80vw;
+      height: 0.5px;
+      background: gray;
+    }
+  }
+  .totalPrice {
+    margin-top: 5%;
+    float: right;
+  }
 }
 
 .order-form {
-    @include flex(column,space-around,center);
+  @include flex(column, space-around, center);
 
-    .orderFormular{
-        @include flex(row,space-around,flex-start);
-        flex-wrap: wrap;
+  .orderFormular {
+    @include flex(row, space-around, flex-start);
+    flex-wrap: wrap;
 
-        @media (min-width: 500px) {
-            width: 320px;
-            @include flex(row, space-around, flex-start);
-          }
-
-        .wrapper{
-            @include flex(column,space-around,center); 
-            height: 200px;
-        }
+    @media (min-width: 500px) {
+      width: 320px;
+      @include flex(row, space-around, flex-start);
     }
 
-    h3 {
-        margin-bottom: 10px;
+    .wrapper {
+      @include flex(column, space-around, center);
+      height: 200px;
     }
+  }
 
-    .comment-wrapper {
-        @include flex(column,space-around,center);
-        margin: 10px 0 30px 0;
+  h3 {
+    margin-bottom: 10px;
+  }
 
-        #orderComments {
-            margin: 10px 0 10px 0;
-        }
+  .comment-wrapper {
+    @include flex(column, space-around, center);
+    margin: 10px 0 30px 0;
+
+    #orderComments {
+      margin: 10px 0 10px 0;
     }
+  }
 }
 
 .kvittocontainer {
+  @include flex(column, space-around, center);
+  border: 1px solid $green;
+  margin: 2rem;
+  padding: 1rem;
+  width: 100%;
+
+  .line {
+    width: 80vw;
+    height: 0.5px;
+    background: gray;
+  }
+
+  .kvittohead {
     @include flex(column, space-around, center);
-    border:1px solid $green;
-    margin: 2rem;
-    padding: 1rem;
-    width: 100%;
+    height: 7rem;
+  }
 
-    .kvittohead {
-        @include flex(column,space-around, center);
-        height: 7rem;
-    }
+  .kvittoproduk {
+    @include flex(row, center, center);
+  }
 
-    .kvittoproduk {
-        @include flex( row, center, center)
-        
-    }
+  ul {
+    list-style: none;
+    min-height: 5rem;
 
-    ul {
-        list-style: none;
-        min-height: 5rem;
-
-        li {
-            margin: 10px;
-            word-spacing: 10px;
-        }
+    li {
+      margin: 10px;
+      word-spacing: 10px;
     }
-    .kvittopersinfo {
-        @include flex(column, space-around, center);
-        border: black 1px solid;
-        margin-top: 15px;
-        width: 80%;
-        height: 200px;
-    }
+  }
+  .kvittopersinfo {
+    @include flex(column, space-around, center);
+    border: black 1px solid;
+    margin-top: 15px;
+    width: 80%;
+    height: 200px;
+  }
 }
 
 .required:after {
-    color: #e32;
-    content: ' *';
-    display: inline;
+  color: #e32;
+  content: " *";
+  display: inline;
 }
