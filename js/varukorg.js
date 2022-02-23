@@ -7,7 +7,6 @@ function clearAllElements(parentElem){
 };
 
 
-
 function renderCards(list){
   list.forEach((card, i) => {
       // console.log(card);
