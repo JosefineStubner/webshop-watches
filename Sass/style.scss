@@ -8,125 +8,127 @@
 @import "./login";
 @import "./order";
 
-*{
-    margin: 0;
-    padding: 0;
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
-.header{
-    width: 100vw;
-    height: 10vh;
-    background: $ice;
-    .logo{
-        margin-left: 4%;
-        .hourglass-logo {
-            height: 55px;
-            width: 180px;
+.header {
+  width: 100vw;
+  height: 10vh;
+  background: $ice;
+  .logo {
+    margin-left: 4%;
+    .hourglass-logo {
+      height: 55px;
+      width: 180px;
+    }
+  }
+  @include flex(row, space-between, center);
+
+  .nav {
+    @include flex(column, center, center);
+    position: absolute;
+    background-color: rgba($gold, 0.747);
+    backdrop-filter: (blur(4px));
+    height: 100vh;
+    inset: 0 0 0 40%;
+    transform: translateX(100%);
+    z-index: 999;
+    transition: all 0.3s ease;
+    ul {
+      height: 80%;
+      width: 50%;
+      @include flex(column, space-around, center);
+      li {
+        list-style: none;
+        font-size: 1.2rem;
+        a {
+          color: $ice;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
           }
+        }
+      }
     }
-@include flex(row, space-between, center);
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+  .hamburger-container {
+    position: fixed;
+    right: 0;
+    @include flex(column, center, center);
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    z-index: 9999;
 
-    .nav{
-        @include flex(column, center, center);
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background: rgb(0, 0, 0);
+      transition: all 0.5s ease;
+      &::before,
+      &::after {
+        content: "";
         position: absolute;
-        background-color: rgba($gold, 0.747);
-        backdrop-filter: (blur(4px));
-        height: 100vh;
-        inset: 0 0 0 40%;
-        transform: translateX(100%);
-        z-index: 999;
-        transition: all .3s ease;
-        ul{
-            height: 80%;
-            width: 50%;
-            @include flex(column, space-around, center);
-            li{
-                list-style: none;
-                font-size: 1.2rem;
-                a{
-                color: $ice;
-                text-decoration: none;
-                &:hover{
-                    text-decoration: underline;
-                }
-                }
-            }
-        }
-        &.active{
-            transform: translateX(0%);
-        }
+        width: 100%;
+        height: 3px;
+        background: black;
+        transition: all 0.5s ease;
+      }
+      &::before {
+        top: 15%;
+      }
+      &::after {
+        bottom: 15%;
+      }
     }
-    .hamburger-container{
-        position: fixed;
-        right: 0;
-        @include flex(column,center,center);
-        width: 40px;
-        height: 40px;
-        margin: 15px;
-        z-index: 9999;
-       
-        .hamburger-line{
-            width: 100%;
-            height: 3px;
-            background:rgb(0, 0, 0);
-            transition: all .5s ease;
-            &::before, &::after{
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background: black;
-                transition: all .5s ease;
-            }
-            &::before{ 
-                top:15%;
-            }
-            &::after{
-                bottom: 15%;
-            }
+    &.activeBtn {
+      z-index: 9999;
 
+      .hamburger-line {
+        background: transparent;
+        &::before {
+          transform: translateY(12.5px) rotate(45deg);
         }
-        &.activeBtn{
-            z-index: 9999;
-            
-            .hamburger-line{  
-                background: transparent;    
-            &::before{  
-                transform: translateY(12.5px) rotate(45deg);
-               }
 
-            &::after{
-                transform: translateY(-12.5px) rotate(-45deg);                
-            }
-            }
+        &::after {
+          transform: translateY(-12.5px) rotate(-45deg);
         }
+      }
     }
+  }
 
-    .cart{
-        position: relative;
-        right: 20%;
-        padding: 2.5px 5px;
-        cursor: pointer;
-        &:hover{
-            background-color:($green);
-            color: white;
-            border-radius: 4px;
-        }
+  .cart {
+    position: relative;
+    right: 20%;
+    padding: 2.5px 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: ($green);
+      color: white;
+      border-radius: 4px;
     }
-    
+  }
 }
-.footer{
-    background-color: $green;
-    // position: relative;
-    // bottom: 0;
-    @include flex(row, space-around, center);
-    p{
-        width: 30%;
-        color: $ice;
-    }
+.footer {
+  background-color: $green;
+  // position: relative;
+  // bottom: 0;
+  @include flex(row, space-around, center);
+  p {
+    width: 30%;
+    color: $ice;
+  }
 }
 //Knappar
 #shoppingcart-main{
@@ -135,7 +137,7 @@ body{
     height: 100%;
     .back-btn{
         align-self: flex-start;
-        margin: 5% 0 0 5%;
+        margin:2% 0 0 2%;
         @include backbtnStyle;
         @include basbtn;
     }
@@ -145,12 +147,20 @@ body{
     @include basbtn;
   }
 
+.buyBtn {
+  @include buybtnStyle;
+  @include basbtn;
+}
 
-  @media only screen and (min-width: 600px) {
-    body{
-        overflow-x: hidden;
+@media only screen and (min-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    .hamburger-container {
+      display: none;
     }
-    .header{
+    
       .hamburger-container{
           display: none;
       }
@@ -162,8 +172,10 @@ body{
           inset: 0 0 0 0;
           height:10%;
           backdrop-filter: blur(0);
+          position: absolute;
           width: 100%;
           z-index: 0;
+          
           ul{
               @include flex(row,space-between,center);
               margin-left: 10%;
@@ -174,13 +186,15 @@ body{
                   }
               }
           }
-      }
-      .cart{
+        }
+      
+        .cart {
           right: 5%;
           z-index: 1;
-      }
+        }
+    }
   }
-}
-.basbtnStyle{
-    @include basbtn
-}
+  
+  .basbtnStyle {
+    @include basbtn;
+  }

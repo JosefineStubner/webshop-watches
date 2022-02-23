@@ -1,4 +1,5 @@
-.main-wrapper {
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+main .main-wrapper {
   width: 90%;
   background: #b98f34;
   display: -webkit-box;
@@ -16,30 +17,30 @@
   margin: 10%;
 }
 
-.main-wrapper .order-button {
+main .main-wrapper .order-button {
   margin: 2%;
   border: 1px solid black;
   padding: 5px;
   border-radius: 7px;
 }
 
-.main-wrapper .order-button:hover {
+main .main-wrapper .order-button:hover {
   background: #6d6dfa;
 }
 
-.main-wrapper .schoppingcart-wrapper .card {
-  width: 50vw;
+main .main-wrapper .schoppingcart-wrapper .card {
+  width: 70vw;
   margin: 3% 0;
   padding: 1rem;
   border: 1px solid black;
   background: white;
 }
 
-.main-wrapper .schoppingcart-wrapper .card img {
+main .main-wrapper .schoppingcart-wrapper .card img {
   width: 20vw;
 }
 
-.main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +54,57 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper button {
+  padding: .5vh 1.5vw;
+  border: .5px solid black;
+  background: rgba(185, 143, 52, 0.3);
+}
+
+main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .decreaseBtn {
+  border-radius: 5px 0 0 5px;
+}
+
+main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBtn {
+  border-radius: 0 5px 5px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .main-wrapper .schoppingcart-wrapper .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-wrapper .schoppingcart-wrapper .card img {
+    width: 50vw;
+    margin-right: 5%;
+  }
+  .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20vw;
+  }
 }
 
 .productside {
@@ -712,7 +764,7 @@ section .orderSection .orderContainer .oneproduct h2 {
 
 section .orderSection .line {
   width: 80vw;
-  height: .5px;
+  height: 0.5px;
   background: gray;
 }
 
@@ -830,6 +882,12 @@ section .totalPrice {
   width: 100%;
 }
 
+.kvittocontainer .line {
+  width: 80vw;
+  height: 0.5px;
+  background: gray;
+}
+
 .kvittocontainer .kvittohead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -893,13 +951,14 @@ section .totalPrice {
 
 .required:after {
   color: #e32;
-  content: ' *';
+  content: " *";
   display: inline;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -957,8 +1016,8 @@ body {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 999;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header .nav ul {
@@ -1023,8 +1082,8 @@ body {
   width: 100%;
   height: 3px;
   background: black;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .header .hamburger-container .hamburger-line::before, .header .hamburger-container .hamburger-line::after {
@@ -1033,8 +1092,8 @@ body {
   width: 100%;
   height: 3px;
   background: black;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .header .hamburger-container .hamburger-line::before {
@@ -1116,7 +1175,7 @@ body {
 #shoppingcart-main .back-btn {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin: 5% 0 0 5%;
+  margin: 2% 0 0 2%;
   color: #004040;
   background-color: transparent;
   border-color: #004040;
@@ -1158,9 +1217,32 @@ body {
   background-color: white;
 }
 
+.buyBtn {
+  color: #fff;
+  background-color: #b98f34;
+  min-width: 5rem;
+  border: 2px solid white;
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1.875rem;
+}
+
+.buyBtn:hover {
+  border: 2px solid #b98f34;
+  color: #b98f34;
+  background-color: white;
+}
+
 @media only screen and (min-width: 600px) {
   body {
     overflow-x: hidden;
+  }
+  .header .hamburger-container {
+    display: none;
   }
   .header .hamburger-container {
     display: none;
@@ -1175,6 +1257,7 @@ body {
     height: 10%;
     -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
+    position: absolute;
     width: 100%;
     z-index: 0;
   }
