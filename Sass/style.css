@@ -391,7 +391,7 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
 }
 
 .startmain .categorycontainer .category {
-  margin: 20px;
+  margin: 20px 30px;
 }
 
 .startmain .categorycontainer .category a {
@@ -407,6 +407,13 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
 
 .startmain .categorycontainer .category a img {
   height: 250px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.startmain .categorycontainer .category a img:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
 }
 
 @media only screen and (min-width: 600px) {
