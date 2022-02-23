@@ -636,6 +636,10 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   display: none;
 }
 
+.create-login-main {
+  padding-top: 20px;
+}
+
 .login-header {
   margin-bottom: 10px;
 }
@@ -728,6 +732,12 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
 
 .login-form .input-container .input-wrapper .create-form-styling {
   margin: 5px 0 5px 0;
+}
+
+.login-form .input-container .input-wrapper input {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px;
 }
 
 .login-form .buyBtn.create-form-styling {

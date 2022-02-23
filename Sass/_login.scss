@@ -2,18 +2,17 @@
   display: none;
 }
 
+.create-login-main {
+  padding-top: 20px;
+}
+
 .login-header {
   margin-bottom: 10px;
 }
+
 .login-form {
   @include flex(column, flex-start, center);
   height: 450px;
-
-  // @media (min-width: 500px) {
-  //   width: 320px;
-  //   @include flex(row, center, flex-start);
-  //   flex-wrap: wrap;
-  // }
 
   .input-container {
     @include flex(column, space-around, center);
@@ -33,6 +32,12 @@
 
       .create-form-styling {
         margin: 5px 0 5px 0;
+      }
+
+      input {
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 2px;
       }
 
     }
