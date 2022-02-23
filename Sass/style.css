@@ -235,6 +235,12 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   }
 }
 
+.productlist .productCard {
+  margin: 2rem auto 10rem;
+  padding: 1rem;
+  border: 2px solid red;
+}
+
 .productlist .productCard a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,6 +254,14 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.productlist .productCard a:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
 }
 
 .productlist img {
