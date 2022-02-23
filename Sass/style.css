@@ -764,7 +764,7 @@ section .orderSection .orderContainer .oneproduct h2 {
 
 section .orderSection .line {
   width: 80vw;
-  height: .5px;
+  height: 0.5px;
   background: gray;
 }
 
@@ -882,6 +882,12 @@ section .totalPrice {
   width: 100%;
 }
 
+.kvittocontainer .line {
+  width: 80vw;
+  height: 0.5px;
+  background: gray;
+}
+
 .kvittocontainer .kvittohead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,7 +951,7 @@ section .totalPrice {
 
 .required:after {
   color: #e32;
-  content: ' *';
+  content: " *";
   display: inline;
 }
 

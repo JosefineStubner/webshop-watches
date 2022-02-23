@@ -121,6 +121,30 @@ let kvitto = () => `
 </div>
 `;
 
+function getUniqueProds(prodList){
+  const returnArray = []
+  let totalPrice = 0
+  prodList.forEach(product =>{
+    const alreadyExists = returnArray.find(retProd =>{
+      return retProd.id === product.id;
+    });
+    if (!alreadyExists){
+      returnArray.push({
+        ...product,
+        antal:1
+      });
+    }else{
+      alreadyExists.antal += 1;
+      alreadyExists.price = parseInt(product.price) * alreadyExists.antal;
+    }
+    totalPrice = totalPrice + product.price
+   
+  });
+  total.innerHTML= totalPrice
+  return returnArray;
+};
+
+
 let kvittoFunc = () => {
   let cartProduct = JSON.parse(localCart)
   viewkvitto.style.display = "hidden";
@@ -131,14 +155,20 @@ let kvittoFunc = () => {
 
   let totalPrice = 0
 
+  cartProduct = getUniqueProds(cartProduct)
+
   cartProduct.forEach((vald)=>{
     const liProd = document.createElement("li");
-    liProd.innerText = vald.name + " " + vald.price + ":-"
+    const liDiv = document.createElement("div");
+    liDiv.classList.add("line")
+    liProd.innerText = vald.name + " " + vald.antal + "st " + vald.price + ":-"
+    liProd.appendChild(liDiv)
     kvittoProduktLista.appendChild(liProd)
-    totalPrice = totalPrice + vald.price
+  
+    // totalPrice = totalPrice + vald.price
   })
 
-  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+  // kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
 
   let persInfo = JSON.parse(persinfo)
 
