@@ -1,5 +1,6 @@
 const productList = document.querySelector(".productlist");
 const searchBtn = document.querySelector("#searchBtn");
+searchBtn.classList.add("basbtnStyle")
 
 //hämtar data från JSON.
 const fetchProductData = async () => {

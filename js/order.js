@@ -22,7 +22,6 @@ let oneOrder = (item) => `
 const localCart = localStorage.getItem("cart")
 if(localCart){
  let cartProduct= JSON.parse(localCart)
-console.log(cartProduct)
  orderContainer.innerHTML = cartProduct.map(oneOrder).join("")
 
  function getUniqueProds(prodList){
@@ -51,8 +50,6 @@ console.log(cartProduct)
    sort(uniqueArray)
    orderContainer.innerHTML= uniqueArray.map(oneOrder).join("")
    console.log(uniqueArray)
-
-
 }
 
 const currentOrderForm = document.querySelector("#orderForm");
@@ -74,7 +71,7 @@ if(currentUserObj) {
   const currentUser = users.find((item) => {
     return currentUserObj.email === item.email
   })
-
+  console.log(currentUser)
   orderName.value = currentUser.name;
   orderAdress.value = currentUser.adress;
   orderZipcode.value = currentUser.zipcode;
@@ -82,6 +79,7 @@ if(currentUserObj) {
   orderEmail.value = currentUser.email;
   orderPhone.value = currentUser.phone;
 }
+console.log(currentUserObj)
 
 const orderArr = () => {
   const orders = (() => {
@@ -104,14 +102,20 @@ const orderArr = () => {
   localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-let viewkvitto = document.querySelector("#kvitto")
+
+const viewkvitto = document.querySelector("#kvitto")
+let persinfo = localStorage.getItem("orders")
+console.log(persinfo)
 
 let kvitto = () => `
 <div class="kvittocontainer">
+<div class="kvittohead">
 <h1>KVITTO</h1>
 <h2>Tack för din beställning</h2>
+</div>
 <ul id="kvittoProduktLista"></ul>
 <div id="kvittototal" class="total"></div>
+<div id="kvittopersinfo" class="kvittopersinfo"></div>
 </div>
 `;
 
@@ -119,7 +123,8 @@ let kvittoFunc = () => {
   let cartProduct = JSON.parse(localCart)
   viewkvitto.style.display = "hidden";
   viewkvitto.innerHTML = kvitto();
-  const kvittoProduktLista = document.getElementById('kvittoProduktLista');
+  const kvittoProduktLista = document.querySelector('#kvittoProduktLista');
+  const kvittopersinfo = document.querySelector("#kvittopersinfo")
   const kvittototal = document.querySelector("#kvittototal");
 
   let totalPrice = 0
@@ -128,11 +133,13 @@ let kvittoFunc = () => {
     const liProd = document.createElement("li");
     liProd.innerText = vald.name + " " + vald.price + ":-"
     kvittoProduktLista.appendChild(liProd)
-
     totalPrice = totalPrice + vald.price
   })
-
   kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+  const godbaytext = document.createElement("p");
+  godbaytext.innerText = "Leveransadress:" + " " + persinfo
+  kvittopersinfo.appendChild(godbaytext)
+
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
