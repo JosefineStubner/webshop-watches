@@ -828,6 +828,7 @@ section .totalPrice {
   border: 1px solid #004040;
   margin: 2rem;
   padding: 1rem;
+  width: 100%;
 }
 
 .kvittocontainer .kvittohead {
@@ -840,9 +841,9 @@ section .totalPrice {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 7rem;
 }
 
@@ -878,15 +879,16 @@ section .totalPrice {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: red 1px solid;
-  width: 50%;
+  border: black 1px solid;
+  margin-top: 15px;
+  width: 80%;
   height: 200px;
 }
 
