@@ -235,6 +235,29 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   }
 }
 
+.filter-products {
+  padding: 0.5rem;
+}
+
+.filter-products .filter-field {
+  margin: 0.75rem 0;
+}
+
+.filter-products .search-btn {
+  color: #004040;
+  background-color: transparent;
+  border-color: #004040;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.filter-products .search-btn:hover {
+  color: white;
+  background-color: #004040;
+}
+
 .productlist .productCard {
   margin: 2rem auto 10rem;
   padding: 1rem;
@@ -270,8 +293,12 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   border: 2px solid green;
 }
 
+.productlist p {
+  display: inline;
+}
+
 .productlist button {
-  display: block;
+  margin-left: 1rem;
 }
 
 .header-img {
