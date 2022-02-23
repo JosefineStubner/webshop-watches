@@ -68,34 +68,37 @@ section{
     }
 }
 
-.kvittocontainer{
+.kvittocontainer {
     @include flex(column, space-around, center);
     border:1px solid $green;
     margin: 2rem;
     padding: 1rem;
-    .kvittohead{
-        @include flex(column,space-around, flex-start);
+    width: 100%;
+
+    .kvittohead {
+        @include flex(column,space-around, center);
         height: 7rem;
     }
 
-    .kvittoproduk{
+    .kvittoproduk {
         @include flex( row, center, center)
         
     }
 
-    ul{
+    ul {
         list-style: none;
         min-height: 5rem;
 
-        li{
+        li {
             margin: 10px;
             word-spacing: 10px;
         }
     }
-    .kvittopersinfo{
-        @include flex(row, space-around, center);
-        border: red 1px solid;
-        width: 50%;
+    .kvittopersinfo {
+        @include flex(column, space-around, center);
+        border: black 1px solid;
+        margin-top: 15px;
+        width: 80%;
         height: 200px;
     }
 }

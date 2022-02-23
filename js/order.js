@@ -109,13 +109,15 @@ console.log(persinfo)
 
 let kvitto = () => `
 <div class="kvittocontainer">
-<div class="kvittohead">
-<h1>KVITTO</h1>
-<h2>Tack för din beställning</h2>
-</div>
-<ul id="kvittoProduktLista"></ul>
-<div id="kvittototal" class="total"></div>
-<div id="kvittopersinfo" class="kvittopersinfo"></div>
+  <div class="kvittohead">
+    <h2 class="kvitto-headings">KVITTO</h2>
+    <h3 class="kvitto-headings">Tack för din beställning</h3>
+  </div>
+  <ul id="kvittoProduktLista"></ul>
+  <div id="kvittototal" class="total"></div>
+  <div id="kvittopersinfo" class="kvittopersinfo">
+    <h3 class="kvitto-headings">Leveransinformation</h3>
+  </div>
 </div>
 `;
 
@@ -135,11 +137,23 @@ let kvittoFunc = () => {
     kvittoProduktLista.appendChild(liProd)
     totalPrice = totalPrice + vald.price
   })
-  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
-  const godbaytext = document.createElement("p");
-  godbaytext.innerText = "Leveransadress:" + " " + persinfo
-  kvittopersinfo.appendChild(godbaytext)
 
+  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+
+  let persInfo = JSON.parse(persinfo)
+
+  persInfo.forEach((order) => {
+    const godbaytext = document.createElement("p");
+    godbaytext.innerText = 
+      "Namn: " + order.name + 
+      "\nLeveransadress: " + order.adress +
+      "\nPostnummer: " + order.zipcode +
+      "\nStad: " + order.city +
+      "\nEpost: " + order.email +
+      "\nTelefon: " + order.phone +
+      "\nKommentar: " + order.comments;
+    kvittopersinfo.appendChild(godbaytext)
+  })
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
