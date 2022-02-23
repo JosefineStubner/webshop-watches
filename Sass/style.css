@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 main .main-wrapper {
   width: 90%;
   background: #b98f34;
@@ -878,6 +879,7 @@ section .totalPrice {
   border: 1px solid #004040;
   margin: 2rem;
   padding: 1rem;
+  width: 100%;
 }
 
 .kvittocontainer .kvittohead {
@@ -890,9 +892,9 @@ section .totalPrice {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 7rem;
 }
 
@@ -928,15 +930,16 @@ section .totalPrice {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: red 1px solid;
-  width: 50%;
+  border: black 1px solid;
+  margin-top: 15px;
+  width: 80%;
   height: 200px;
 }
 
@@ -949,6 +952,7 @@ section .totalPrice {
 * {
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -997,7 +1001,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
+  position: absolute;
   background-color: rgba(185, 143, 52, 0.747);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
@@ -1006,8 +1010,8 @@ body {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 999;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header .nav ul {
@@ -1072,8 +1076,8 @@ body {
   width: 100%;
   height: 3px;
   background: black;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .header .hamburger-container .hamburger-line::before, .header .hamburger-container .hamburger-line::after {
@@ -1082,8 +1086,8 @@ body {
   width: 100%;
   height: 3px;
   background: black;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .header .hamburger-container .hamburger-line::before {
@@ -1207,9 +1211,32 @@ body {
   background-color: white;
 }
 
+.buyBtn {
+  color: #fff;
+  background-color: #b98f34;
+  min-width: 5rem;
+  border: 2px solid white;
+  padding: .4rem 1rem;
+  border: 1px solid;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1.875rem;
+}
+
+.buyBtn:hover {
+  border: 2px solid #b98f34;
+  color: #b98f34;
+  background-color: white;
+}
+
 @media only screen and (min-width: 600px) {
   body {
     overflow-x: hidden;
+  }
+  .header .hamburger-container {
+    display: none;
   }
   .header .hamburger-container {
     display: none;
