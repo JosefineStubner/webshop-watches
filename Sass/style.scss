@@ -137,10 +137,12 @@ body{
         align-self: flex-start;
         margin: 5% 0 0 5%;
         @include backbtnStyle;
+        @include basbtn;
     }
 }
 .buyBtn {
     @include buybtnStyle;
+    @include basbtn;
   }
 
 
@@ -178,4 +180,7 @@ body{
           z-index: 1;
       }
   }
+}
+.basbtnStyle{
+    @include basbtn
 }

@@ -71,18 +71,32 @@ section{
 .kvittocontainer{
     @include flex(column, space-around, center);
     border:1px solid $green;
-    height: 200px;
+    margin: 2rem;
+    padding: 1rem;
+    .kvittohead{
+        @include flex(column,space-around, flex-start);
+        height: 7rem;
+    }
 
     .kvittoproduk{
         @include flex( row, center, center)
+        
     }
 
     ul{
         list-style: none;
+        min-height: 5rem;
 
         li{
             margin: 10px;
+            word-spacing: 10px;
         }
+    }
+    .kvittopersinfo{
+        @include flex(row, space-around, center);
+        border: red 1px solid;
+        width: 50%;
+        height: 200px;
     }
 }
 
