@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#loginForm");
 const loginEmail = document.querySelector("#loginEmail");
 const loginPassword = document.querySelector("#loginPassword");
+const regBtn = document.querySelector("#regBtn");
 
 const loggedInUser = () => {
   localStorage.removeItem("loggedInUser")
@@ -32,3 +33,8 @@ loginForm.addEventListener("submit", (e) => {
   checkUserInfo();
   location.reload();
 });
+
+regBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.replace("skapa-login.html");
+})
