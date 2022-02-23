@@ -278,19 +278,19 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
       -ms-flex-align: center;
           align-items: center;
   margin: 2%;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.productlist .productCard a:hover {
-  -webkit-transform: scale(103%);
-          transform: scale(103%);
 }
 
 .productlist img {
   max-width: 50%;
   max-height: 50%;
   border: 2px solid green;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.productlist img:hover {
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
 }
 
 .productlist p {

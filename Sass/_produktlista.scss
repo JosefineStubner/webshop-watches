@@ -17,16 +17,16 @@
     a {
       @include flex(column, space-around, center);
       margin: 2%;
-      transition: all 0.3s ease;
-      &:hover {
-        transform: scale(103%);
-      }
     }
   }
   img {
     max-width: 50%;
     max-height: 50%;
     border: 2px solid green;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(103%);
+    }
   }
 
   p {
