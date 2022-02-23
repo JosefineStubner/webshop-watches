@@ -45,14 +45,17 @@ const renderedFilteredProducts = () => {
       const productCardList = document.createElement("div");
       productCardList.classList.add("productCard");
 
-      const productParagraph = document.createElement("p");
-      productParagraph.innerText = product.name;
+      const productHeading = document.createElement("h3");
+      productHeading.innerText = product.name;
 
       const imageWrapper = document.createElement("a");
       imageWrapper.href = `Produktsida.html?name=${product.name}`;
 
       const productImage = document.createElement("img");
       productImage.src = product.image;
+
+      const productPrice = document.createElement("p");
+      productPrice.innerText = product.price;
 
       //skapar köpknapp.
       const buyBtn = document.createElement("button");
@@ -66,11 +69,13 @@ const renderedFilteredProducts = () => {
       buyBtn.innerText = "Köp";
 
       //lägger till element till productCardList.
-      productCardList.appendChild(productParagraph);
+      productCardList.appendChild(productHeading);
       //lägger till img till a-tagg.
       imageWrapper.appendChild(productImage);
       //lägger till a-tagg med img till productCardList.
       productCardList.appendChild(imageWrapper);
+
+      productCardList.appendChild(productPrice);
 
       productCardList.appendChild(buyBtn);
 
