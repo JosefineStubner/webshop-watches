@@ -1,11 +1,9 @@
 
 const orderWrapper = document.querySelector(".endproduct");
-const orderForm = document.querySelector (".orderFormular")
-const orderContainer = document.querySelector (".orderContainer")
+const orderForm = document.querySelector (".orderFormular");
+const orderContainer = document.querySelector (".orderContainer");
 let total = document.querySelector(".total");
 
-
-//ska skappas för varje köpcklick.
 let oneOrder = (item) => `
 <div class="oneproduct">
   <img src="${item.image}" alt="" />
@@ -18,8 +16,8 @@ let oneOrder = (item) => `
   <div class="line"></div>
 `;
 
+const localCart = localStorage.getItem("cart");
 
-const localCart = localStorage.getItem("cart")
 if(localCart){
  let cartProduct= JSON.parse(localCart)
  orderContainer.innerHTML = cartProduct.map(oneOrder).join("")
@@ -49,7 +47,6 @@ if(localCart){
    const uniqueArray = getUniqueProds(cartProduct)
    sort(uniqueArray)
    orderContainer.innerHTML= uniqueArray.map(oneOrder).join("")
-   console.log(uniqueArray)
 }
 
 const currentOrderForm = document.querySelector("#orderForm");
@@ -70,8 +67,7 @@ if(currentUserObj) {
   
   const currentUser = users.find((item) => {
     return currentUserObj.email === item.email
-  })
-  console.log(currentUser)
+  });
   orderName.value = currentUser.name;
   orderAdress.value = currentUser.adress;
   orderZipcode.value = currentUser.zipcode;
@@ -79,7 +75,6 @@ if(currentUserObj) {
   orderEmail.value = currentUser.email;
   orderPhone.value = currentUser.phone;
 }
-console.log(currentUserObj)
 
 const orderArr = () => {
   const orders = (() => {
@@ -102,10 +97,8 @@ const orderArr = () => {
   localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-
-const viewkvitto = document.querySelector("#kvitto")
-let persinfo = localStorage.getItem("orders")
-console.log(persinfo)
+const viewkvitto = document.querySelector("#kvitto");
+let persinfo = localStorage.getItem("orders");
 
 let kvitto = () => `
 <div class="kvittocontainer">
@@ -170,7 +163,7 @@ let kvittoFunc = () => {
 
   kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
 
-  let persInfo = JSON.parse(persinfo)
+  let persInfo = JSON.parse(persinfo);
 
   persInfo.forEach((order) => {
     const godbaytext = document.createElement("p");
@@ -182,7 +175,8 @@ let kvittoFunc = () => {
       "\nEpost: " + order.email +
       "\nTelefon: " + order.phone +
       "\nKommentar: " + order.comments;
-    kvittopersinfo.appendChild(godbaytext)
+    kvittopersinfo.appendChild(godbaytext);
+    godbaytext.style.textAlign = "center";
   })
 }
 
@@ -192,4 +186,4 @@ currentOrderForm.addEventListener("submit", (e) => {
   orderArr();
   kvittoFunc();
 
-})
+});
