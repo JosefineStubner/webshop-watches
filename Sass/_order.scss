@@ -38,18 +38,27 @@ section {
 .order-form {
   @include flex(column, space-around, center);
 
+  input,
+  textarea {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px;
+  }
+
   .orderFormular {
     @include flex(row, space-around, flex-start);
     flex-wrap: wrap;
 
     @media (min-width: 500px) {
-      width: 320px;
       @include flex(row, space-around, flex-start);
+      flex-wrap: nowrap;
     }
 
     .wrapper {
       @include flex(column, space-around, center);
       height: 200px;
+      width: 170px;
+      margin: 0 5px 0 5px;
     }
   }
 

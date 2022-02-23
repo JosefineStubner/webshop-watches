@@ -836,6 +836,13 @@ section .totalPrice {
           align-items: center;
 }
 
+.order-form input,
+.order-form textarea {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px;
+}
+
 .order-form .orderFormular {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,7 +862,6 @@ section .totalPrice {
 
 @media (min-width: 500px) {
   .order-form .orderFormular {
-    width: 320px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -868,6 +874,8 @@ section .totalPrice {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -885,6 +893,8 @@ section .totalPrice {
       -ms-flex-align: center;
           align-items: center;
   height: 200px;
+  width: 170px;
+  margin: 0 5px 0 5px;
 }
 
 .order-form h3 {
