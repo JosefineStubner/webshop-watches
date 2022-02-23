@@ -41,12 +41,16 @@
     align-items: center;
     width: 80%;
     .category {
-      margin: 20px;
+      margin: 20px 30px;
       a {
         text-decoration: none;
         @include heading2;
         img {
           height: 250px;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(103%);
+          }
         }
       }
     }
