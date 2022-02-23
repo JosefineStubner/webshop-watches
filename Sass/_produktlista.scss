@@ -1,3 +1,13 @@
+.filter-products {
+  padding: 0.5rem;
+  .filter-field {
+    margin: 0.75rem 0;
+  }
+  .search-btn {
+    @include backbtnStyle;
+  }
+}
+
 .productlist {
   .productCard {
     margin: 2rem auto 10rem;
@@ -19,8 +29,11 @@
     border: 2px solid green;
   }
 
+  p {
+    display: inline;
+  }
+
   button {
-    display: block;
+    margin-left: 1rem;
   }
 }
-
