@@ -34,7 +34,7 @@ body {
 
   .nav {
     @include flex(column, center, center);
-    position: absolute;
+    position: fixed;
     background-color: rgba($gold, 0.747);
     backdrop-filter: (blur(4px));
     height: 100vh;
@@ -131,21 +131,21 @@ body {
   }
 }
 //Knappar
-#shoppingcart-main{
-    @include flex(column,space-around,center);
-    // width: 100vw;
-    height: 100%;
-    .back-btn{
-        align-self: flex-start;
-        margin:2% 0 0 2%;
-        @include backbtnStyle;
-        @include basbtn;
-    }
-}
-.buyBtn {
-    @include buybtnStyle;
+#shoppingcart-main {
+  @include flex(column, space-around, center);
+  // width: 100vw;
+  height: 100%;
+  .back-btn {
+    align-self: flex-start;
+    margin: 2% 0 0 2%;
+    @include backbtnStyle;
     @include basbtn;
   }
+}
+.buyBtn {
+  @include buybtnStyle;
+  @include basbtn;
+}
 
 .buyBtn {
   @include buybtnStyle;
@@ -160,41 +160,41 @@ body {
     .hamburger-container {
       display: none;
     }
-    
-      .hamburger-container{
-          display: none;
-      }
-      .logo{
-          z-index: 1;
-      }
-      .nav{
-          transform: translateX(0);
-          inset: 0 0 0 0;
-          height:10%;
-          backdrop-filter: blur(0);
-          position: absolute;
-          width: 100%;
-          z-index: 0;
-          
-          ul{
-              @include flex(row,space-between,center);
-              margin-left: 10%;
-              width: 50%;
-              li{
-                  a{
-                      color: black;
-                  }
-              }
+
+    .hamburger-container {
+      display: none;
+    }
+    .logo {
+      z-index: 1;
+    }
+    .nav {
+      transform: translateX(0);
+      inset: 0 0 0 0;
+      height: 10%;
+      backdrop-filter: blur(0);
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+
+      ul {
+        @include flex(row, space-between, center);
+        margin-left: 10%;
+        width: 50%;
+        li {
+          a {
+            color: black;
           }
         }
-      
-        .cart {
-          right: 5%;
-          z-index: 1;
-        }
+      }
+    }
+
+    .cart {
+      right: 5%;
+      z-index: 1;
     }
   }
-  
-  .basbtnStyle {
-    @include basbtn;
-  }
+}
+
+.basbtnStyle {
+  @include basbtn;
+}
