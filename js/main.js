@@ -65,13 +65,17 @@ const addProductToCart = (productId) => {
   });
 };
 
-//funktion som visar inloggad användare i menyn över hela sidan.
+const loginMenuLink = document.querySelector("#loginMenuLink");
+const loginATag = document.querySelector("#loginMenuLink > a");
+const loginMenuList = document.querySelector("#loginMenuList");
+
 let loggedInUserObj = localStorage.getItem("loggedInUser");
 
 if (loggedInUserObj) {
   let users = JSON.parse(localStorage.users);
   loggedInUserObj = JSON.parse(loggedInUserObj);
   loginMenuLink.classList.add("hidden-login");
+  loginATag.classList.add("hidden-login");
 
   const currentUser = users.find((item) => {
     return loggedInUserObj.email === item.email;
