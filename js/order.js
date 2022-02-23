@@ -165,10 +165,10 @@ let kvittoFunc = () => {
     liProd.appendChild(liDiv)
     kvittoProduktLista.appendChild(liProd)
   
-    // totalPrice = totalPrice + vald.price
+    totalPrice = totalPrice + vald.price
   })
 
-  // kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
 
   let persInfo = JSON.parse(persinfo)
 
