@@ -32,7 +32,7 @@
     </header>
     <main>
       <section id="kvitto">
-      <h2 class="orderTitle">Beställnings-sida</h2>
+      <h2 class="orderTitle">Beställningssida</h2>
       <section class="orderSection">
         <!-- en div ska skappas för varje vald produkt -->
         <div class="orderContainer">
@@ -44,31 +44,31 @@
 
       </section>
       <form class="order-form" id="orderForm">
-        <h2>Beställningsformulär</h2>
+        <h3>Beställningsformulär</h3>
         <section class="orderFormular">
           <div class="wrapper">
-            <label for="orderName" class="create-form-styling">Namn</label>
+            <label for="orderName" class="required create-form-styling">Namn</label>
             <input type="text" name="order-name" class="create-form-styling" id="orderName" required>
-            <label for="orderAdress" class="create-form-styling">Gatuadress</label>
+            <label for="orderAdress" class="required create-form-styling">Gatuadress</label>
             <input type="text" name="order-adress" class="create-form-styling" id="orderAdress" required>
-            <label for="orderZipcode" class="create-form-styling">Postnummer</label>
+            <label for="orderZipcode" class="required create-form-styling">Postnummer</label>
             <input type="number" name="order-zipcode" class="create-form-styling" id="orderZipcode" required>
           </div>
   
           <div class="wrapper">
-            <label for="orderCity" class="create-form-styling">Ort</label>
+            <label for="orderCity" class="required create-form-styling">Ort</label>
             <input type="text" name="order-city" class="create-form-styling" id="orderCity" required>
-            <label for="orderEmail" class="create-form-styling">E-post</label>
+            <label for="orderEmail" class="required create-form-styling">E-post</label>
             <input type="email" name="order-email" class="create-form-styling" id="orderEmail" required>
             <label for="orderPhone" class="create-form-styling">Telefonnummer</label>
             <input type="number" name="order-phone" class="create-form-styling" id="orderPhone">
           </div>
         </section>
-        <div class="comment-wrapper">
+        <section class="comment-wrapper">
           <label for="orderComments" class="create-form-styling">Övriga kommentarer</label>
-          <textarea name="textbox" id="orderComments" cols="30" rows="10"></textarea>
+          <textarea name="textbox" cols="30" rows="10" class="create-form-styling" id="orderComments"></textarea>
           <button type="submit" class="buyBtn create-form-styling" id="orderBtn">Beställ</button>
-        </div>
+        </section>
       </form>
     </section>
     </main>
