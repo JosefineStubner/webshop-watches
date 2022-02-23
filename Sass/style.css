@@ -605,6 +605,12 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   height: 228px;
 }
 
+.create-login-main .create-login-form .input-container .input-wrapper input {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px;
+}
+
 @media (min-width: 500px) {
   .create-login-main .create-login-form .input-container .input-wrapper {
     display: -webkit-box;

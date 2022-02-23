@@ -33,5 +33,4 @@ createUserForm.addEventListener("submit", (e) => {
   e.preventDefault();
   userArr();
   window.location.replace("login.html");
-  
 })

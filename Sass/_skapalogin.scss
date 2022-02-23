@@ -31,6 +31,12 @@
         @include flex(column, space-evenly, center);
         height: 228px;
 
+        input {
+          border: 1px solid black;
+          border-radius: 3px;
+          padding: 2px;
+        }
+
         @media (min-width: 500px) {
           @include flex(column, flex-start, center);
           margin: 0 5px 0 5px;
