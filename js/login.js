@@ -1,5 +1,4 @@
 const loginForm = document.querySelector("#loginForm");
-
 const loginEmail = document.querySelector("#loginEmail");
 const loginPassword = document.querySelector("#loginPassword");
 
@@ -31,7 +30,5 @@ const checkUserInfo = () => {
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   checkUserInfo();
-
   location.reload();
-
 });
