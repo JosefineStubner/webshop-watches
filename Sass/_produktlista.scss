@@ -1,6 +1,10 @@
 .productlist {
-    border: 2px solid red;
+.productCard{
+    a{
+        @include flex(column,space-around,center);
 
+    }
+}
     img {
         max-width: 50%;
         max-height: 50%;

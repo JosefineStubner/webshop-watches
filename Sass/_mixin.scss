@@ -18,6 +18,10 @@
     box-sizing: border-box;
     border-width: 1px;
     cursor: pointer;
+    &:hover{
+        color: white;
+        background-color: $green;
+    }
 }
 
 @mixin buybtnStyle {
@@ -30,6 +34,12 @@
     background-color: $gold;
     border-radius: 1.875rem;
     min-width: 5rem;
+    border: 2px solid white;
+    &:hover{
+        border: 2px solid $gold;
+        color: $gold;
+        background-color: white;
+    }
 }
 
 // text
