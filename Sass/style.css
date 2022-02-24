@@ -1081,7 +1081,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   background-color: rgba(185, 143, 52, 0.747);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
