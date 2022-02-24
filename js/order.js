@@ -85,20 +85,27 @@ const orderArr = () => {
   })();
 
   orders.push({
-    "name": orderName.value, 
-    "adress": orderAdress.value,
-    "zipcode": orderZipcode.value,
-    "city": orderCity.value,
-    "email": orderEmail.value,
-    "phone": orderPhone.value,
-    "comments": orderComments.value
+    // "name": orderName.value, 
+    // "adress": orderAdress.value,
+    // "zipcode": orderZipcode.value,
+    // "city": orderCity.value,
+    // "email": orderEmail.value,
+    // "phone": orderPhone.value,
+    // "comments": orderComments.value
+
+    "Namn": orderName.value, 
+    "Adress": orderAdress.value,
+    "Postnummer": orderZipcode.value,
+    "Stad": orderCity.value,
+    "Epost": orderEmail.value,
+    "Telefon": orderPhone.value,
+    "Kommentar": orderComments.value
   });
 
   localStorage.setItem('orders', JSON.stringify(orders));
 }
 
 const viewkvitto = document.querySelector("#kvitto");
-let persinfo = localStorage.getItem("orders");
 
 let kvitto = () => `
 <div class="kvittocontainer">
@@ -139,6 +146,7 @@ function getUniqueProds(prodList){
 
 
 let kvittoFunc = () => {
+  let persinfo = localStorage.getItem("orders");
   let cartProduct = JSON.parse(localCart)
   viewkvitto.style.display = "hidden";
   viewkvitto.innerHTML = kvitto();
@@ -166,17 +174,23 @@ let kvittoFunc = () => {
   let persInfo = JSON.parse(persinfo);
 
   persInfo.forEach((order) => {
-    const godbaytext = document.createElement("p");
-    godbaytext.innerText = 
-      "Namn: " + order.name + 
-      "\nLeveransadress: " + order.adress +
-      "\nPostnummer: " + order.zipcode +
-      "\nStad: " + order.city +
-      "\nEpost: " + order.email +
-      "\nTelefon: " + order.phone +
-      "\nKommentar: " + order.comments;
-    kvittopersinfo.appendChild(godbaytext);
-    godbaytext.style.textAlign = "center";
+    // const godbaytext = document.createElement("p");
+    // godbaytext.innerText = 
+    //   "Namn: " + order.name + 
+    //   "\nLeveransadress: " + order.adress +
+    //   "\nPostnummer: " + order.zipcode +
+    //   "\nStad: " + order.city +
+    //   "\nEpost: " + order.email +
+    //   "\nTelefon: " + order.phone +
+    //   "\nKommentar: " + order.comments;
+    // kvittopersinfo.appendChild(godbaytext);
+    // godbaytext.style.textAlign = "center";
+    for (let property in order) {
+      const godbaytext = document.createElement("p");
+      godbaytext.innerHTML = `${property}: ${order[property]}`
+      kvittopersinfo.appendChild(godbaytext);
+      godbaytext.style.textAlign = "center";
+    }
   })
 }
 
@@ -185,5 +199,4 @@ currentOrderForm.addEventListener("submit", (e) => {
   e.preventDefault();
   orderArr();
   kvittoFunc();
-
 });
