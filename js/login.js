@@ -13,9 +13,9 @@ const loggedInUser = () => {
 
 };
 
-let users = JSON.parse(localStorage.users);
 
 const checkUserInfo = () => {
+  let users = JSON.parse(localStorage.users);
   users.forEach((user) => {
     if (user.email === loginEmail.value) {
       if (user.password === loginPassword.value) {
