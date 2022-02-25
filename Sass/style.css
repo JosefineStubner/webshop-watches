@@ -41,11 +41,13 @@ main .main-wrapper .schoppingcart-wrapper .card img {
 }
 
 main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -70,8 +72,15 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
   border-radius: 0 5px 5px 0;
 }
 
+main .orderCartBtn {
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+  margin-bottom: 20vh !important;
+}
+
 @media only screen and (min-width: 600px) {
-  .main-wrapper .schoppingcart-wrapper .card {
+  main .main-wrapper .schoppingcart-wrapper .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -85,17 +94,22 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 1% 0;
   }
-  .main-wrapper .schoppingcart-wrapper .card img {
-    width: 50vw;
+  main .main-wrapper .schoppingcart-wrapper .card img {
+    width: 8vw;
     margin-right: 5%;
   }
-  .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+  main .main-wrapper .schoppingcart-wrapper .card .pruductname {
+    margin-bottom: 10%;
+  }
+  main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -103,7 +117,7 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBt
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 20vw;
+    width: 40vw;
   }
 }
 

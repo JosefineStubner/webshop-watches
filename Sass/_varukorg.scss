@@ -24,7 +24,8 @@ main{
         width: 20vw;
       }
       .bottom-line-wrapper{
-        @include flex(row, space-around,center);
+        margin-top: 5%;
+        @include flex(row, space-between,center);
         width: 100%;
         button{
           padding: .5vh 1.5vw;
@@ -42,25 +43,36 @@ main{
   }
  
 }
+.orderCartBtn{
+  align-self: center !important;
+  margin-bottom: 20vh !important;
+}
 }
 
 
 @media only screen and (min-width: 600px) {
+  main{
 .main-wrapper {
   .schoppingcart-wrapper {
+
     .card {
-      @include flex(row,flex-start,center,);
+      @include flex(row,flex-start,center);
+      margin: 1% 0;
       img{
-        width: 50vw;
+        width: 8vw;
         margin-right: 5%;
       }
+      .pruductname{
+        margin-bottom: 10%
+      }
       .bottom-line-wrapper{
-        @include flex(row, space-around,center);
-        width: 20vw;
+        @include flex(row, space-between,center);
+        width: 40vw;
         
         
       }
     }
   }
+}
 }
 }
