@@ -178,7 +178,7 @@ main .orderCartBtn {
 }
 
 .productside .producttext {
-  margin: 5px;
+  margin: 0.313rem;
   width: 18rem;
   height: 10rem;
 }
@@ -197,7 +197,7 @@ main .orderCartBtn {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 16rem;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .productside .price {
@@ -244,8 +244,29 @@ main .orderCartBtn {
             align-items: center;
   }
   .header .nav ul li a {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
+  }
+  .productside .productImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem;
+  }
+  .productside .productImg img {
+    width: 100%;
   }
 }
 
@@ -275,7 +296,8 @@ main .orderCartBtn {
 .productlist .productCard {
   margin: 2rem auto 10rem;
   padding: 1rem;
-  border: 2px solid red;
+  background-color: #004040;
+  color: #ECF2F3;
 }
 
 .productlist .productCard a {
@@ -297,7 +319,7 @@ main .orderCartBtn {
 .productlist img {
   max-width: 50%;
   max-height: 50%;
-  border: 2px solid green;
+  border: 2px solid #b98f34;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -309,6 +331,7 @@ main .orderCartBtn {
 
 .productlist p {
   display: inline;
+  font-weight: bold;
 }
 
 .productlist button {

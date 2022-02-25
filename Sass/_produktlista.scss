@@ -12,7 +12,9 @@
   .productCard {
     margin: 2rem auto 10rem;
     padding: 1rem;
-    border: 2px solid red;
+    // border: 2px solid red;
+    background-color: $green;
+    color: $ice;
 
     a {
       @include flex(column, space-around, center);
@@ -22,7 +24,7 @@
   img {
     max-width: 50%;
     max-height: 50%;
-    border: 2px solid green;
+    border: 2px solid $gold;
     transition: all 0.3s ease;
     &:hover {
       transform: scale(103%);
@@ -31,6 +33,7 @@
 
   p {
     display: inline;
+    font-weight: bold;
   }
 
   button {
