@@ -38,7 +38,7 @@ if(localCart){
       alreadyExists.antal += 1;
       alreadyExists.price = parseInt(product.price) * alreadyExists.antal;
     }
-    totalPrice = totalPrice + product.price
+    totalPrice = totalPrice + parseInt(product.price)
    
   });
   total.innerHTML= totalPrice
