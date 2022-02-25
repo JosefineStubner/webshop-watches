@@ -176,7 +176,7 @@ let kvittoFunc = () => {
       "\nTelefon: " + order.phone +
       "\nKommentar: " + order.comments;
     kvittopersinfo.appendChild(godbaytext);
-    godbaytext.style.textAlign = "center";
+    // godbaytext.style.textAlign = "center";
   })
 }
 
