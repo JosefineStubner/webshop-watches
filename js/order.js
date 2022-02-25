@@ -189,7 +189,7 @@ let kvittoFunc = () => {
       const godbaytext = document.createElement("p");
       godbaytext.innerHTML = `${property}: ${order[property]}`
       kvittopersinfo.appendChild(godbaytext);
-      godbaytext.style.textAlign = "center";
+      // godbaytext.style.textAlign = "center";
     }
   })
 }
