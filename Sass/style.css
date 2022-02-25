@@ -295,7 +295,7 @@ main .orderCartBtn {
 
 .productlist .productCard {
   margin: 2rem auto 10rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #004040;
   color: #ECF2F3;
 }
