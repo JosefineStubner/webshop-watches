@@ -23,10 +23,12 @@ const shoppingComponent = (event)=> `
           <div class="card-wrapper">
             <h3 class="pruductname">${event.name}</h3>
             <div class="bottom-line-wrapper">
+            <div class="quantatyBtns">
             <button class="decreaseBtn" data-id="${event.id}">-</button>
             <label for="amount">Antal:</label>
             <button class="increaseBtn" data-id="${event.id}">+</button>
-              <h4>${event.antal}St</h4>
+            </div>
+            <h4>${event.antal}St</h4>
               <h4 class="price">${event.price} Sek</h4>
             </div>
           </div>
@@ -112,7 +114,6 @@ decreaseBtn.forEach(delBtn=>{
 
 //  deletproduct.forEach(e=>{
 //    e.addEventListener("click", ()=>{
-//      console.log('del trigger');
 //      uniqueArray.splice(e, 1);
 //      localStorage.setItem("cart", JSON.stringify(uniqueArray));
 //      shoppingWrapper.removeChild(card);

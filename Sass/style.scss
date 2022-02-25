@@ -34,7 +34,7 @@ body {
 
   .nav {
     @include flex(column, center, center);
-    position: absolute;
+    position: fixed;
     background-color: rgba($gold, 0.747);
     backdrop-filter: (blur(4px));
     height: 100vh;
