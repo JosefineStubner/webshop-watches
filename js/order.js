@@ -85,13 +85,6 @@ const orderArr = () => {
   })();
 
   orders.push({
-    // "name": orderName.value, 
-    // "adress": orderAdress.value,
-    // "zipcode": orderZipcode.value,
-    // "city": orderCity.value,
-    // "email": orderEmail.value,
-    // "phone": orderPhone.value,
-    // "comments": orderComments.value
 
     "Namn": orderName.value, 
     "Adress": orderAdress.value,
@@ -118,6 +111,7 @@ let kvitto = () => `
   <div id="kvittopersinfo" class="kvittopersinfo">
     <h3 class="kvitto-headings">Leveransinformation</h3>
   </div>
+  <button class="basbtnStyle" id="end">Avsluta</button>
 </div>
 `;
 

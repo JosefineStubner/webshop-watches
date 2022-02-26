@@ -142,13 +142,12 @@ body {
     @include basbtn;
   }
 }
+
 .buyBtn {
   @include buybtnStyle;
   @include basbtn;
 }
-
-.buyBtn {
-  @include buybtnStyle;
+.basbtnStyle {
   @include basbtn;
 }
 

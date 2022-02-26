@@ -1328,11 +1328,7 @@ body {
   background-color: white;
 }
 
-.buyBtn {
-  color: #fff;
-  background-color: #b98f34;
-  min-width: 5rem;
-  border: 2px solid white;
+.basbtnStyle {
   padding: .4rem 1rem;
   border: 1px solid;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -1340,12 +1336,6 @@ body {
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 1.875rem;
-}
-
-.buyBtn:hover {
-  border: 2px solid #b98f34;
-  color: #b98f34;
-  background-color: white;
 }
 
 @media only screen and (min-width: 600px) {
