@@ -183,9 +183,16 @@ let kvittoFunc = () => {
       const godbaytext = document.createElement("p");
       godbaytext.innerHTML = `${property}: ${order[property]}`
       kvittopersinfo.appendChild(godbaytext);
-      // godbaytext.style.textAlign = "center";
+      godbaytext.style.textAlign = "flex-start";
     }
   })
+  //starta om knapp - rensar/loggar ut/börjar om på startsidan.
+  const totaldelete = document.querySelector("#end")
+
+  totaldelete.addEventListener("click", function(){
+   localStorage.removeItem("cart");
+   window.location.href = "index.html";
+})
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
