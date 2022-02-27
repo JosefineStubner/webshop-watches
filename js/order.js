@@ -99,12 +99,16 @@ const orderArr = () => {
 }
 
 const viewkvitto = document.querySelector("#kvitto");
+function getOrderNum(max) {
+  return Math.floor(Math.random() * max);
+}
 
 let kvitto = () => `
 <div class="kvittocontainer">
   <div class="kvittohead">
     <h2 class="kvitto-headings">KVITTO</h2>
     <h3 class="kvitto-headings">Tack för din beställning</h3>
+    <p>Ditt ordernummer är : ${getOrderNum(99999999)}</p>
   </div>
   <ul id="kvittoProduktLista"></ul>
   <div id="kvittototal" class="total"></div>
@@ -192,7 +196,7 @@ let kvittoFunc = () => {
   totaldelete.addEventListener("click", function(){
    localStorage.removeItem("cart");
    window.location.href = "index.html";
-})
+  })
 }
 
 currentOrderForm.addEventListener("submit", (e) => {
