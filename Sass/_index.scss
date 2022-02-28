@@ -28,6 +28,10 @@
     user-select: none;
   }
 }
+
+.categoryHeader {
+  color: red;
+}
 .startmain {
   display: flex;
   flex-direction: column;
@@ -35,6 +39,14 @@
   align-items: center;
   padding: 50px 10px;
   // border: 1px solid olive;
+
+  .categoryTitel {
+    text-transform: uppercase;
+    margin-bottom: 7%;
+    &:hover {
+      color: $gold;
+    }
+  }
   .categorycontainer {
     display: flex;
     flex-direction: column;
@@ -44,14 +56,19 @@
       margin: 20px 30px;
       a {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+
         @include heading2;
         img {
-          max-width: 100%;
+          max-width: 70%;
           height: auto;
+          align-self: center;
           transition: all 0.3s ease;
           &:hover {
             transform: scale(103%);
           }
+          margin-bottom: 6%;
         }
       }
     }

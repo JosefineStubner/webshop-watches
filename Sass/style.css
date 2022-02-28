@@ -422,6 +422,10 @@ main .orderCartBtn {
           user-select: none;
 }
 
+.categoryHeader {
+  color: red;
+}
+
 .startmain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,6 +441,15 @@ main .orderCartBtn {
       -ms-flex-align: center;
           align-items: center;
   padding: 50px 10px;
+}
+
+.startmain .categoryTitel {
+  text-transform: uppercase;
+  margin-bottom: 7%;
+}
+
+.startmain .categoryTitel:hover {
+  color: #b98f34;
 }
 
 .startmain .categorycontainer {
@@ -458,6 +471,13 @@ main .orderCartBtn {
 
 .startmain .categorycontainer .category a {
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #000000;
   letter-spacing: 0.1rem;
   margin: 10px 0px 0px;
@@ -468,10 +488,14 @@ main .orderCartBtn {
 }
 
 .startmain .categorycontainer .category a img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-bottom: 6%;
 }
 
 .startmain .categorycontainer .category a img:hover {
