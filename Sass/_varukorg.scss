@@ -13,7 +13,7 @@ main{
       background: rgb(109, 109, 250);
     }
   }
-  .schoppingcart-wrapper {
+  .shoppingcart-wrapper {
     .card {
       width: 70vw;
       margin: 3% 0;
@@ -53,7 +53,7 @@ main{
 @media only screen and (min-width: 600px) {
   main{
 .main-wrapper {
-  .schoppingcart-wrapper {
+  .shoppingcart-wrapper {
 
     .card {
       @include flex(row,flex-start,center);
@@ -62,7 +62,7 @@ main{
         width: 8vw;
         margin-right: 5%;
       }
-      .pruductname{
+      .productname{
         margin-bottom: 10%
       }
       .bottom-line-wrapper{
