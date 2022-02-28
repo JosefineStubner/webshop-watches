@@ -1278,24 +1278,34 @@ body {
 }
 
 .footer {
+  margin-top: 10%;
   background-color: #004040;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  color: #ECF2F3;
+  text-align: center;
+  padding: 5%;
 }
 
-.footer p {
-  width: 30%;
+.footer .footerTitle {
+  padding: 5%;
+}
+
+.footer .footerTitle li {
+  list-style: none;
+  font-size: 3.5vh;
+}
+
+.footer .footerTitle li a {
   color: #ECF2F3;
+  text-decoration: none;
+}
+
+.footer .footerTitle li a:hover {
+  color: rgba(185, 143, 52, 0.747);
+}
+
+.footer .social {
+  font-size: 4vh;
+  padding: 5%;
 }
 
 #shoppingcart-main {
@@ -1416,6 +1426,31 @@ body {
   .header .cart {
     right: 5%;
     z-index: 1;
+  }
+  .footer {
+    background-color: #004040;
+    color: #ECF2F3;
+    text-align: center;
+    padding: 2%;
+  }
+  .footer .footerTitle {
+    padding: 1%;
+    font-size: 3vh;
+    font-weight: bold;
+  }
+  .footer .footerText {
+    padding: 1%;
+    margin: 0% 20% 0% 20%;
+  }
+  .footer .social {
+    padding: 1%;
+    font-size: 4vh;
+  }
+  .footer .social i {
+    padding: 1%;
+  }
+  .footer .copyright {
+    padding: 1%;
   }
 }
 

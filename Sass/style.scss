@@ -121,15 +121,35 @@ body {
   }
 }
 .footer {
+  margin-top: 10%;
   background-color: $green;
-  // position: relative;
+  color: $ice;
+  text-align: center;
+  padding: 5%;
+
   // bottom: 0;
-  @include flex(row, space-around, center);
-  p {
-    width: 30%;
-    color: $ice;
+  //@include flex(row, space-around, center);
+  .footerTitle {
+    padding: 5%;
+    li {
+      list-style: none;
+      font-size: 3.5vh;
+      a {
+        color: $ice;
+        text-decoration: none;
+        &:hover {
+          color: rgba($gold, 0.747);
+        }
+      }
+    }
+  }
+
+  .social {
+    font-size: 4vh;
+    padding: 5%;
   }
 }
+
 //Knappar
 #shoppingcart-main {
   @include flex(column, space-around, center);
@@ -190,6 +210,37 @@ body {
     .cart {
       right: 5%;
       z-index: 1;
+    }
+  }
+
+  .footer {
+    background-color: $green;
+    color: $ice;
+    text-align: center;
+    padding: 2%;
+
+    .footerTitle {
+      padding: 1%;
+      font-size: 3vh;
+      font-weight: bold;
+    }
+
+    .footerText {
+      padding: 1%;
+      margin: 0% 20% 0% 20%;
+    }
+
+    .social {
+      padding: 1%;
+      font-size: 4vh;
+
+      i {
+        padding: 1%;
+      }
+    }
+
+    .copyright {
+      padding: 1%;
     }
   }
 }
