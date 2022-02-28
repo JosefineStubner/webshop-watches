@@ -10,7 +10,7 @@ let oneOrder = (item) => `
     <div class="orderCardContainer">
       <h2>${item.name}</h2>
       <p> Antal ${item.antal}st</p>
-      <p>${item.price} kr</p>
+      <p>${item.price} SEK</p>
     </div>
   </div>
   <div class="line"></div>
@@ -41,7 +41,7 @@ if(localCart){
     totalPrice = totalPrice + parseInt(product.price)
    
   });
-  total.innerHTML= totalPrice
+  total.innerHTML= totalPrice + " SEK";
   return returnArray;
    };
    const uniqueArray = getUniqueProds(cartProduct)

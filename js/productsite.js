@@ -5,7 +5,7 @@ let productComponent = (item) => `
   <div class="productImg"><img src="${item.image}" alt="" /></div>
   <p class="producttext" id="productpara">${item.description}</p>
   <div class="productinfo">
-  <p class="price"> ${item.price} </p>
+  <p class="price"> ${item.price} SEK</p>
   <div class="productCard">
     <button class="buyBtn uppBtn" data-id="${item.id}">Lägg till i varukorgen</button>
   </div>
