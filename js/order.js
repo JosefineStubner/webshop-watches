@@ -130,7 +130,7 @@ function getUniqueProds(prodList){
     totalPrice = totalPrice + product.price
    
   });
-  total.innerHTML= totalPrice
+  total.innerHTML= totalPrice + " SEK";
   return returnArray;
 };
 
@@ -151,14 +151,14 @@ let kvittoFunc = () => {
     const liProd = document.createElement("li");
     const liDiv = document.createElement("div");
     liDiv.classList.add("line")
-    liProd.innerText = vald.name + " " + vald.antal + "st " + vald.price + ":-"
+    liProd.innerText = vald.name + " " + vald.antal + "st " + vald.price + " SEK";
     liProd.appendChild(liDiv)
     kvittoProduktLista.appendChild(liProd)
   
     totalPrice = totalPrice + vald.price
   })
 
-  kvittototal.innerHTML = "Total kostnad: " + totalPrice + ":-";
+  kvittototal.innerHTML = "Total kostnad: " + totalPrice + " SEK";
 
   let persInfo = JSON.parse(persinfo);
 
