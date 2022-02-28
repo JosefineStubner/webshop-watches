@@ -2,7 +2,7 @@
   "pageName": "Watches",
   "products": [{
     "name": "Armband1",
-    "price": "100 SEK",
+    "price": 100,
     "image": "./images/products/Armbandsur1.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Armband2",
-    "price": "200 SEK",
+    "price": 200,
     "image": "./images/products/Armbandsur2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
@@ -18,7 +18,7 @@
   },
   {
     "name": "Armband3",
-    "price": "300 SEK",
+    "price": 300,
     "image": "./images/products/Armbandsur3.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Armbandsur",
@@ -26,7 +26,7 @@
   },
   {
     "name": "Fickur1",
-    "price": "400 SEK",
+    "price": 400,
     "image": "./images/products/Fickur1.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Fickur2",
-    "price": "500 SEK",
+    "price": 500,
     "image": "./images/products/Fickur2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Fickur",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Fickur3",
-    "price": "600 SEK",
+    "price": 600,
     "image": "./images/products/Fickur3.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category":"Fickur",
@@ -50,7 +50,7 @@
   },
   {
     "name": "Gökur1",
-    "price": "700 SEK",
+    "price": 700,
     "image": "./images/products/gokur5.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
@@ -58,7 +58,7 @@
   },
   {
     "name": "Gökur2",
-    "price": "800 SEK",
+    "price": 800,
     "image": "./images/products/gokur6.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
@@ -66,7 +66,7 @@
   },
   {
     "name": "Gökur3",
-    "price": "900 SEK",
+    "price": 900,
     "image": "./images/products/gokur7.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "Gökur",
