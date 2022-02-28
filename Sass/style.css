@@ -469,6 +469,7 @@ main .orderCartBtn {
 }
 
 .startmain .categorycontainer .category a img {
+  display: none;
   height: 250px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
