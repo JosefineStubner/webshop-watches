@@ -595,7 +595,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form {
     width: 320px;
     display: -webkit-box;
@@ -631,7 +631,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form .input-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -674,7 +674,7 @@ main .orderCartBtn {
   padding: 2px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form .input-container .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -745,7 +745,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .login-form .input-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,7 +780,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .login-form .input-container .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -939,7 +939,7 @@ section .totalPrice {
       flex-wrap: wrap;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .order-form .orderFormular {
     display: -webkit-box;
     display: -ms-flexbox;
