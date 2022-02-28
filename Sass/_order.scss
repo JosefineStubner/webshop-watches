@@ -4,7 +4,7 @@ section {
   }
   @include flex(column, flex-start, center);
   .orderSection {
-    align-self: flex-start;
+    align-self: center;
     margin: 5%;
     .orderContainer {
       @include flex(column, space-around, center);
@@ -49,7 +49,7 @@ section {
     @include flex(row, space-around, flex-start);
     flex-wrap: wrap;
 
-    @media (min-width: 600px) {
+    @media (min-width: 500px) {
       @include flex(row, space-around, flex-start);
       flex-wrap: nowrap;
     }
