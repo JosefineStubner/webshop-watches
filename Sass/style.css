@@ -1130,6 +1130,10 @@ section .totalPrice {
   font-family: "Lato", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   overflow-x: hidden;
 }
