@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 main .main-wrapper {
   width: 90%;
-  background: #b98f34;
+  background: #004040;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,7 @@ main .main-wrapper {
       -ms-flex-align: center;
           align-items: center;
   margin: 10%;
+  color: white;
 }
 
 main .main-wrapper .order-button {
@@ -28,6 +29,10 @@ main .main-wrapper .order-button:hover {
   background: #6d6dfa;
 }
 
+main .main-wrapper .schoppingcart-wrapper {
+  color: black;
+}
+
 main .main-wrapper .schoppingcart-wrapper .card {
   width: 70vw;
   margin: 3% 0;
@@ -38,6 +43,30 @@ main .main-wrapper .schoppingcart-wrapper .card {
 
 main .main-wrapper .schoppingcart-wrapper .card img {
   width: 20vw;
+}
+
+main .main-wrapper .schoppingcart-wrapper .card .productHeaderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-wrapper .schoppingcart-wrapper .card .productHeaderContainer .deleteBtn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  margin-right: 5%;
+  cursor: pointer;
 }
 
 main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
@@ -100,8 +129,8 @@ main .orderCartBtn {
     width: 8vw;
     margin-right: 5%;
   }
-  main .main-wrapper .schoppingcart-wrapper .card .pruductname {
-    margin-bottom: 10%;
+  main .main-wrapper .schoppingcart-wrapper .card .productHeaderContainer {
+    margin: 0 0 5% 0;
   }
   main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
     display: -webkit-box;
