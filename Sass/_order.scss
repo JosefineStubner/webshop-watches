@@ -4,7 +4,7 @@ section {
   }
   @include flex(column, flex-start, center);
   .orderSection {
-    align-self: flex-start;
+    align-self: center;
     margin: 5%;
     .orderContainer {
       @include flex(column, space-around, center);
@@ -114,6 +114,11 @@ section {
     width: 80%;
     height: 200px;
   }
+
+  #end {
+    margin-top: 10px;
+  }
+
 }
 
 .required:after {

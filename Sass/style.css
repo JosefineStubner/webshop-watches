@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 main .main-wrapper {
   width: 90%;
-  background: #b98f34;
+  background: #004040;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,7 +29,8 @@ main .main-wrapper .order-button:hover {
   background: #6d6dfa;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card {
+main .main-wrapper .shoppingcart-wrapper .card {
+  color: black;
   width: 70vw;
   margin: 3% 0;
   padding: 1rem;
@@ -36,11 +38,35 @@ main .main-wrapper .schoppingcart-wrapper .card {
   background: white;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card img {
+main .main-wrapper .shoppingcart-wrapper .card img {
   width: 20vw;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+main .main-wrapper .shoppingcart-wrapper .card .productHeaderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-wrapper .shoppingcart-wrapper .card .productHeaderContainer .deleteBtn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper {
   margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,17 +84,17 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
   width: 100%;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper button {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper button {
   padding: .5vh 1.5vw;
   border: .5px solid black;
   background: rgba(185, 143, 52, 0.3);
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .decreaseBtn {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper .decreaseBtn {
   border-radius: 5px 0 0 5px;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBtn {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper .increaseBtn {
   border-radius: 0 5px 5px 0;
 }
 
@@ -80,7 +106,7 @@ main .orderCartBtn {
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-wrapper .schoppingcart-wrapper .card {
+  main .main-wrapper .shoppingcart-wrapper .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -96,14 +122,14 @@ main .orderCartBtn {
             align-items: center;
     margin: 1% 0;
   }
-  main .main-wrapper .schoppingcart-wrapper .card img {
+  main .main-wrapper .shoppingcart-wrapper .card img {
     width: 8vw;
     margin-right: 5%;
   }
-  main .main-wrapper .schoppingcart-wrapper .card .pruductname {
-    margin-bottom: 10%;
+  main .main-wrapper .shoppingcart-wrapper .card .productHeaderContainer {
+    margin: 0 0 5% 0;
   }
-  main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+  main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -319,7 +345,7 @@ main .orderCartBtn {
 .productlist img {
   max-width: 50%;
   max-height: 50%;
-  border: 2px solid #b98f34;
+  border: 4px solid #b98f34;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -569,7 +595,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form {
     width: 320px;
     display: -webkit-box;
@@ -605,7 +631,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form .input-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -648,7 +674,7 @@ main .orderCartBtn {
   padding: 2px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .create-login-main .create-login-form .input-container .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -719,7 +745,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .login-form .input-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -754,7 +780,7 @@ main .orderCartBtn {
           align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .login-form .input-container .input-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -814,8 +840,9 @@ section .orderTitle {
 }
 
 section .orderSection {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin: 5%;
 }
 
@@ -1058,6 +1085,10 @@ section .totalPrice {
   margin-top: 15px;
   width: 80%;
   height: 200px;
+}
+
+.kvittocontainer #end {
+  margin-top: 10px;
 }
 
 .required:after {

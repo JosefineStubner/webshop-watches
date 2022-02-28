@@ -12,7 +12,7 @@
   .create-login-form {
     @include flex(column, flex-start, center);
 
-    @media (min-width: 500px) {
+    @media (min-width: 600px) {
       width: 320px;
       @include flex(row, center, flex-start);
       flex-wrap: wrap;
@@ -21,7 +21,7 @@
     .input-container {
       @include flex(column, space-around, center);
 
-      @media (min-width: 500px) {
+      @media (min-width: 600px) {
         @include flex(row, space-around, center);
         flex-wrap: wrap;
         margin-bottom: 20px;
@@ -37,7 +37,7 @@
           padding: 2px;
         }
 
-        @media (min-width: 500px) {
+        @media (min-width: 600px) {
           @include flex(column, flex-start, center);
           margin: 0 5px 0 5px;
         }

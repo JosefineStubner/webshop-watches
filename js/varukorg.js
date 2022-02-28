@@ -1,4 +1,4 @@
-const shoppingWrapper = document.querySelector(".schoppingcart-wrapper");
+const shoppingWrapper = document.querySelector(".shoppingcart-wrapper");
 let total = document.querySelector(".total");
 function clearAllElements(parentElem){
   while(parentElem.firstChild){
@@ -8,7 +8,7 @@ function clearAllElements(parentElem){
 
 
 function renderCards(list){
-  list.forEach((card, i) => {
+  list.forEach((card) => {
       // console.log(card);
       const elemCard = document.createElement("div")
       elemCard.innerHTML =shoppingComponent(card)
@@ -21,15 +21,18 @@ const shoppingComponent = (event)=> `
 <div class="card">
           <img src="${event.image}" alt="${event.category}">
           <div class="card-wrapper">
+            <div class="productHeaderContainer">
             <h3 class="pruductname">${event.name}</h3>
+            <button class="deleteBtn" data-id="${event.id}">X</button>
+            </div>
             <div class="bottom-line-wrapper">
-            <div class="quantatyBtns">
+            <div class="quantityBtns">
             <button class="decreaseBtn" data-id="${event.id}">-</button>
             <label for="amount">Antal:</label>
             <button class="increaseBtn" data-id="${event.id}">+</button>
             </div>
             <h4>${event.antal}St</h4>
-              <h4 class="price">${event.price} Sek</h4>
+              <h4 class="price">${event.price} SEK</h4>
             </div>
           </div>
         </div>
@@ -38,9 +41,9 @@ const shoppingComponent = (event)=> `
 const localCart = localStorage.getItem("cart")
 if(localCart){
  let cartProduct= JSON.parse(localCart)
- 
-  
- 
+
+
+
  function getUniqueProds(prodList){
 const returnArray = []
 let totalPrice = 0
@@ -65,13 +68,13 @@ return returnArray;
  const uniqueArray = getUniqueProds(cartProduct)
  sort(uniqueArray)
  shoppingWrapper.innerHTML= uniqueArray.map(shoppingComponent).join("")
- 
 
- 
+
+
 //  let NewShoppingCart = [...cartProduct]
 //deleteknapp
  let card = document.querySelector(".card")
- 
+
  const deletproduct = document.querySelectorAll(".deleteBtn");
 const increaseBtn = document.querySelectorAll(".increaseBtn")
 increaseBtn.forEach(e=>{
@@ -87,19 +90,19 @@ increaseBtn.forEach(e=>{
     currentCart.push(newProduct);
     sort(currentCart)
     localStorage.setItem("cart", JSON.stringify(currentCart));
-    
+
     location.reload()
   })
-}) 
- 
+})
+
 const decreaseBtn = document.querySelectorAll(".decreaseBtn")
 
 decreaseBtn.forEach(delBtn=>{
   delBtn.addEventListener("click", ()=>{
-    let data = delBtn.getAttribute("data-id")  
-    
+    let data = delBtn.getAttribute("data-id")
+
     const currentCart = JSON.parse(localStorage.getItem('cart'));
-    
+
     const newProduct = currentCart.find(prod =>{
       return prod.id == data
     })
@@ -107,19 +110,32 @@ decreaseBtn.forEach(delBtn=>{
     currentCart.splice(currentCart.indexOf(newProduct), 1);
     sort(currentCart)
     localStorage.setItem("cart", JSON.stringify(currentCart));
-    
+
     location.reload()
   })
 })
 
-//  deletproduct.forEach(e=>{
-//    e.addEventListener("click", ()=>{
-//      uniqueArray.splice(e, 1);
-//      localStorage.setItem("cart", JSON.stringify(uniqueArray));
-//      shoppingWrapper.removeChild(card);
-//      location.reload()
-//     })
-//   })
+ deletproduct.forEach(e=>{
+   e.addEventListener("click", ()=>{
+    let data = e.getAttribute("data-id")
+
+    const currentCart = JSON.parse(localStorage.getItem('cart'));
+
+    const newProduct = uniqueArray.find(prod =>{
+      return prod.id == data
+    })
+let filteredCart = currentCart.filter(prod =>{
+  return prod.name !== newProduct.name
+})
+console.log(filteredCart)
+
+     localStorage.setItem("cart", JSON.stringify(filteredCart));
+     location.reload()
+
+    })
+  })
 }
+
+
 
 
