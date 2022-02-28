@@ -1,4 +1,4 @@
-const shoppingWrapper = document.querySelector(".schoppingcart-wrapper");
+const shoppingWrapper = document.querySelector(".shoppingcart-wrapper");
 let total = document.querySelector(".total");
 function clearAllElements(parentElem){
   while(parentElem.firstChild){
@@ -8,7 +8,7 @@ function clearAllElements(parentElem){
 
 
 function renderCards(list){
-  list.forEach((card, i) => {
+  list.forEach((card) => {
       // console.log(card);
       const elemCard = document.createElement("div")
       elemCard.innerHTML =shoppingComponent(card)
@@ -26,7 +26,7 @@ const shoppingComponent = (event)=> `
             <button class="deleteBtn" data-id="${event.id}">X</button>
             </div>
             <div class="bottom-line-wrapper">
-            <div class="quantatyBtns">
+            <div class="quantityBtns">
             <button class="decreaseBtn" data-id="${event.id}">-</button>
             <label for="amount">Antal:</label>
             <button class="increaseBtn" data-id="${event.id}">+</button>

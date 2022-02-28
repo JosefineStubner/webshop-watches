@@ -2,9 +2,10 @@ main{
 .main-wrapper {
   width: 90%;
   background: $green;
+  color: white;
+
   @include flex(column, space-around, center);
   margin: 10%;
-  color: white;
   .order-button {
     margin: 2%;
     border: 1px solid black;
@@ -14,9 +15,9 @@ main{
       background: rgb(109, 109, 250);
     }
   }
-  .schoppingcart-wrapper {
-    color: black;
+  .shoppingcart-wrapper {
     .card {
+      color: black;
       width: 70vw;
       margin: 3% 0;
       padding: 1rem;
@@ -65,7 +66,7 @@ main{
 @media only screen and (min-width: 600px) {
   main{
 .main-wrapper {
-  .schoppingcart-wrapper {
+  .shoppingcart-wrapper {
 
     .card {
       @include flex(row,flex-start,center);
