@@ -1,7 +1,9 @@
 main{
 .main-wrapper {
   width: 90%;
-  background: $gold;
+  background: $green;
+  color: white;
+
   @include flex(column, space-around, center);
   margin: 10%;
   .order-button {
@@ -15,6 +17,7 @@ main{
   }
   .shoppingcart-wrapper {
     .card {
+      color: black;
       width: 70vw;
       margin: 3% 0;
       padding: 1rem;
@@ -22,6 +25,16 @@ main{
       background: white;
       img {
         width: 20vw;
+      }
+      .productHeaderContainer{
+        @include flex(row,space-between,center);
+        .deleteBtn{
+          border: none;
+          background: none;
+          font-size: 20px;
+          margin-right: 5%;
+          cursor: pointer;
+        }
       }
       .bottom-line-wrapper{
         margin-top: 5%;
@@ -62,8 +75,9 @@ main{
         width: 8vw;
         margin-right: 5%;
       }
-      .productname{
-        margin-bottom: 10%
+    
+      .productHeaderContainer{
+        margin: 0 0 5% 0;
       }
       .bottom-line-wrapper{
         @include flex(row, space-between,center);
