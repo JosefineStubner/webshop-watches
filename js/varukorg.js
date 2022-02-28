@@ -32,7 +32,7 @@ const shoppingComponent = (event)=> `
             <button class="increaseBtn" data-id="${event.id}">+</button>
             </div>
             <h4>${event.antal}St</h4>
-              <h4 class="price">${event.price} Sek</h4>
+              <h4 class="price">${event.price} SEK</h4>
             </div>
           </div>
         </div>
