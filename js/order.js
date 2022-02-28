@@ -77,15 +77,8 @@ if(currentUserObj) {
 }
 
 const orderArr = () => {
-  const orders = (() => {
-    const orderValue = localStorage.getItem('orders');
-    return orderValue === null
-      ? []
-      : JSON.parse(orderValue);
-  })();
-
-  orders.push({
-
+  localStorage.removeItem("orders")
+  localStorage.setItem("orders", JSON.stringify({
     "Namn": orderName.value, 
     "Adress": orderAdress.value,
     "Postnummer": orderZipcode.value,
@@ -93,10 +86,9 @@ const orderArr = () => {
     "Epost": orderEmail.value,
     "Telefon": orderPhone.value,
     "Kommentar": orderComments.value
-  });
-
-  localStorage.setItem('orders', JSON.stringify(orders));
-}
+    })
+  );
+};
 
 const viewkvitto = document.querySelector("#kvitto");
 function getOrderNum(max) {
@@ -115,7 +107,7 @@ let kvitto = () => `
   <div id="kvittopersinfo" class="kvittopersinfo">
     <h3 class="kvitto-headings">Leveransinformation</h3>
   </div>
-  <button class="basbtnStyle" id="end">Avsluta</button>
+  <button class="buyBtn" id="end">Avsluta</button>
 </div>
 `;
 
@@ -171,30 +163,18 @@ let kvittoFunc = () => {
 
   let persInfo = JSON.parse(persinfo);
 
-  persInfo.forEach((order) => {
-    // const godbaytext = document.createElement("p");
-    // godbaytext.innerText = 
-    //   "Namn: " + order.name + 
-    //   "\nLeveransadress: " + order.adress +
-    //   "\nPostnummer: " + order.zipcode +
-    //   "\nStad: " + order.city +
-    //   "\nEpost: " + order.email +
-    //   "\nTelefon: " + order.phone +
-    //   "\nKommentar: " + order.comments;
-    // kvittopersinfo.appendChild(godbaytext);
-    // godbaytext.style.textAlign = "center";
-    for (let property in order) {
-      const godbaytext = document.createElement("p");
-      godbaytext.innerHTML = `${property}: ${order[property]}`
-      kvittopersinfo.appendChild(godbaytext);
-      godbaytext.style.textAlign = "flex-start";
-    }
-  })
-  //starta om knapp - rensar/loggar ut/börjar om på startsidan.
+  for (let property in persInfo) {
+    const godbaytext = document.createElement("p");
+    godbaytext.innerHTML = `${property}: ${persInfo[property]}`
+    kvittopersinfo.appendChild(godbaytext);
+    godbaytext.style.textAlign = "center";
+  }
+
   const totaldelete = document.querySelector("#end")
 
   totaldelete.addEventListener("click", function(){
    localStorage.removeItem("cart");
+   localStorage.removeItem("orders");
    window.location.href = "index.html";
   })
 }

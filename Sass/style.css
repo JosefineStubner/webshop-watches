@@ -1060,6 +1060,10 @@ section .totalPrice {
   height: 200px;
 }
 
+.kvittocontainer #end {
+  margin-top: 10px;
+}
+
 .required:after {
   color: #e32;
   content: " *";
