@@ -15,17 +15,25 @@ const loggedInUser = () => {
 
 
 const checkUserInfo = () => {
-  let users = JSON.parse(localStorage.users);
-  users.forEach((user) => {
-    if (user.email === loginEmail.value) {
-      if (user.password === loginPassword.value) {
-        alert("login successful");
-        loggedInUser();
-      } else {
-        alert("login failed");
+  let userFound = false;
+
+  if (localStorage.users) {
+    let users = JSON.parse(localStorage.users);
+    users.forEach((user) => {
+      if (user.email === loginEmail.value) {
+        if (user.password === loginPassword.value) {
+          userFound = true;
+        } 
       }
-    }
-  });
+    });
+  }
+
+  if (userFound) {
+    alert("login successful");
+    loggedInUser();
+  } else {
+    alert("login failed");
+  }
 };
 
 loginForm.addEventListener("submit", (e) => {
