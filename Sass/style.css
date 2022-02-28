@@ -28,7 +28,7 @@ main .main-wrapper .order-button:hover {
   background: #6d6dfa;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card {
+main .main-wrapper .shoppingcart-wrapper .card {
   width: 70vw;
   margin: 3% 0;
   padding: 1rem;
@@ -36,11 +36,11 @@ main .main-wrapper .schoppingcart-wrapper .card {
   background: white;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card img {
+main .main-wrapper .shoppingcart-wrapper .card img {
   width: 20vw;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper {
   margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,17 +58,17 @@ main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
   width: 100%;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper button {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper button {
   padding: .5vh 1.5vw;
   border: .5px solid black;
   background: rgba(185, 143, 52, 0.3);
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .decreaseBtn {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper .decreaseBtn {
   border-radius: 5px 0 0 5px;
 }
 
-main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper .increaseBtn {
+main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper .increaseBtn {
   border-radius: 0 5px 5px 0;
 }
 
@@ -80,7 +80,7 @@ main .orderCartBtn {
 }
 
 @media only screen and (min-width: 600px) {
-  main .main-wrapper .schoppingcart-wrapper .card {
+  main .main-wrapper .shoppingcart-wrapper .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -96,14 +96,14 @@ main .orderCartBtn {
             align-items: center;
     margin: 1% 0;
   }
-  main .main-wrapper .schoppingcart-wrapper .card img {
+  main .main-wrapper .shoppingcart-wrapper .card img {
     width: 8vw;
     margin-right: 5%;
   }
-  main .main-wrapper .schoppingcart-wrapper .card .pruductname {
+  main .main-wrapper .shoppingcart-wrapper .card .productname {
     margin-bottom: 10%;
   }
-  main .main-wrapper .schoppingcart-wrapper .card .bottom-line-wrapper {
+  main .main-wrapper .shoppingcart-wrapper .card .bottom-line-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
