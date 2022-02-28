@@ -319,7 +319,7 @@ main .orderCartBtn {
 .productlist img {
   max-width: 50%;
   max-height: 50%;
-  border: 2px solid #b98f34;
+  border: 4px solid #b98f34;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
