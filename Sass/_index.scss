@@ -4,16 +4,15 @@
     background-size: 100%;
     height: 80vh;
     border: 1px solid red;*/
+  
 
   .imgDiv {
-    width: 80vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    margin-top: 5%;
     @include flex(row, center, center);
     .headerIMG {
-      height: 80vh;
-      margin: 0 15% 0 0;
+      height: 100%;
     }
   }
 
@@ -22,9 +21,9 @@
 
   .startheading {
     position: absolute;
-    top: 47%;
-    font-size: 14vw;
-    color: $gold;
+    top: 35%;
+    font-size: 20vw;
+    color: $ice;
     user-select: none;
   }
 }
@@ -100,11 +99,11 @@
   }
 
   .header-img {
+    width:100vw;
     .imgDiv {
-      width: 90vw;
-      height: 70vh;
+      width: 100vw;
+      height: 100vh;
       position: relative;
-      margin: 5%;
       overflow: hidden;
       .headerIMG {
         background-repeat: no-repeat;
@@ -115,7 +114,10 @@
       }
     }
     .startheading {
-      font-size: 14vw;
+      font-size: 12vw;
+      left: 5%;
+      top: 45%;
+      color: $ice;
     }
   }
 
