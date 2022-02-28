@@ -55,7 +55,7 @@ const renderedFilteredProducts = () => {
       productImage.src = product.image;
 
       const productPrice = document.createElement("p");
-      productPrice.innerText = product.price;
+      productPrice.innerText = product.price + " SEK";
 
       //skapar köpknapp.
       const buyBtn = document.createElement("button");
