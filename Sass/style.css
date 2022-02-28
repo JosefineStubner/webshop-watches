@@ -450,7 +450,6 @@ main .orderCartBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
 }
 
 .startmain .categorycontainer .category {
@@ -469,8 +468,8 @@ main .orderCartBtn {
 }
 
 .startmain .categorycontainer .category a img {
-  display: none;
-  height: 250px;
+  max-width: 100%;
+  height: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
