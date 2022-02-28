@@ -840,8 +840,9 @@ section .orderTitle {
 }
 
 section .orderSection {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin: 5%;
 }
 
@@ -939,7 +940,7 @@ section .totalPrice {
       flex-wrap: wrap;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .order-form .orderFormular {
     display: -webkit-box;
     display: -ms-flexbox;
