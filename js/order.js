@@ -5,13 +5,13 @@ const orderContainer = document.querySelector (".orderContainer");
 let total = document.querySelector(".total");
 
 let oneOrder = (item) => `
-<div class="oneproduct">
-  <img src="${item.image}" alt="" />
-  <div class="orderCardContainer">
-  <h2>${item.name}</h2>
-  <p> Antal ${item.antal} st</p>
-  <p>${item.price} kr</p>
-  </div>
+  <div class="oneproduct">
+    <img src="${item.image}" alt=""/>
+    <div class="orderCardContainer">
+      <h2>${item.name}</h2>
+      <p> Antal ${item.antal}st</p>
+      <p>${item.price} kr</p>
+    </div>
   </div>
   <div class="line"></div>
 `;
@@ -133,7 +133,6 @@ function getUniqueProds(prodList){
   total.innerHTML= totalPrice
   return returnArray;
 };
-
 
 let kvittoFunc = () => {
   let persinfo = localStorage.getItem("orders");
