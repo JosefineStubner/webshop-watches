@@ -6,6 +6,10 @@ main{
 
   @include flex(column, space-around, center);
   margin: 10%;
+
+  .totalCartValue{
+    margin: 2%;
+  }
   .order-button {
     margin: 2%;
     border: 1px solid black;
@@ -16,6 +20,7 @@ main{
     }
   }
   .shoppingcart-wrapper {
+    
     .card {
       color: black;
       width: 70vw;

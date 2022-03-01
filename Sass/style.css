@@ -18,6 +18,10 @@ main .main-wrapper {
   margin: 10%;
 }
 
+main .main-wrapper .totalCartValue {
+  margin: 2%;
+}
+
 main .main-wrapper .order-button {
   margin: 2%;
   border: 1px solid black;
@@ -436,10 +440,6 @@ main .orderCartBtn {
           user-select: none;
 }
 
-.categoryHeader {
-  color: red;
-}
-
 .startmain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,6 +568,7 @@ main .orderCartBtn {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    z-index: -1;
   }
   .header-img .imgDiv .headerIMG {
     background-repeat: no-repeat;

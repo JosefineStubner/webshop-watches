@@ -23,7 +23,7 @@ const shoppingComponent = (event)=> `
           <div class="card-wrapper">
             <div class="productHeaderContainer">
             <h3 class="pruductname">${event.name}</h3>
-            <button class="deleteBtn" data-id="${event.id}">X</button>
+            <button class="deleteBtn" data-id="${event.id}"><i class="fa fa-trash-o" style="font-size:20px"></i></button>
             </div>
             <div class="bottom-line-wrapper">
             <div class="quantityBtns">
