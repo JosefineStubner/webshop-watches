@@ -1,4 +1,4 @@
-@import "./varibels";
+@import "./variables";
 @import "./mixin";
 @import "./varukorg";
 @import "./produktsida";
@@ -133,9 +133,6 @@ body {
   color: $ice;
   text-align: center;
   padding: 5%;
-
-  // bottom: 0;
-  //@include flex(row, space-around, center);
   .footerTitle {
     padding: 5%;
     li {
