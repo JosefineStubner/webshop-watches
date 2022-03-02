@@ -49,7 +49,7 @@ const renderedFilteredProducts = () => {
       productHeading.innerText = product.name;
 
       const imageWrapper = document.createElement("a");
-      imageWrapper.href = `Produktsida.html?name=${product.name}`;
+      imageWrapper.href = `produktsida.html?name=${product.name}`;
 
       const productImage = document.createElement("img");
       productImage.src = product.image;
