@@ -4,7 +4,7 @@ const cartBtn = document.querySelector(".cart");
 let active = false;
 
 cartBtn.addEventListener("click", () => {
-  window.location.href = "./Varukorg.html";
+  window.location.href = "./varukorg.html";
 });
 hamburgerBtn.addEventListener("click", () => {
   if (!active) {
